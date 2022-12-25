@@ -11,11 +11,15 @@ module.exports = {
         green : "#007C1B",
         gray : "#F7F7F7",
         darkGray : "#EEEEEE",
-        textBlue: "#0058FF"
+        textBlue: "#0058FF",
+        hoverBlue: "#0077FF",
       },
       backgroundImage:{
         saly : 'url("images/Saly-1.png")',
-      }
+      },
+      width:{
+        '1/7' : '17%',
+      },
     },
   },
   plugins: [],
