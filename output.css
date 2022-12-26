@@ -621,6 +621,10 @@ video {
   top: 0px;
 }
 
+.left-0 {
+  left: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1668,6 +1672,10 @@ video {
   border-bottom-width: 0px;
 }
 
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -1884,6 +1892,10 @@ video {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.pr-2 {
+  padding-right: 0.5rem;
 }
 
 .text-left {
@@ -2391,20 +2403,14 @@ body{
 }
 
 .swiper-slide{
-  width: -moz-fit-content;
-  width: fit-content;
-  z-index: 0;
-  padding: 0 15px;
-}
-
-.swiper{
-  position: relative;
+  width: auto !important;
 }
 
 .s-button-next{
   position: absolute;
   top: 0;
   right: 0;
+  padding-right: 10px;
   z-index: 100;
   background: url('images/ArrowRight.svg');
   background-repeat: no-repeat;

@@ -9,17 +9,13 @@ body{
   box-shadow: 0px 4px 20px rgba(232, 232, 232, 0.61);
 }
 .swiper-slide{
-  width: fit-content;
-  z-index: 0;
-  padding: 0 15px;
-}
-.swiper{
-  position: relative;
+  width: auto !important;
 }
 .s-button-next{
   position: absolute;
   top: 0;
   right: 0;
+  padding-right: 10px;
   z-index: 100;
   background: url('images/ArrowRight.svg');
   background-repeat: no-repeat;

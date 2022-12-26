@@ -18,7 +18,7 @@
         <a href="/" class="flex mr-9"> 
           <img src="images/Logo.svg" alt="">
         </a>
-        <button onclick="openService()" class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Услуги</button>
+        <button  onmouseover="openService()" class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Услуги</button>
         <button class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Преимущества</button>
         <button class="border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Отзывы</button>
       </div>
@@ -27,8 +27,8 @@
         <button href="/" class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Быстрый заказ</button>
       </div>
     </header>
-    <section class="xl:px-32 px-[10px]">
-      <div id="service" class="hidden bg-white w-full z-20 py-6">
+    <section class="relative">
+      <div id="service" onmouseleave="openService()" class="hidden xl:px-32 h-full overflow-y-scroll px-[10px] bg-white w-full z-20 py-6 absolute top-0 left-0">
         <div class="flex justify-between w-full">
           <div class="w-fit">
             <div class="flex items-center gap-x-1">
@@ -242,7 +242,7 @@
           </div>
         </div>
       </div>
-      <div id="info" class="flex items-center justify-between z-0 py-14">
+      <div id="info" class="flex xl:px-32 px-[10px] items-center justify-between z-0 py-14">
         <div class="w-3/4 z-10">
           <h1 class=" text-5xl font-semibold">Продвижение во всех <br> соцсетях за пару кликов</h1>
           <p class=" text-xl font-normal mt-6 mb-9">Получайте подписчиков, лайки, репосты, просмотры, прослушивания и любую другую активность на свои профили в социальных сетях по самым низким ценами на рынке и в самые быстрые сроки!</p>
@@ -256,59 +256,71 @@
     <section class="bg-textBlue py-10 xl:px-32 px-[10px]">
       <h2 class=" text-4xl text-center text-white font-semibold my-10">Быстрый заказ</h2>
       <div class="">
-        <div class="swiper bg-white rounded-xl overflow-hidden w-full">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <button class="flex items-center py-3 gap-x-1 px-4 hover:bg-pressed">
+        <div class="swiper bg-white rounded-xl overflow-hidden w-full pr-2">
+          <div class="swiper-wrapper relative">
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
                 <img src="images/insta.svg" alt="" class="h-5 w-5">
                 <h5 class=" text-lg ">Instagram</h5>
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <button class="flex items-center py-3 gap-x-1 px-4 hover:bg-pressed">
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
                 <img src="images/Vk.svg" alt="" class="h-5 w-5">
                 <h5 class=" text-lg ">Vk</h5>
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <button class="flex items-center py-3 gap-x-1 px-4 hover:bg-pressed">
-                <img src="images/TikTok.svg" alt="" class="h-5 w-5">
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
+                <img src="images/Tiktok.svg" alt="" class="h-5 w-5">
                 <h5 class=" text-lg ">TikTok</h5>
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <button class="flex items-center py-3 gap-x-1 px-4 hover:bg-pressed">
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
                 <img src="images/Telegram.svg" alt="" class="h-5 w-5">
                 <h5 class=" text-lg ">Telegram</h5>
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <button class="flex items-center py-3 gap-x-1 px-4 hover:bg-pressed">
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
                 <img src="images/YouTube.svg" alt="" class="h-5 w-5">
                 <h5 class=" text-lg ">YouTube</h5>
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <button class="flex items-center py-3 gap-x-1 px-4 hover:bg-pressed">
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
                 <img src="images/FaceBook.svg" alt="" class="h-5 w-5">
                 <h5 class=" text-lg ">FaceBook</h5>
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <button class="flex items-center py-3 gap-x-1 px-4 hover:bg-pressed">
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
                 <img src="images/Twitter.svg" alt="" class="h-5 w-5">
                 <h5 class=" text-lg ">Twitter</h5>
-              </button>
-            </div>
-            <div class="swiper-slide">
-              <button class="flex items-center py-3 gap-x-1 px-4 hover:bg-pressed">
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
                 <img src="images/Twich.svg" alt="" class="h-5 w-5">
                 <h5 class=" text-lg ">Twitch</h5>
-              </button>
-            </div>
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
+                <img src="images/Twich.svg" alt="" class="h-5 w-5">
+                <h5 class=" text-lg ">Twitch</h5>
+              </div>
+            </button>
+            <button class="swiper-slide">
+              <div class=" py-3 px-4 flex items-center gap-x-1 hover:bg-pressed">
+                <img src="images/Twich.svg" alt="" class="h-5 w-5">
+                <h5 class=" text-lg ">Twitch</h5>
+              </div>
+            </button>
+            
           </div>
           <button class="s-button-next"></button>
-
         </div>
       </div>
     </section>
@@ -319,27 +331,23 @@
     function openService(){
       if(!isService){
         document.getElementById("service").classList.remove("hidden")
-        document.getElementById("info").classList.add("hidden")
+        document.getElementById("service").classList.add("border-b-2")
         isService = !isService
       }
       else{
         document.getElementById("service").classList.add("hidden")
-        document.getElementById("info").classList.remove("hidden")
         isService = !isService
       }
     }
     var swiper = new Swiper('.swiper', {
       loop: true,
-      slidesPerView: 9,
-      spaceBetween: 0,
-      watchSlidesProgress: true,
+      slidesPerView: 'auto',
       autoplay: {
-          delay: 2500,
+          delay: 2000,
           disableOnInteraction: false,
       },
       navigation: {
         nextEl: ".s-button-next",
-        prevEl: ".s-button-prev",
       },
     });
   </script>
