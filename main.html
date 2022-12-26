@@ -374,9 +374,105 @@
         </div>
       </div>
     </section>
+    <section class="xl:px-32 px-[10px] py-14 ">
+      <div class="flex items-center justify-between bg-textBlue px-20 rounded-[40px]">
+        <div class="w-2/3">
+          <h2 class=" text-4xl font-semibold text-white">Скидки до 50% <br> в нашем телеграм-канале</h2>
+          <p class = "text-white mt-5 mb-7 text-lg">Раздаем промокоды в Telegram каждую неделю</p>
+          <button href="/" class="h-full py-3 rounded-md bg-[#2C75FF] hover:shadow-lg px-6 text-white">Получить промокод</button>
+        </div>
+        <div class="">
+          <img src="images/Saly2.svg" alt="">
+        </div>
+      </div>
+    </section>
+    <section class="xl:px-32 px-[10px] py-10">
+      <h2 class=" text-4xl text-center font-semibold my-10">Частые вопросы</h2>
+      <div id="questionAnswer" class="grid grid-cols-2 gap-x-7 gap-y-4">
+
+      </div>
+    </section>
+    <footer class="xl:px-32 px-[10px] py-10 bg-whiteGray">
+      <div class="grid grid-cols-6 gap-x-12">
+        <div class="col-span-2 ">
+          <img src="images/Logo.svg" alt="" class="mb-5">
+          <p class="text-sm">
+            SMMFLOW - сервис, где вы сможете приобрести качественное продвижение в социальных сетях <br> по выгодным ценам.
+          </p>
+          <div class="flex items-center gap-x-1 mt-5">
+            <img src="images/card1.svg" alt="w-[46px]">
+            <img src="images/card2.svg" alt="w-[46px]">
+            <img src="images/card3.svg" alt="w-[46px]">
+            <img src="images/card4.svg" alt="w-[46px]">
+          </div>
+        </div>
+        <div class="col-span-1">
+          <button class="block">Каталог услуг</button>
+          <button class="block my-2">Преимущества</button>
+          <button class="block">Отзывы</button>
+        </div>
+        <div class="col-span-2">
+          <button class="block">Политика конфиденциальности</button>
+          <button class="block my-2">Публичная оферта</button>
+          <button class="block my-2">Пользовательское соглашение</button>
+          <button class="block my-2">Правила сервиса</button>
+          <button class="block">Контакты</button>
+        </div>
+        <div class="col-span-1">
+          <p class="font-medium">Нужна помощь?</p>
+          <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md">Онлайн-чат</button>
+          <span>support@smmflow.net</span>
+        </div>
+      </div>
+    </footer>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
+
+    let Questions = [
+      {id: 8, isQuestion: false, answerId: 'answer1', arrow: 'arrow1',  question: 'Почему цены на ваши услуги ниже, чем у конкурентов?', answer:'Мы стремимся предложить наши услуги по наиболее конкурентоспособным ценам, чтобы обеспечить удобство и доступность для наших клиентов.'},
+      {id: 9, isQuestion: false, answerId: 'answer2', arrow: 'arrow2',  question: 'Какие способы оплаты вы принимаете?', answer : 'Мы принимаем оплату различными способами, такими как банковские карты, Qiwi-кошелек, Payeer и криптовалюты.'},
+      {id: 10, isQuestion: false, answerId: 'answer3', arrow: 'arrow3',  question: 'Как вы гарантируете качество услуг?', answer : 'Мы используем только безопасные и эффективные методы, которые позволяют нам гарантировать высокое качество наших услуг.'},
+      {id: 11, isQuestion: false, answerId: 'answer4', arrow: 'arrow4',  question: 'Меня не заблокируют?', answer : 'Мы используем только безопасные и этичные методы привлечения подписчиков и лайков, которые не нарушают условия использования социальных сетей.'},
+      {id: 12, isQuestion: false, answerId: 'answer5', arrow: 'arrow5',  question: 'Как я могу узнать о статусе моего заказа?', answer : 'Вы можете отслеживать статус своего заказа через свой личный кабинет на нашем сайте.'},
+      {id: 13, isQuestion: false, answerId: 'answer6', arrow: 'arrow6',  question: 'Как я могу связаться с вами?', answer : 'Вы можете связаться с нами через онлайн-чат на сайте или через социальные сети.'},
+      {id: 14, isQuestion: false, answerId: 'answer7', arrow: 'arrow7',  question: 'Как быстро выполняется заказ?', answer : 'Срок выполнения заказа зависит от типа и объема услуги, которую вы заказываете. Обычно мы указываем срок выполнения в описании услуги.'},
+      {id: 15, isQuestion: false, answerId: 'answer8', arrow: 'arrow8',  question: 'Что произойдет, если мои подписчики или лайки уйдут?', answer : 'Мы предлагаем гарантию возврата денег на баланс в случае удаления подписчиков или лайков, а так же предоставляем гарантию от списаний по некоторым услугам в течение 1 месяца.'},
+    ]
+
+    Questions.map((q)=>{
+      document.getElementById("questionAnswer").innerHTML += `
+        <div class="col-span-1 h-fit rounded-xl overflow-hidden">
+          <div id="${q.id}" class="flex rounded-xl items-center justify-between bg-whiteGray px-6 py-4">
+            <p class="font-medium text-base">${q.question}</p>
+            <button onclick="Question(${q.id})" class="w-fit h-auto">
+              <img id="${q.arrow}" src="images/ArrowDown.svg" alt="" class="transition-all duration-150">
+            </button>
+          </div>
+          <div id="${q.answerId}" class="hidden bg-whiteGray border-t z-20 border-textGray border-opacity-40 px-6 py-4 text-start">${q.answer}</div>
+        </div>
+      `
+    })
+
+    function Question(asd){
+      Questions.map((q)=>{
+        if (asd == q.id){
+          if (!q.isQuestion){
+            document.getElementById(`${q.id}`).classList.remove("rounded-xl")
+            document.getElementById(`${q.answerId}`).classList.remove("hidden")
+            document.getElementById(`${q.arrow}`).classList.add("rotate-180")
+            q.isQuestion = !q.isQuestion
+          }
+          else{
+            document.getElementById(`${q.id}`).classList.add("rounded-xl")
+            document.getElementById(`${q.answerId}`).classList.add("hidden")
+            document.getElementById(`${q.arrow}`).classList.remove("rotate-180")
+            q.isQuestion = !q.isQuestion
+          }
+        }
+      })
+    }
+
     let isSocial = [
       {id:0, head: 'Instagram', open: true, img: 'images/insta.svg', info: [
         {id: 0, img: 'images/Person.svg', text: 'Подписчики'},
@@ -408,8 +504,8 @@
     isSocial.map((element)=>{
       if(element.open){
         document.getElementById("slider").innerHTML += `
-          <button id = "${element.head}" onclick="sliderService(${element.id})" class="swiper-slide">
-            <div class=" py-3 px-6 flex items-center gap-x-1 hover:bg-pressed">
+          <button id = "${element.head}" onclick="sliderService(${element.id})" class="swiper-slide hover:bg-pressed">
+            <div class=" py-3 px-6 flex items-center gap-x-1 w-fit mx-auto">
               <img src="${element.img}" alt="" class="h-8 w-8">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
@@ -425,8 +521,8 @@
       }
       else{
         document.getElementById("slider").innerHTML += `
-          <button id = "${element.head}" onclick="sliderService(${element.id})" class="swiper-slide">
-            <div class=" py-3 px-6 flex items-center gap-x-1 hover:bg-pressed">
+          <button id = "${element.head}" onclick="sliderService(${element.id})" class="swiper-slide hover:bg-pressed">
+            <div class=" py-3 px-6 flex items-center gap-x-1 w-fit mx-auto">
               <img src="${element.img}" alt="" class="h-8 w-8">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
@@ -437,6 +533,7 @@
     function sliderService(getId){
       let s = ""
       let buttons = ""
+      console.log(getId);
       isSocial.map((element)=>{
         if(element.id === getId){
           document.getElementById(`${element.head}`).innerHTML = `
