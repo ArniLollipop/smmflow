@@ -13,6 +13,8 @@ module.exports = {
         darkGray : "#EEEEEE",
         textBlue: "#0058FF",
         hoverBlue: "#0077FF",
+        whiteGray: "#F8F8F9",
+        textGray: "#5F5F66",
       },
       backgroundImage:{
         saly : 'url("images/Saly-1.png")',

@@ -29,3 +29,7 @@ body{
 .swiper-button-next::after{
   display: none;
 }
+
+.pressed{
+  background-color: '#BBCAF366';
+}
