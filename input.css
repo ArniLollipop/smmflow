@@ -10,6 +10,7 @@ body{
 }
 .swiper-slide{
   width: auto !important;
+  display: inline-block;
 }
 .s-button-next{
   position: absolute;
@@ -31,5 +32,9 @@ body{
 }
 
 .pressed{
-  background-color: '#BBCAF366';
+  background: rgba(187, 202, 243, 0.4);
+}
+
+.popup{
+  background: rgba(0, 0, 0, 0.6) !important;
 }
