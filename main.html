@@ -12,40 +12,78 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container mx-auto">
+  <div class="container mx-auto overflow-hidden">
+    <div id = "menu" class="h-full absolute bg-white z-10 px-[10px] w-full pt-14 translate-x-full transition-all duration-200">
+      <button class="font-medium text-2xl mt-4 block">Сделать заказ</button>
+      <button class="font-medium text-2xl mt-4 block">Мои заказы</button>
+      <button class="font-medium text-2xl mt-4 block">Пополнить баланс</button>
+      <button class="font-medium text-2xl mt-4 block">Пополнить баланс</button>
+      <button class="font-medium text-2xl mt-4 block">Выход</button>
+    </div>
     <div id="modal" class="hidden fixed w-full h-full popup z-20 rounded-md">
-      <div class="bg-white px-28 py-14 w-[560px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative rounded-md">
-        <div class="relative">
+      <div  class="bg-white px-28 py-14 w-[560px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative rounded-md">
+        <div id="logIn" class="relative ">
           <p class="text-center text-xl font-medium mb-10">Вход в аккаунт</p>
           <label class="text-start font-medium ">Ваш email-адрес
-            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-[#8A8A8A] outline-none border-opacity-50 mb-5">
+            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
           </label>
           <label class="text-start font-medium ">Ваш пароль
-            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-[#8A8A8A] outline-none border-opacity-50">
+            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50">
           </label>
-          <button class="text-whiteBlue mt-2">Забыли пароль?</button>
-          <button class="text-center w-full font-medium text-white bg-blue py-3 rounded-md mt-5 hover:shadow-lg">Войти</button>
+          <button class="text-whiteBlue my-3">Забыли пароль?</button>
+          <p class="text-red mb-3 hidden">Неправильный email-адрес или пароль</p>
+          <p class="text-green mb-3 hidden">Вы успешно вошли в свой аккаунт.</p>
+          <button class="text-center w-full font-medium text-white bg-blue py-3 rounded-md hover:shadow-lg">Войти</button>
           <div class="flex items-center justify-center mt-5">
-            <span>Нет аккаунта? <button class="text-whiteBlue"> Зарегистрироваться</button></span>
+            <span>Нет аккаунта? <button onclick="signUp()" class="text-whiteBlue"> Зарегистрироваться</button></span>
           </div>
-          
+        </div>
+        <div id="signUp" class="relative hidden">
+          <p class="text-center text-xl font-medium mb-10">Регистрация</p>
+          <label class="text-start font-medium ">Ваш email-адрес
+            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
+          </label>
+          <label class="text-start font-medium ">Ваш пароль
+            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
+          </label>
+          <p class="text-red mb-3 hidden">Этот Email-адрес уже используется.</p>
+          <p class="text-green mb-3 hidden">Регистрация прошла успешно.</p>
+          <button class="text-center w-full font-medium text-white bg-blue py-3 rounded-md hover:shadow-lg">Зарегистрироваться</button>
         </div>
         <button onclick="modalOpen()" class="absolute top-5 right-5"><img src="images/Close.svg" alt="" class="w-5 h-5"></button>
       </div>
     </div>
-    <div class="">
-      <header class=" header xl:px-32 px-[10px] flex items-center justify-between py-4">
-        <div class="flex items-center">
-          <a href="/" class="flex mr-9"> 
+    <div id="main" class="">
+      <header id="header" class=" header xl:px-32 w-full px-[10px] flex items-center justify-between py-4 z-10">
+        <div class="flex items-center"> 
+          <a id="logo" href="/" class="flex mr-9 z-20"> 
             <img src="images/Logo.svg" alt="">
           </a>
-          <button  onmouseover="openService()" class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Услуги</button>
-          <button class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Преимущества</button>
-          <button class="border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Отзывы</button>
+          <div class = "hidden md:flex items-center w-fit"> 
+            <button onclick="openService()" onmouseover="openService()" class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Услуги</button>
+            <button class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Преимущества</button>
+            <button class="border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Отзывы</button>
+          </div>
         </div>
-        <div class="flex items-center">
+        <div class="hidden md:flex items-center w-fit">
           <button onclick="modalOpen()" class="mr-7 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Войти</button>
           <button class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Быстрый заказ</button>
+        </div>
+        <div class="md:hidden flex items-center z-20">
+          <button id = "burger" onclick="Burger()" class="">
+            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_420_8350)">
+              <rect id="burger1" class="transition-all duration-150 " x="0.279297" y="0.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              <rect id="burger2" class="transition-all duration-150 " x="0.279297" y="8.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              <rect id="burger3" class="transition-all duration-150 " x="0.279297" y="16.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_420_8350">
+                <rect width="22" height="19" fill="white" transform="translate(0.279297 0.5)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
         </div>
       </header>
       <section class="relative">
@@ -263,37 +301,40 @@
             </div>
           </div>
         </div>
-        <div id="info" class="flex xl:px-32 px-[10px] items-center justify-between z-0 py-14">
-          <div class="w-3/4 z-10">
-            <h1 class=" text-5xl font-semibold">Продвижение во всех <br> соцсетях за пару кликов</h1>
-            <p class=" text-xl font-normal mt-6 mb-9">Получайте подписчиков, лайки, репосты, просмотры, прослушивания и любую другую активность на свои профили в социальных сетях по самым низким ценами на рынке и в самые быстрые сроки!</p>
+        <div id="info" class="md:flex xl:px-32 px-[10px] items-center justify-between z-0 py-14">
+          <div class="md:w-3/4 w-full text-center md:text-start z-10">
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold">Продвижение во всех <br class="md:block hidden"> соцсетях за пару кликов</h1>
+            <p class=" lg:text-xl md:text-lg text-base md:px-0 px-10 font-normal mt-6 mb-9">Получайте подписчиков, лайки, репосты, просмотры, прослушивания и любую другую активность на свои профили в социальных сетях по самым низким ценами на рынке и в самые быстрые сроки!</p>
+            <img src="images/Saly-13.svg" alt="" class="md:hidden w-full h-auto mb-5">
             <button class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Начать продвижение</button>
           </div>
-          <div class="w-1/2 h-auto z-0">
+          <div class="md:w-1/2 w-full h-auto z-0 md:block hidden">
             <img src="images/Saly-1.png" alt="w-full">
           </div>
         </div>
       </section>
       <section class="bg-textBlue py-10 xl:px-32 px-[10px]">
-        <h2 class=" text-4xl text-center text-white font-semibold my-10">Быстрый заказ</h2>
+        <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center text-white font-semibold mb-10">Быстрый заказ</h2>
         <div class="">
-          <div class="swiper bg-white relative rounded-xl overflow-hidden w-full pr-2">
-            <div id="slider" class="swiper-wrapper z-0">
-              
+          <div class="flex items-center bg-white relative rounded-xl overflow-hidden">
+            <div class="swiper  pr-2">
+              <div id="slider" class="swiper-wrapper z-0">
+                
+              </div>
             </div>
-            <button class="s-button-next"></button>
+            <button class="s-button-next w-full"></button>
           </div>
-          <div id="slider-service" class="grid grid-cols-5 mt-5 gap-x-5 gap-y-5">
+          <div id="slider-service" class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-3 mt-5 lg:gap-x-5 gap-x-2 gap-y-5">
             
           </div>
         </div>
       </section>
       <section class="py-6">
-        <h2 class=" text-4xl text-center font-semibold my-10">Отзывы клиентов</h2>
+        <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center font-semibold mb-10">Отзывы клиентов</h2>
         <div class="revies-swiper overflow-hidden">
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="p-7 bg-whiteGray w-[323px] rounded-2xl block mx-auto">
+            <div class="swiper-slide w-full">
+              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                 <div class="flex items-center mb-6">
                   <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                   <div class="">
@@ -312,8 +353,8 @@
                 </p>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="p-7 bg-whiteGray w-[323px] rounded-2xl block mx-auto">
+            <div class="swiper-slide w-full">
+              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                 <div class="flex items-center mb-6">
                   <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                   <div class="">
@@ -332,8 +373,8 @@
                 </p>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="p-7 bg-whiteGray w-[323px] rounded-2xl block mx-auto">
+            <div class="swiper-slide w-full">
+              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                 <div class="flex items-center mb-6">
                   <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                   <div class="">
@@ -352,8 +393,8 @@
                 </p>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="p-7 bg-whiteGray w-[323px] rounded-2xl block mx-auto">
+            <div class="swiper-slide w-full">
+              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                 <div class="flex items-center mb-6">
                   <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                   <div class="">
@@ -372,8 +413,8 @@
                 </p>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="p-7 bg-whiteGray w-[323px] rounded-2xl block mx-auto">
+            <div class="swiper-slide w-full">
+              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                 <div class="flex items-center mb-6">
                   <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                   <div class="">
@@ -395,30 +436,33 @@
           </div>
         </div>
       </section>
-      <section class="xl:px-32 px-[10px] py-14 ">
-        <div class="flex items-center justify-between bg-textBlue px-20 rounded-[40px]">
-          <div class="w-2/3">
-            <h2 class=" text-4xl font-semibold text-white">Скидки до 50% <br> в нашем телеграм-канале</h2>
-            <p class = "text-white mt-5 mb-7 text-lg">Раздаем промокоды в Telegram каждую неделю</p>
+      <section class="xl:px-32 md:px-[10px] md:py-14 py-10">
+        <div class="flex items-center justify-between md:py-14 py-10 bg-textBlue lg:px-20 md:px-10 px-[10px] md:rounded-[40px] relative overflow-hidden">
+          <div class="lg:w-2/3 w-[70%]">
+            <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white">Скидки до 50% <br> в нашем телеграм-канале</h2>
+            <p class = "text-white md:mt-5 md:mb-7 mt-3 mb-5 md:text-lg text-base">Раздаем промокоды в Telegram каждую неделю</p>
             <button href="/" class="h-full py-3 rounded-md bg-[#2C75FF] hover:shadow-lg px-6 text-white">Получить промокод</button>
           </div>
-          <div class="">
-            <img src="images/Saly2.svg" alt="">
+          <div class="md:relative absolute md:bottom-0 md:right-10 -bottom-10 -right-10 md:w-1/2 md:h-[80%] w-[40%] h-full">
+            <img src="images/Saly2.svg" alt="" class=" md:w-3/4 md:h-1/2 w-[248px] h-[248px]">
           </div>
         </div>
       </section>
       <section class="xl:px-32 px-[10px] py-10">
-        <h2 class=" text-4xl text-center font-semibold my-10">Частые вопросы</h2>
-        <div id="questionAnswer" class="grid grid-cols-2 gap-x-7 gap-y-4">
+        <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center font-semibold mb-10">Частые вопросы</h2>
+        <div id="questionAnswer" class="grid lg:grid-cols-2 grid-cols-1 gap-x-7 gap-y-4">
 
         </div>
       </section>
       <footer class="xl:px-32 px-[10px] py-10 bg-whiteGray">
-        <div class="grid grid-cols-6 gap-x-12">
-          <div class="col-span-2 ">
+        <div class="flex flex-wrap gap-y-5 justify-between">
+          <div class="lg:w-[35%] md:w-1/2 w-full">
             <img src="images/Logo.svg" alt="" class="mb-5">
-            <p class="text-sm">
+            <p class="text-sm md:block hidden">
               SMMFLOW - сервис, где вы сможете приобрести качественное продвижение в социальных сетях <br> по выгодным ценам.
+            </p>
+            <p class="text-sm md:hidden">
+              SMMFLOW - ведущий сервис на рынке продвижения в социальных сетях. За счет низких цен и высокого качества выполнения услуг сервис является незаменимым для большинства наших клиентов со всего мира. 
             </p>
             <div class="flex items-center gap-x-1 mt-5">
               <img src="images/card1.svg" alt="w-[46px]">
@@ -427,22 +471,27 @@
               <img src="images/card4.svg" alt="w-[46px]">
             </div>
           </div>
-          <div class="col-span-1">
+          <div class="lg:w-fit md:w-1/2 w-full lg:hidden">
+            <p class="font-medium block">Нужна помощь?</p>
+            <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
+            <span class="block">support@smmflow.net</span>
+          </div>
+          <div class="lg:w-fit md:w-1/2 w-full">
             <button class="block">Каталог услуг</button>
             <button class="block my-2">Преимущества</button>
             <button class="block">Отзывы</button>
           </div>
-          <div class="col-span-2">
+          <div class="lg:w-fit md:w-1/2 w-full">
             <button class="block">Политика конфиденциальности</button>
             <button class="block my-2">Публичная оферта</button>
             <button class="block my-2">Пользовательское соглашение</button>
             <button class="block my-2">Правила сервиса</button>
             <button class="block">Контакты</button>
           </div>
-          <div class="col-span-1">
-            <p class="font-medium">Нужна помощь?</p>
-            <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md">Онлайн-чат</button>
-            <span>support@smmflow.net</span>
+          <div class="lg:w-fit w-1/3 lg:block hidden">
+            <p class="font-medium block">Нужна помощь?</p>
+            <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
+            <span class="block">support@smmflow.net</span>
           </div>
         </div>
       </footer>
@@ -452,6 +501,39 @@
   <script>
 
     let isModal = false;
+    let isLogIn = false;
+    let burgerMenu = false;
+
+    function Burger(){
+      if (!burgerMenu){
+        document.getElementById("burger1").classList.add("rotate-45","translate-x-[5px]", "-translate-y-[0.5px]")
+        document.getElementById("burger2").classList.add("opacity-0", "rotate-360")
+        document.getElementById("burger3").classList.add("-rotate-45", "-translate-x-[9px]", "translate-y-1")
+        document.getElementById("menu").classList.remove("translate-x-full")
+        burgerMenu = !burgerMenu
+      }
+      else{
+        document.getElementById("burger1").classList.remove("rotate-45","translate-x-[5px]", "-translate-y-[0.5px]")
+        document.getElementById("burger2").classList.remove("opacity-0", "rotate-360")
+        document.getElementById("burger3").classList.remove("-rotate-45", "-translate-x-[9px]", "translate-y-1")
+        document.getElementById("menu").classList.add("translate-x-full")
+        burgerMenu = !burgerMenu
+      }
+    }
+
+
+    function signUp(){
+      if (!isLogIn){
+        document.getElementById("logIn").classList.add("hidden")
+        document.getElementById("signUp").classList.remove("hidden")
+        isLogIn = !isLogIn
+      }
+      else{
+        document.getElementById("logIn").classList.remove("hidden")
+        document.getElementById("signUp").classList.add("hidden")
+        isLogIn = !isLogIn
+      }
+    }
 
     function modalOpen(){
       if(!isModal){
@@ -459,15 +541,11 @@
         isModal = !isModal
       }
       else{
+        isLogIn = true
+        signUp();
         document.getElementById("modal").classList.add("hidden")
         isModal = !isModal
       }
-    }
-
-    let qwe = document.querySelectorAll(".container")
-    for (let index = 0; index < qwe.length; index++) {
-      console.log(qwe[index]);
-      
     }
 
     let isSocial = [
@@ -502,16 +580,16 @@
       if(element.open){
         document.getElementById("slider").innerHTML += `
           <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide hover:bg-pressed pressed">
-            <div class=" py-3 px-6 flex items-center gap-x-1 w-fit mx-auto">
+            <div class=" md:py-3 py-1 lg:px-6 md:px-4 px-2 flex items-center gap-x-1 w-fit mx-auto">
               <img src="${element.img}" alt="" class="h-8 w-8">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
           </button>`
         element.info.map((info)=>{
           document.getElementById("slider-service").innerHTML += `
-            <button class="col-span-1 px-4 h-[170px] flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
+            <button class="col-span-1 md:px-4 px-2 py-7 md:py-12 h-auto flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
               <img src="${info.img}" alt="" class="w-[38px] h-[38px] mx-auto">
-              <p class=" text-xl font-medium">${info.text}</p>
+              <p class=" lg:text-xl md:text-base text-sm font-medium">${info.text}</p>
             </button>
           `
         })
@@ -519,7 +597,7 @@
       else{
         document.getElementById("slider").innerHTML += `
           <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide hover:bg-pressed">
-            <div class=" py-3 px-6 flex items-center gap-x-1 w-fit mx-auto">
+            <div class=" md:py-3 py-1 lg:px-6 md:px-4 px-2 flex items-center gap-x-1 w-fit mx-auto">
               <img src="${element.img}" alt="" class="h-8 w-8">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
@@ -542,9 +620,9 @@
           }
           element.info.map((info)=>{
             s += `
-              <button class="col-span-1 px-4 h-[170px] flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
+              <button class="col-span-1 md:px-4 px-2 py-7 md:py-12 flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
                 <img src="${info.img}" alt="" class="w-[38px] h-[38px] mx-auto">
-                <p class=" text-xl font-medium">${info.text}</p>
+                <p class=" lg:text-xl md:text-base text-sm font-medium font-medium">${info.text}</p>
               </button>
             `
           })
@@ -589,13 +667,13 @@
     Questions.map((q)=>{
       document.getElementById("questionAnswer").innerHTML += `
         <div class="col-span-1 h-fit rounded-xl overflow-hidden">
-          <div id="${q.id}" class="flex rounded-xl items-center justify-between bg-whiteGray px-6 py-4">
-            <p class="font-medium text-base">${q.question}</p>
+          <div id="${q.id}" class="flex rounded-xl items-center justify-between bg-whiteGray px-3 py-4">
+            <p class="font-medium md:w-full w-[90%] text-base">${q.question}</p>
             <button onclick="Question(${q.id})" class="w-fit h-auto">
               <img id="${q.arrow}" src="images/ArrowDown.svg" alt="" class="transition-all duration-150">
             </button>
           </div>
-          <div id="${q.answerId}" class="hidden bg-whiteGray border-t z-20 border-textGray border-opacity-40 px-6 py-4 text-start">${q.answer}</div>
+          <div id="${q.answerId}" class="hidden bg-whiteGray border-t z-20 border-border border-opacity-40 px-3 py-4 text-start">${q.answer}</div>
         </div>
       `
     })
@@ -623,6 +701,7 @@
     var swiper = new Swiper('.swiper', {
       loop: true,
       loopedSlides: 50,
+      watchSlidesProgress: true,
       slidesPerView: 'auto',
       autoplay: {
           delay: 2500,
@@ -635,8 +714,9 @@
     var ReviewsSwiper = new Swiper('.revies-swiper', {
       loop: true,
       slidesPerView: 'auto',
+      watchSlidesProgress: true,
       centeredSlides: true,
-      spaceBetween: 30,
+      spaceBetween: 16,
       autoplay: {
           delay: 3000,
           disableOnInteraction: false,

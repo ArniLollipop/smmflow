@@ -10,7 +10,11 @@ body{
 }
 .swiper-slide{
   width: auto !important;
+  opacity: 0.25;
   display: inline-block;
+}
+.swiper-slide-visible{
+  opacity: 1;
 }
 .s-button-next{
   position: absolute;
