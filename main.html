@@ -12,16 +12,16 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container mx-auto overflow-hidden relative min-h-[100vh]">
+  <div class="w-full mx-auto overflow-hidden relative min-h-[100vh]">
     <div id = "menu" class="h-[100vh] absolute bg-white z-10 px-[10px] w-full pt-14 translate-x-full transition-all duration-200">
-      <button class="font-medium text-2xl mt-4 block">Сделать заказ</button>
+      <a href="order.html" class="font-medium text-2xl mt-4 block">Сделать заказ</a>
       <button class="font-medium text-2xl mt-4 block">Мои заказы</button>
-      <button class="font-medium text-2xl mt-4 block">Войти</button>
+      <button onclick="modalOpen()" class="font-medium text-2xl mt-4 block">Войти</button>
       <button class="font-medium text-2xl mt-4 block">Пополнить баланс</button>
       <button class="font-medium text-2xl mt-4 block">Выход</button>
     </div>
-    <div id="modal" class="hidden fixed w-full h-full popup z-20 rounded-md">
-      <div  class="bg-white px-28 py-14 w-[560px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative rounded-md">
+    <div id="modal" class="hidden fixed w-full px-[10px] h-full popup z-20">
+      <div class="bg-white md:px-[110px] md:py-[60px] py-10 md:w-[560px] px-[10px] rounded-md  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative">
         <div id="logIn" class="relative ">
           <p class="text-center text-xl font-medium mb-10">Вход в аккаунт</p>
           <label class="text-start font-medium ">Ваш email-адрес
@@ -53,447 +53,460 @@
         <button onclick="modalOpen()" class="absolute top-5 right-5"><img src="images/Close.svg" alt="" class="w-5 h-5"></button>
       </div>
     </div>
-    <header id="header" class=" header xl:px-32 w-full px-[10px] flex items-center justify-between py-4 z-10">
-      <div class="flex items-center"> 
-        <a id="logo" href="main.html" class="flex mr-9 z-20"> 
-          <img src="images/Logo.svg" alt="">
-        </a>
-        <div class = "hidden md:flex items-center w-fit"> 
-          <button onclick="openService()" onmouseover="openService()" class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Услуги</button>
-          <button class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Преимущества</button>
-          <button class="border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Отзывы</button>
+    <header id="header" class=" header w-full">
+      <div class="container mx-auto xl:px-32 w-full px-[10px] flex items-center justify-between py-4 z-10">
+        <div class="flex items-center"> 
+          <a id="logo" href="main.html" class="flex mr-9 z-10"> 
+            <img src="images/Logo.svg" alt="">
+          </a>
+          <div class = "hidden md:flex items-center w-fit"> 
+            <button onclick="openService()" onmouseover="openService()" class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Услуги</button>
+            <button class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Преимущества</button>
+            <button class="border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Отзывы</button>
+          </div>
         </div>
-      </div>
-      <div class="hidden md:flex items-center w-fit">
-        <button onclick="modalOpen()" class="mr-7 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Войти</button>
-        <a href="order.html" class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Быстрый заказ</a>
-      </div>
-      <div class="md:hidden flex items-center z-20">
-        <button id = "burger" onclick="Burger()" class="">
-          <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_420_8350)">
-            <rect id="burger1" class="transition-all duration-150 " x="0.279297" y="0.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
-            <rect id="burger2" class="transition-all duration-150 " x="0.279297" y="8.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
-            <rect id="burger3" class="transition-all duration-150 " x="0.279297" y="16.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
-            </g>
-            <defs>
-              <clipPath id="clip0_420_8350">
-              <rect width="22" height="19" fill="white" transform="translate(0.279297 0.5)"/>
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
+        <div class="hidden md:flex items-center w-fit">
+          <button onclick="modalOpen()" class="mr-7 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Войти</button>
+          <a href="order.html" class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Быстрый заказ</a>
+        </div>
+        <div class="md:hidden flex items-center z-20">
+          <button id = "burger" onclick="Burger()" class="">
+            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_420_8350)">
+              <rect id="burger1" class="transition-all duration-150 " x="0.279297" y="0.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              <rect id="burger2" class="transition-all duration-150 " x="0.279297" y="8.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              <rect id="burger3" class="transition-all duration-150 " x="0.279297" y="16.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_420_8350">
+                <rect width="22" height="19" fill="white" transform="translate(0.279297 0.5)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
       </div>
     </header>
-    <div id="main" class="">
-      <section class="relative">
-        <div id="service" onmouseleave="openService()" class="hidden xl:px-32 h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-20 py-6 absolute top-0 left-0">
-          <div class="grid grid-cols-7 gap-y-4 gap-x-4 justify-between w-full">
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/insta.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">Instagram</h5>
+    <div id="main" class="" >
+      <div class="">
+        <section class="relative container mx-auto">
+          <div id="service" onmouseleave="openService()" class="hidden xl:px-32 h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-20 py-6 absolute top-0 left-0">
+            <div class="grid grid-cols-7 gap-y-4 gap-x-4 justify-between w-full">
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/insta.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">Instagram</h5>
+                </div>
+                <div class="mt-5 text-start">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+                </div>
               </div>
-              <div class="mt-5 text-start">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Telegram.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">Telegram</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Реакции</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Голосование</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Старт бота</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Telegraph просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                </div>
               </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Telegram.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">Telegram</h5>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Vk.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">Vk</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на видео</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на пост</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Накрутка опросов</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Прослушивания</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Релиз плейлиста</button> 
+                </div>
               </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Реакции</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Голосование</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Старт бота</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Telegraph просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Tiktok.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">TikTok</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                </div>
               </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Vk.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">Vk</h5>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Youtube.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">YouTube</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры трансляций</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры Shorts</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Часы просмотров</button>
+                </div>
               </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на видео</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на пост</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Накрутка опросов</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Прослушивания</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Релиз плейлиста</button> 
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Twich.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">Twitch</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                </div>
               </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Tiktok.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">TikTok</h5>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Facebook.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">FaceBook</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+                </div>
               </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/insta.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">Instagram</h5>
+                </div>
+                <div class="mt-5 text-start">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+                </div>
               </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Youtube.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">YouTube</h5>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Telegram.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">Telegram</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Реакции</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Голосование</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Старт бота</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Telegraph просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                </div>
               </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры трансляций</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры Shorts</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Часы просмотров</button>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Vk.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">Vk</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на видео</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на пост</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Накрутка опросов</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Прослушивания</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Релиз плейлиста</button> 
+                </div>
               </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Twich.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">Twitch</h5>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Tiktok.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">TikTok</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                </div>
               </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Youtube.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">YouTube</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры трансляций</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры Shorts</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Часы просмотров</button>
+                </div>
               </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Facebook.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">FaceBook</h5>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Twich.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">Twitch</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                </div>
               </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
-              </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/insta.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">Instagram</h5>
-              </div>
-              <div class="mt-5 text-start">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
-              </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Telegram.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">Telegram</h5>
-              </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Реакции</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Голосование</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Старт бота</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Telegraph просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
-              </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Vk.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">Vk</h5>
-              </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на видео</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на пост</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Накрутка опросов</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Прослушивания</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Релиз плейлиста</button> 
-              </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Tiktok.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">TikTok</h5>
-              </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-              </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Youtube.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">YouTube</h5>
-              </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры трансляций</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры Shorts</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Часы просмотров</button>
-              </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Twich.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">Twitch</h5>
-              </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
-              </div>
-            </div>
-            <div class="col-span-1">
-              <div class="flex items-center gap-x-1">
-                <img src="images/Facebook.svg" alt="" class="h-5 w-5">
-                <h5 class=" text-lg ">FaceBook</h5>
-              </div>
-              <div class="mt-5">
-                <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
-                <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
-                <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+              <div class="col-span-1">
+                <div class="flex items-center gap-x-1">
+                  <img src="images/Facebook.svg" alt="" class="h-5 w-5">
+                  <h5 class=" text-lg ">FaceBook</h5>
+                </div>
+                <div class="mt-5">
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                  <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div id="info" class="md:flex xl:px-32 px-[10px] items-center justify-between z-0 md:py-14 py-10">
-          <div class="md:w-3/4 w-full text-center md:text-start z-10">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold">Продвижение во всех <br class="md:block hidden"> соцсетях за пару кликов</h1>
-            <p class=" lg:text-xl md:text-lg text-base md:px-0 px-10 font-normal mt-6 mb-9">Получайте подписчиков, лайки, репосты, просмотры, прослушивания и любую другую активность на свои профили в социальных сетях по самым низким ценами на рынке и в самые быстрые сроки!</p>
-            <img src="images/Saly-13.svg" alt="" class="md:hidden w-full h-auto mb-5">
-            <button class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Начать продвижение</button>
+          <div id="info" class="md:flex xl:px-32 px-[10px] items-center justify-between z-0 md:py-14 py-10">
+            <div class="md:w-3/4 w-full text-center md:text-start z-10">
+              <h1 class="text-3xl md:text-4xl lg:text-5xl font-semibold">Продвижение во всех <br class="md:block hidden"> соцсетях за пару кликов</h1>
+              <p class=" lg:text-xl md:text-lg text-base md:px-0 px-10 font-normal mt-6 mb-9">Получайте подписчиков, лайки, репосты, просмотры, прослушивания и любую другую активность на свои профили в социальных сетях по самым низким ценами на рынке и в самые быстрые сроки!</p>
+              <img src="images/Saly-13.svg" alt="" class="md:hidden w-full h-auto mb-5">
+              <button class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Начать продвижение</button>
+            </div>
+            <div class="md:w-1/2 w-full h-auto z-0 md:block hidden">
+              <img src="images/Saly-1.png" alt="w-full">
+            </div>
           </div>
-          <div class="md:w-1/2 w-full h-auto z-0 md:block hidden">
-            <img src="images/Saly-1.png" alt="w-full">
-          </div>
-        </div>
-      </section>
-      <section class="bg-textBlue py-10 xl:px-32 px-[10px]">
-        <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center text-white font-semibold mb-10">Быстрый заказ</h2>
-        <div class="">
-          <div class="flex items-center bg-white relative rounded-xl overflow-hidden">
-            <div class="swiper  pr-2">
-              <div id="slider" class="swiper-wrapper z-0">
+        </section>
+        <section class="bg-textBlue w-full">
+          <div class="container mx-auto md:pt-10 md:pb-[60px] py-[30px] xl:px-32 px-[10px]">
+            <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center text-white font-semibold md:mb-10 mb-[30px]">Быстрый заказ</h2>
+            <div class="">
+              <div class="flex items-center bg-white relative rounded-xl overflow-hidden">
+                <div class="swiper  pr-2">
+                  <div id="slider" class="swiper-wrapper z-0">
+                    
+                  </div>
+                </div>
+                <button class="s-button-next w-full"></button>
+              </div>
+              <div id="slider-service" class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-3 md:mt-5 mt-2 md:gap-5 gap-2">
                 
               </div>
             </div>
-            <button class="s-button-next w-full"></button>
           </div>
-          <div id="slider-service" class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-3 mt-5 lg:gap-x-5 gap-x-2 gap-y-5">
-            
-          </div>
-        </div>
-      </section>
-      <section class="py-6">
-        <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center font-semibold mb-10">Отзывы клиентов</h2>
-        <div class="revies-swiper overflow-hidden">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide w-full">
-              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
-                <div class="flex items-center mb-6">
-                  <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
-                  <div class="">
-                    <p class="font-medium text-lg">Анна</p>
-                    <div class="flex gap-x-1 mt-1">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+        </section>
+        <section class="md:pt-[60px] pb-[100px] py-10">
+          <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center font-semibold mb-10">Отзывы клиентов</h2>
+          <div class="revies-swiper overflow-hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide w-full">
+                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                  <div class="flex items-center mb-6">
+                    <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
+                    <div class="">
+                      <p class="font-medium text-lg">Анна</p>
+                      <div class="flex gap-x-1 mt-1">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                      </div>
                     </div>
                   </div>
+                  <p class="text-lg font-normal text-textGray pl-2">
+                    Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
+                  </p>
                 </div>
-                <p class="text-lg font-normal text-textGray pl-2">
-                  Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
-                </p>
               </div>
-            </div>
-            <div class="swiper-slide w-full">
-              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
-                <div class="flex items-center mb-6">
-                  <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
-                  <div class="">
-                    <p class="font-medium text-lg">Анна</p>
-                    <div class="flex gap-x-1 mt-1">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+              <div class="swiper-slide w-full">
+                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                  <div class="flex items-center mb-6">
+                    <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
+                    <div class="">
+                      <p class="font-medium text-lg">Анна</p>
+                      <div class="flex gap-x-1 mt-1">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                      </div>
                     </div>
                   </div>
+                  <p class="text-lg font-normal text-textGray pl-2">
+                    Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
+                  </p>
                 </div>
-                <p class="text-lg font-normal text-textGray pl-2">
-                  Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
-                </p>
               </div>
-            </div>
-            <div class="swiper-slide w-full">
-              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
-                <div class="flex items-center mb-6">
-                  <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
-                  <div class="">
-                    <p class="font-medium text-lg">Анна</p>
-                    <div class="flex gap-x-1 mt-1">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+              <div class="swiper-slide w-full">
+                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                  <div class="flex items-center mb-6">
+                    <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
+                    <div class="">
+                      <p class="font-medium text-lg">Анна</p>
+                      <div class="flex gap-x-1 mt-1">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                      </div>
                     </div>
                   </div>
+                  <p class="text-lg font-normal text-textGray pl-2">
+                    Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
+                  </p>
                 </div>
-                <p class="text-lg font-normal text-textGray pl-2">
-                  Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
-                </p>
               </div>
-            </div>
-            <div class="swiper-slide w-full">
-              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
-                <div class="flex items-center mb-6">
-                  <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
-                  <div class="">
-                    <p class="font-medium text-lg">Анна</p>
-                    <div class="flex gap-x-1 mt-1">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+              <div class="swiper-slide w-full">
+                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                  <div class="flex items-center mb-6">
+                    <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
+                    <div class="">
+                      <p class="font-medium text-lg">Анна</p>
+                      <div class="flex gap-x-1 mt-1">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                      </div>
                     </div>
                   </div>
+                  <p class="text-lg font-normal text-textGray pl-2">
+                    Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
+                  </p>
                 </div>
-                <p class="text-lg font-normal text-textGray pl-2">
-                  Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
-                </p>
               </div>
-            </div>
-            <div class="swiper-slide w-full">
-              <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
-                <div class="flex items-center mb-6">
-                  <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
-                  <div class="">
-                    <p class="font-medium text-lg">Анна</p>
-                    <div class="flex gap-x-1 mt-1">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
-                      <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+              <div class="swiper-slide w-full">
+                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                  <div class="flex items-center mb-6">
+                    <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
+                    <div class="">
+                      <p class="font-medium text-lg">Анна</p>
+                      <div class="flex gap-x-1 mt-1">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                        <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
+                      </div>
                     </div>
                   </div>
+                  <p class="text-lg font-normal text-textGray pl-2">
+                    Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
+                  </p>
                 </div>
-                <p class="text-lg font-normal text-textGray pl-2">
-                  Я не ожидала, что продвижение в Instagram может быть таким простым. Заказала подписчиков через SMMFLOW и очень довольна результатом.
-                </p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section class="xl:px-32 md:px-[10px] md:py-14 py-10">
-        <div class="flex items-center justify-between md:py-14 py-10 bg-textBlue lg:px-20 md:px-10 px-[10px] md:rounded-[40px] relative overflow-hidden">
-          <div class="lg:w-2/3 w-[70%]">
-            <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white">Скидки до 50% <br> в нашем телеграм-канале</h2>
-            <p class = "text-white md:mt-5 md:mb-7 mt-3 mb-5 md:text-lg text-base">Раздаем промокоды в Telegram каждую неделю</p>
-            <button href="/" class="h-full py-3 rounded-md bg-[#2C75FF] hover:shadow-lg px-6 text-white">Получить промокод</button>
+        </section>
+        <section class="w-full">
+          <div class="container mx-auto xl:px-32 md:px-[10px] md:py-14 py-10">
+            <div class="flex items-center justify-between md:py-14 py-10 bg-textBlue lg:px-20 md:px-10 px-[10px] md:rounded-[40px] relative overflow-hidden">
+              <div class="lg:w-2/3 w-[70%]">
+                <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white">Скидки до 50% <br> в нашем телеграм-канале</h2>
+                <p class = "text-white md:mt-5 md:mb-7 mt-3 mb-5 md:text-lg text-base">Раздаем промокоды в Telegram каждую неделю</p>
+                <button href="/" class="h-full py-3 rounded-md bg-[#2C75FF] hover:shadow-lg px-6 text-white">Получить промокод</button>
+              </div>
+              <div class="md:relative absolute md:bottom-0 md:right-10 -bottom-10 -right-10 md:w-1/4 w-[40%] h-full">
+                <img src="images/Saly2.svg" alt="" class=" md:w-3/4 md:h-1/2 w-[248px] h-[248px]">
+              </div>
+            </div>
           </div>
-          <div class="md:relative absolute md:bottom-0 md:right-10 -bottom-10 -right-10 md:w-1/4 w-[40%] h-full">
-            <img src="images/Saly2.svg" alt="" class=" md:w-3/4 md:h-1/2 w-[248px] h-[248px]">
-          </div>
-        </div>
-      </section>
-      <section class="xl:px-32 px-[10px] py-10">
-        <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center font-semibold mb-10">Частые вопросы</h2>
-        <div id="questionAnswer" class="grid lg:grid-cols-2 grid-cols-1 gap-x-7 gap-y-4">
+        </section>
+        <section class=" w-full">
+          <div class="container mx-auto xl:px-32 px-[10px] py-10">
+            <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center font-semibold mb-10">Частые вопросы</h2>
+            <div id="questionAnswer" class="grid lg:grid-cols-2 grid-cols-1 gap-x-7 gap-y-4">
 
-        </div>
-      </section>
-      <footer class="xl:px-32 px-[10px] py-10 bg-whiteGray">
-        <div class="flex flex-wrap gap-y-5 justify-between">
-          <div class="lg:w-[35%] md:w-1/2 w-full">
-            <img src="images/Logo.svg" alt="" class="mb-5">
-            <p class="text-sm md:block hidden">
-              SMMFLOW - сервис, где вы сможете приобрести качественное продвижение в социальных сетях <br> по выгодным ценам.
-            </p>
-            <p class="text-sm md:hidden">
-              SMMFLOW - ведущий сервис на рынке продвижения в социальных сетях. За счет низких цен и высокого качества выполнения услуг сервис является незаменимым для большинства наших клиентов со всего мира. 
-            </p>
-            <div class="flex items-center gap-x-1 mt-5">
-              <img src="images/card1.svg" alt="w-[46px]">
-              <img src="images/card2.svg" alt="w-[46px]">
-              <img src="images/card3.svg" alt="w-[46px]">
-              <img src="images/card4.svg" alt="w-[46px]">
             </div>
           </div>
-          <div class="lg:w-fit md:w-1/2 w-full lg:hidden">
-            <p class="font-medium block">Нужна помощь?</p>
-            <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
-            <span class="block">support@smmflow.net</span>
-          </div>
-          <div class="lg:w-fit md:w-1/2 w-full">
-            <button class="block">Каталог услуг</button>
-            <button class="block my-2">Преимущества</button>
-            <button class="block">Отзывы</button>
-          </div>
-          <div class="lg:w-fit md:w-1/2 w-full">
-            <button class="block">Политика конфиденциальности</button>
-            <button class="block my-2">Публичная оферта</button>
-            <button class="block my-2">Пользовательское соглашение</button>
-            <button class="block my-2">Правила сервиса</button>
-            <button class="block">Контакты</button>
-          </div>
-          <div class="lg:w-fit w-1/3 lg:block hidden">
-            <p class="font-medium block">Нужна помощь?</p>
-            <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
-            <span class="block">support@smmflow.net</span>
+        </section>
+      </div>
+      <footer class="w-full bg-whiteGray">
+        <div class="container mx-auto xl:px-32 px-[10px] py-10">
+          <div class="flex flex-wrap gap-y-5 justify-between">
+            <div class="lg:w-[35%] md:w-1/2 w-full">
+              <img src="images/Logo.svg" alt="" class="mb-5">
+              <p class="text-sm md:block hidden">
+                SMMFLOW - сервис, где вы сможете приобрести качественное продвижение в социальных сетях <br> по выгодным ценам.
+              </p>
+              <p class="text-sm md:hidden">
+                SMMFLOW - ведущий сервис на рынке продвижения в социальных сетях. За счет низких цен и высокого качества выполнения услуг сервис является незаменимым для большинства наших клиентов со всего мира. 
+              </p>
+              <div class="flex items-center gap-x-1 mt-5">
+                <img src="images/card1.svg" alt="w-[46px]">
+                <img src="images/card2.svg" alt="w-[46px]">
+                <img src="images/card3.svg" alt="w-[46px]">
+                <img src="images/card4.svg" alt="w-[46px]">
+              </div>
+            </div>
+            <div class="lg:w-fit md:w-1/2 w-full lg:hidden">
+              <p class="font-medium block">Нужна помощь?</p>
+              <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
+              <span class="block">support@smmflow.net</span>
+            </div>
+            <div class="lg:w-fit md:w-1/2 w-full">
+              <button class="block">Каталог услуг</button>
+              <button class="block my-2">Преимущества</button>
+              <button class="block">Отзывы</button>
+            </div>
+            <div class="lg:w-fit md:w-1/2 w-full">
+              <button class="block">Политика конфиденциальности</button>
+              <button class="block my-2">Публичная оферта</button>
+              <button class="block my-2">Пользовательское соглашение</button>
+              <button class="block my-2">Правила сервиса</button>
+              <button class="block">Контакты</button>
+            </div>
+            <div class="lg:w-fit w-1/3 lg:block hidden">
+              <p class="font-medium block">Нужна помощь?</p>
+              <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
+              <span class="block">support@smmflow.net</span>
+            </div>
           </div>
         </div>
       </footer>
     </div>
+
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
@@ -580,15 +593,15 @@
       if(element.open){
         document.getElementById("slider").innerHTML += `
           <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide hover:bg-pressed pressed">
-            <div class=" md:py-3 py-1 lg:px-6 md:px-4 px-2 flex items-center gap-x-1 w-fit mx-auto">
-              <img src="${element.img}" alt="" class="h-8 w-8">
+            <div class=" md:py-3 py-2 md:px-4 px-2 flex items-center gap-x-1 w-fit mx-auto">
+              <img src="${element.img}" alt="" class="md:h-8 md:w-8 h-[28px] w-[28px]">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
           </button>`
         element.info.map((info)=>{
           document.getElementById("slider-service").innerHTML += `
-            <button class="col-span-1 md:px-4 px-2 py-7 md:py-12 h-auto flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
-              <img src="${info.img}" alt="" class="w-[38px] h-[38px] mx-auto">
+            <button class="col-span-1 md:px-4 px-2 md:h-[170px] h-[111px] h-auto flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
+              <img src="${info.img}" alt="" class="md:w-[38px] md:h-[38px] w-[30px] h-[30px] mx-auto">
               <p class=" lg:text-xl md:text-base text-sm font-medium">${info.text}</p>
             </button>
           `
@@ -596,9 +609,9 @@
       }
       else{
         document.getElementById("slider").innerHTML += `
-          <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide hover:bg-pressed">
-            <div class=" md:py-3 py-1 lg:px-6 md:px-4 px-2 flex items-center gap-x-1 w-fit mx-auto">
-              <img src="${element.img}" alt="" class="h-8 w-8">
+          <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide hover:bg-pressed ">
+            <div class=" md:py-3 py-2 md:px-4 px-2 flex items-center gap-x-1 w-fit mx-auto">
+              <img src="${element.img}" alt="" class="md:h-8 md:w-8 h-[28px] w-[28px]">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
           </button>`
@@ -620,9 +633,9 @@
           }
           element.info.map((info)=>{
             s += `
-              <button class="col-span-1 md:px-4 px-2 py-7 md:py-12 flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
-                <img src="${info.img}" alt="" class="w-[38px] h-[38px] mx-auto">
-                <p class=" lg:text-xl md:text-base text-sm font-medium font-medium">${info.text}</p>
+              <button class="col-span-1 md:px-4 px-2 md:h-[170px] h-[111px] h-auto flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
+                <img src="${info.img}" alt="" class="md:w-[38px] md:h-[38px] w-[30px] h-[30px] mx-auto">
+                <p class=" lg:text-xl md:text-base text-sm font-medium">${info.text}</p>
               </button>
             `
           })
@@ -666,15 +679,15 @@
 
     Questions.map((q)=>{
       document.getElementById("questionAnswer").innerHTML += `
-        <div class="col-span-1 h-fit rounded-xl overflow-hidden">
-          <div id="${q.id}" class="flex rounded-xl items-center justify-between bg-whiteGray px-3 py-4">
+        <button onclick="Question(${q.id})" class="col-span-1 text-start h-fit rounded-xl overflow-hidden">
+          <div id="${q.id}" class="flex rounded-xl items-center justify-between bg-whiteGray lg:py-[22px] lg:pl-[15px] lg:pr-6 py-[17px] px-[14px]">
             <p class="font-medium md:w-full w-[90%] text-base">${q.question}</p>
-            <button onclick="Question(${q.id})" class="w-fit h-auto">
+            <div class="w-fit h-auto">
               <img id="${q.arrow}" src="images/ArrowDown.svg" alt="" class="transition-all duration-150">
-            </button>
+            </div>
           </div>
           <div id="${q.answerId}" class="hidden bg-whiteGray border-t z-20 border-border border-opacity-40 px-3 py-4 text-start">${q.answer}</div>
-        </div>
+        </button>
       `
     })
 
@@ -703,10 +716,6 @@
       loopedSlides: 50,
       watchSlidesProgress: true,
       slidesPerView: 'auto',
-      autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-      },
       navigation: {
         nextEl: ".s-button-next",
       },
