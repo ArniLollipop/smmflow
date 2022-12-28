@@ -19,6 +19,7 @@ module.exports = {
       },
       backgroundImage:{
         saly : 'url("images/Saly-1.png")',
+        saly2 : 'url("images/Saly2.svg")'
       },
       width:{
         '1/7' : '17%',
