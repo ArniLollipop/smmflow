@@ -24,6 +24,9 @@ module.exports = {
       width:{
         '1/7' : '17%',
       },
+      zIndex :{
+        '5' : "5",
+      }
     },
   },
   plugins: [],

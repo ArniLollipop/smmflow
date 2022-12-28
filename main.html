@@ -90,7 +90,7 @@
     <div id="main" class="" >
       <div class="">
         <section class="relative container mx-auto">
-          <div id="service" onmouseleave="openService()" class="hidden xl:px-32 h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-20 py-6 absolute top-0 left-0">
+          <div id="service" onmouseleave="openService()" class="hidden xl:px-32 h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-[15] py-6 absolute top-0 left-0">
             <div class="grid grid-cols-7 gap-y-4 gap-x-4 justify-between w-full">
               <div class="col-span-1">
                 <div class="flex items-center gap-x-1">
@@ -318,13 +318,17 @@
           <div class="container mx-auto md:pt-10 md:pb-[60px] py-[30px] xl:px-32 px-[10px]">
             <h2 class=" lg:text-4xl md:text-3xl text-2xl text-center text-white font-semibold md:mb-10 mb-[30px]">Быстрый заказ</h2>
             <div class="">
-              <div class="flex items-center bg-white relative rounded-xl overflow-hidden">
-                <div class="swiper  pr-2">
-                  <div id="slider" class="swiper-wrapper z-0">
-                    
+              <div class="w-full h-fit overflow-hidden rounded-xl">
+                <div class="slider-shadow flex items-center relative rounded-xl overflow-hidden bg-white ">
+                  <div class="swiper pr-2">
+                    <div id="slider" class="swiper-wrapper">
+                      
+                    </div>
                   </div>
+                  <button class="s-button-next w-fit pr-1 h-full z-10">
+                    <img src="images/ArrowRight.svg" alt="" class=" w-7 h-[14px]">
+                  </button>
                 </div>
-                <button class="s-button-next w-full"></button>
               </div>
               <div id="slider-service" class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-3 md:mt-5 mt-2 md:gap-5 gap-2">
                 
@@ -337,12 +341,12 @@
           <div class="revies-swiper overflow-hidden">
             <div class="swiper-wrapper">
               <div class="swiper-slide w-full">
-                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                   <div class="flex items-center mb-6">
                     <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                     <div class="">
                       <p class="font-medium text-lg">Анна</p>
-                      <div class="flex gap-x-1 mt-1">
+                      <div class="flex gap-x-1 mt-[6px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
@@ -357,12 +361,12 @@
                 </div>
               </div>
               <div class="swiper-slide w-full">
-                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                   <div class="flex items-center mb-6">
                     <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                     <div class="">
                       <p class="font-medium text-lg">Анна</p>
-                      <div class="flex gap-x-1 mt-1">
+                      <div class="flex gap-x-1 mt-[6px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
@@ -377,12 +381,12 @@
                 </div>
               </div>
               <div class="swiper-slide w-full">
-                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                   <div class="flex items-center mb-6">
                     <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                     <div class="">
                       <p class="font-medium text-lg">Анна</p>
-                      <div class="flex gap-x-1 mt-1">
+                      <div class="flex gap-x-1 mt-[6px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
@@ -397,12 +401,12 @@
                 </div>
               </div>
               <div class="swiper-slide w-full">
-                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                   <div class="flex items-center mb-6">
                     <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                     <div class="">
                       <p class="font-medium text-lg">Анна</p>
-                      <div class="flex gap-x-1 mt-1">
+                      <div class="flex gap-x-1 mt-[6px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
@@ -417,12 +421,12 @@
                 </div>
               </div>
               <div class="swiper-slide w-full">
-                <div class="md:p-7 p-3 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
                   <div class="flex items-center mb-6">
                     <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                     <div class="">
                       <p class="font-medium text-lg">Анна</p>
-                      <div class="flex gap-x-1 mt-1">
+                      <div class="flex gap-x-1 mt-[6px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
                         <img src="images/Star.svg" alt="" class = "w-[14px] h-[14px]">
@@ -441,16 +445,17 @@
         </section>
         <section class="w-full">
           <div class="container mx-auto xl:px-32 md:px-[10px] md:py-14 py-10">
-            <div class="flex items-center justify-between md:py-14 py-10 bg-textBlue lg:px-20 md:px-10 px-[10px] md:rounded-[40px] relative overflow-hidden">
+            <div class="flex items-center justify-between md:py-[96px] py-6 bg-textBlue lg:px-20 md:px-10 px-[10px] md:rounded-[40px] relative overflow-hidden">
               <div class="lg:w-2/3 w-[70%]">
                 <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white">Скидки до 50% <br> в нашем телеграм-канале</h2>
                 <p class = "text-white md:mt-5 md:mb-7 mt-3 mb-5 md:text-lg text-base">Раздаем промокоды в Telegram каждую неделю</p>
-                <button href="/" class="h-full py-3 rounded-md bg-[#2C75FF] hover:shadow-lg px-6 text-white">Получить промокод</button>
+                <button href="/" class="h-full md:py-[18px] px-6 py-4 rounded-md md:text-lg text-base font-medium bg-[#2C75FF] hover:shadow-lg text-white">Получить промокод</button>
               </div>
-              <div class="md:relative absolute md:bottom-0 md:right-10 -bottom-10 -right-10 md:w-1/4 w-[40%] h-full">
-                <img src="images/Saly2.svg" alt="" class=" md:w-3/4 md:h-1/2 w-[248px] h-[248px]">
+              <div class=" absolute md:top-0 md:right-10 -bottom-12 -right-5 w-[40%] h-full">
+                <img src="images/Saly2.svg" alt="" class=" md:w-3/4 md:h-full w-[248px] h-[248px]">
               </div>
             </div>
+            
           </div>
         </section>
         <section class=" w-full">
@@ -463,14 +468,14 @@
         </section>
       </div>
       <footer class="w-full bg-whiteGray">
-        <div class="container mx-auto xl:px-32 px-[10px] py-10">
+        <div class="container mx-auto xl:px-32 px-[10px] md:py-10 py-5">
           <div class="flex flex-wrap gap-y-5 justify-between">
             <div class="lg:w-[35%] md:w-1/2 w-full">
               <img src="images/Logo.svg" alt="" class="mb-5">
               <p class="text-sm md:block hidden">
                 SMMFLOW - сервис, где вы сможете приобрести качественное продвижение в социальных сетях <br> по выгодным ценам.
               </p>
-              <p class="text-sm md:hidden">
+              <p class="text-base md:hidden">
                 SMMFLOW - ведущий сервис на рынке продвижения в социальных сетях. За счет низких цен и высокого качества выполнения услуг сервис является незаменимым для большинства наших клиентов со всего мира. 
               </p>
               <div class="flex items-center gap-x-1 mt-5">
