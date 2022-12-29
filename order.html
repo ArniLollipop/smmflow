@@ -54,7 +54,7 @@
       </div>
     </div>
     <header id="header" class=" header w-full">
-      <div class="container mx-auto xl:px-32 w-full px-[10px] flex items-center justify-between py-4 z-10">
+      <div class="max-w-[1180px] mx-auto xl:px-0 px-[10px] flex items-center justify-between py-4 z-10">
         <div class="flex items-center"> 
           <a id="logo" href="main.html" class="flex mr-9 z-10"> 
             <img src="images/Logo.svg" alt="">
@@ -89,8 +89,8 @@
     </header>
     <div id="main" class="" >
       <div class="">
-        <section class="relative container mx-auto">
-          <div id="service" onmouseleave="openService()" class="hidden xl:px-32 h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-[15] py-6 absolute top-0 left-0">
+        <section class="relative max-w-[1180px] mx-auto">
+          <div id="service" onmouseleave="openService()" class="hidden xl:px-0 h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-[15] py-6 absolute top-0 left-0">
             <div class="grid grid-cols-7 gap-y-4 gap-x-4 justify-between w-full">
               <div class="col-span-1">
                 <div class="flex items-center gap-x-1">
@@ -302,8 +302,8 @@
               </div>
             </div>
           </div>
-        <section class="container mx-auto">
-          <div class="xl:px-32 px-[10px] md:py-10 py-[30px]">
+        <section class="max-w-[1180px] mx-auto">
+          <div class="xl:px-0 px-[10px] md:py-10 py-[30px]">
             <h3 class="text-[22px] font-semibold">Оформление заказа</h3>
             <div class="flex justify-between mt-[30px]">
               <div class="lg:w-[45%] w-full">
@@ -356,18 +356,18 @@
                   </div>
                 </div>
                 <div class="lg:hidden block">
-                  <div class="flex flex-wrap bg-whiteGray rounded-xl p-[10px] items-center my-5 gap-2 md:text-base text-sm">
+                  <div class="flex flex-wrap bg-whiteGray rounded-xl p-[10px] items-center my-3 gap-2 md:text-base text-sm">
                     <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      🌍  Со всего мира
+                      <span class="mr-2">🌍</span>Со всего мира
                     </div>
                     <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      🚀  Скорость до 10К/день
+                      <span class="mr-2">🚀</span>Скорость до 10К/день
                     </div>
                     <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      ⚡  Быстрый старт
+                      <span class="mr-2">⚡</span>Быстрый старт
                     </div>
                     <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      ⭐️  Гарантия 60 дней
+                      <span class="mr-2">⭐️</span>Гарантия 60 дней
                     </div>
                   </div>
                 </div>
@@ -391,16 +391,16 @@
                 <div>
                   <p class="font-medium text-base mb-1 mt-5">Количество</p>
                   <input type="text" placeholder="Укажите количество" class="p-3 border outline-none border-border w-full rounded-xl">
-                  <span class="text-xs text-[#8A8A8A]">Можно заказать от 100 до 100 000</span>
+                  <span class="text-xs mt-1 text-[#8A8A8A]">Можно заказать от 100 до 100 000</span>
                 </div>
                 <div >
                   <p class="font-medium text-base mb-1 mt-5">Укажите ссылку</p>
                   <input type="text" placeholder="https://www.instagram.com/p/CN8Xf1rgWX7/" class="p-3 border outline-none border-border w-full rounded-xl">
-                  <p class="text-xs text-[#8A8A8A] w-[80%]">Ваш профиль должен быть открытым для правильной работы наших услуг. Мы не сможем продвигать закрытый профиль</p>
+                  <p class="text-xs mt-1 text-[#8A8A8A] w-[80%]">Ваш профиль должен быть открытым для правильной работы наших услуг. Мы не сможем продвигать закрытый профиль</p>
                 </div>
                 <div class="flex items-center justify-between w-full mt-5">
                   <p class="font-medium text-base ">Промокод</p>
-                  <button class="flex items-center gap-x-[6px] md:text-base text-sm text-[#2C75FF] border-2 border-[#2C75FF] p-1 rounded-md font-medium">
+                  <button class="flex items-center gap-x-[6px] md:text-base text-sm text-[#2C75FF] border-2 border-[#2C75FF] px-2 py-[6px] rounded-md font-medium">
                     🎁 Получить промокод
                   </button>
                 </div>
@@ -413,24 +413,24 @@
                   <p class="font-medium text-xl">453 руб.</p>
                 </div>
                 <a href="pay.html">
-                  <div class="w-full text-center py-3 hover:shadow-lg text-white font-semibold bg-blue rounded-md mt-2" >Оплатить 450 руб.</div>
+                  <div class="w-full text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-2" >Оплатить 450 руб.</div>
                 </a>
               </div>
-              <div class="w-[50%] lg:block hidden border-l border-border h-fit p-14">
+              <div class="w-[50%] lg:block hidden border-l border-border h-fit xl:p-14 lg:p-7">
                 <div class="bg-gray rounded-xl p-5 w-full">
                   <p class="font-medium text-xl">Описание услуги</p>
                   <div class="flex flex-wrap items-center my-5 gap-2 text-base">
                     <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      🌍  Со всего мира
+                      <span class="mr-1">🌍</span>Со всего мира
                     </div>
                     <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      🚀  Скорость до 10К/день
+                      <span class="mr-1">🚀</span>Скорость до 10К/день
                     </div>
                     <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      ⚡  Быстрый старт
+                      <span class="mr-1">⚡</span>Быстрый старт
                     </div>
                     <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      ⭐️  Гарантия 60 дней
+                      <span class="mr-1">⭐️</span>Гарантия 60 дней
                     </div>
                   </div>
                   <span class="">
@@ -440,7 +440,7 @@
                     <div class="lg:w-2/3 w-[70%]">
                       <h2 class="text-lg font-semibold text-white">Скидки до 50% <br> в нашем телеграм-канале</h2>
                       <p class = "text-white mt-3 mb-5 text-sm">Раздаем промокоды в Telegram каждую неделю</p>
-                      <button href="/" class="h-full py-3 rounded-md bg-[#2C75FF] hover:shadow-lg px-6 text-white">Получить промокод</button>
+                      <button href="/" class="h-full py-3 rounded-md bg-[#2C75FF] font-medium hover:shadow-lg px-6 text-white">Получить промокод</button>
                     </div>
                     <div class="w-[40%] h-44 bg-saly2 bg-right bg-contain bg-no-repeat">
                     </div>
@@ -454,7 +454,7 @@
     
       </div>
       <footer class="w-full bg-whiteGray">
-        <div class="container mx-auto xl:px-32 px-[10px] md:py-10 py-5">
+        <div class="max-w-[1180px] mx-auto xl:px-0 px-[10px] md:py-10 py-5">
           <div class="flex flex-wrap gap-y-5 justify-between">
             <div class="lg:w-[35%] md:w-1/2 w-full">
               <img src="images/Logo.svg" alt="" class="mb-5">
@@ -580,7 +580,7 @@ let isModal = false;
     let s = ""
 
     social.map((element)=>{
-      s += `<li onclick="option1(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-border p-3">
+      s += `<li onclick="option1(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray p-3">
               <img src="${element.img}" alt="" class="w-5 h-5">
               <span>${element.name}</span>
             </li>`
@@ -640,7 +640,7 @@ let isModal = false;
       {id: 15, img: 'images/Reels.svg', name: "Reels"},
     ]
     services.map((element)=>{
-      s += `<li onclick="option2(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-border p-3">
+      s += `<li onclick="option2(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray p-3">
               <img src="${element.img}" alt="" class="w-5 h-5">
               <span>${element.name}</span>
             </li>`
@@ -699,7 +699,7 @@ let isModal = false;
     ]
     s=""
     TarifService.map((element)=>{
-      s += `<li onclick="option3(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-border p-3">
+      s += `<li onclick="option3(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray p-3">
               <span>${element.text}</span>
             </li>`
     })
@@ -744,7 +744,7 @@ let isModal = false;
       {id: 30, text: 'Живые ⭐️ Гарантия'},
     ]
     TarifUser.map((element)=>{
-      s += `<li onclick="option4(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-border p-3">
+      s += `<li onclick="option4(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray p-3">
               <span>${element.text}</span>
             </li>`
     })

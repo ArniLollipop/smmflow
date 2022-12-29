@@ -54,7 +54,7 @@
       </div>
     </div>
     <header id="header" class=" header w-full">
-      <div class="container mx-auto xl:px-32 w-full px-[10px] flex items-center justify-between py-4 z-10">
+      <div class="max-w-[1180px] mx-auto xl:px-0 px-[10px] flex items-center justify-between py-4 z-10">
         <div class="flex items-center"> 
           <a id="logo" href="main.html" class="flex mr-9 z-10"> 
             <img src="images/Logo.svg" alt="">
@@ -89,8 +89,8 @@
     </header>
     <div id="main" class="" >
       <div class="">
-        <section class="relative container mx-auto">
-          <div id="service" onmouseleave="openService()" class="hidden xl:px-32 h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-[15] py-6 absolute top-0 left-0">
+        <section class="relative max-w-[1180px] mx-auto">
+          <div id="service" onmouseleave="openService()" class="hidden xl:px-0 h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-[15] py-6 absolute top-0 left-0">
             <div class="grid grid-cols-7 gap-y-4 gap-x-4 justify-between w-full">
               <div class="col-span-1">
                 <div class="flex items-center gap-x-1">
@@ -302,11 +302,11 @@
               </div>
             </div>
           </div>
-        <section class="container mx-auto">
-          <div class="xl:px-32 px-[10px] md:py-10 py-[30px]">
+        <section class="max-w-[1180px] mx-auto">
+          <div class="xl:px-0 px-[10px] md:py-10 py-[30px]">
             <h3 class="text-[22px] font-semibold">Оформление заказа</h3>
-            <div class="w-[35%] mt-[30px]">
-              <div class="py-5 px-6 bg-whiteGray rounded-xl">
+            <div class="xl:w-[35%] lg:w-1/2 w-full mt-[30px]">
+              <div class="py-5 md:px-6 px-[10px]  bg-whiteGray rounded-xl">
                 <div class="flex items-center gap-x-8">
                   <img src="images/insta.svg" alt="" class="w-[47px] h-[47px]">
                   <div class="">
@@ -331,10 +331,67 @@
                 <p class="text-blue"><span class="text-[#6D6D6D]">Ссылка:</span> https://instagram.com/durov</p>
                 <p class="text-[#6D6D6D] mt-2">Количество: 1000</p>
               </div>
-              <div class="">
+              <div class="mt-[30px] w-full">
                 <p class="font-medium">Укажите ваш Email-адрес</p>
-                <input type="email" placeholder="johndoe@google.com" class="outline-none border border-border rounded-xl p-3">
+                <input type="email" placeholder="johndoe@google.com" class="outline-none border border-border rounded-xl p-3 w-full my-2">
+                <p class="text-xs mt-1 text-[#8A8A8A] w-[80%]">Отправим чек и данные для доступа к аккаунту</p>
               </div>
+              <div class="mt-5 w-full">
+                <p class="font-semibold text-lg">Способ оплаты</p>
+                <div class="mt-[14px]">
+                  <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl">
+                    <label for="pay1" class=" w-full cursor-pointer flex items-center justify-between" >
+                      <div class="flex items-center gap-x-[10px]">
+                        <div class=" flex items-center justify-center w-5 h-5 rounded-full bg-[#E9E9E9]">
+                          <input checked type="radio" id="pay1" name="pay" class="w-0 hidden peer">
+                          <div class="w-3 h-3 rounded-full input opacity-0 transition-all duration-150 peer-checked:opacity-100">
+
+                          </div>
+                        </div>
+                        <p class="text-base font-medium">Карта РФ</p>
+                      </div>
+                      <div class="flex items-center gap-x-1">
+                        <img src="images/card1.svg" alt="">
+                        <img src="images/card2.svg" alt="">
+                        <img src="images/card3.svg" alt="">
+                      </div>
+                    </label>
+                  </div>
+                  <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl mt-2">
+                    <label for="pay2" class=" w-full cursor-pointer flex items-center justify-between" >
+                      <div class="flex items-center gap-x-[10px]">
+                        <div class=" flex items-center justify-center w-5 h-5 rounded-full bg-[#E9E9E9]">
+                          <input  type="radio" id="pay2" name="pay" class="w-0 hidden peer">
+                          <div class="w-3 h-3 rounded-full input opacity-0 transition-all duration-150 peer-checked:opacity-100">
+
+                          </div>
+                        </div>
+                        <p class="text-base font-medium">Карта другой страны</p>
+                      </div>
+                      <div class="flex items-center gap-x-1">
+                        <img src="images/card2.svg" alt="">
+                        <img src="images/card3.svg" alt="">
+                      </div>
+                    </label>
+                  </div>
+                  <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl mt-2">
+                    <label for="pay3" class=" w-full cursor-pointer flex items-center justify-between" >
+                      <div class="flex items-center gap-x-[10px]">
+                        <div class=" flex items-center justify-center w-5 h-5 rounded-full bg-[#E9E9E9]">
+                          <input  type="radio" id="pay3" name="pay" class="w-0 hidden peer">
+                          <div class="w-3 h-3 rounded-full input opacity-0 transition-all duration-150 peer-checked:opacity-100">
+
+                          </div>
+                        </div>
+                        <img src="images/Qiwi.svg" alt="">
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <p class="text-red text-sm mt-3 hidden">Ошибка при оплате, попробуйте позже или обратитесь <button class="text-whiteBlue">в поддержку</button></p>
+              <p class="text-green text-sm mt-3 hidden">Переходим в платежную систему...</p>
+              <button class="w-full text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-3" >Оплатить 450 руб.</и>
             </div>
           </div>
         </section>
@@ -342,14 +399,14 @@
     
       </div>
       <footer class="w-full bg-whiteGray">
-        <div class="container mx-auto xl:px-32 px-[10px] md:py-10 py-5">
-          <div class="flex flex-wrap gap-y-5 justify-between">
-            <div class="lg:w-[35%] md:w-1/2 w-full">
+        <div class="max-w-[1180px] xl:px-0 px-[10px] mx-auto md:py-10 py-5">
+          <div class="flex flex-wrap justify-between gap-y-5">
+            <div class="lg:w-[30%] md:w-1/2 w-full">
               <img src="images/Logo.svg" alt="" class="mb-5">
               <p class="text-sm md:block hidden">
                 SMMFLOW - сервис, где вы сможете приобрести качественное продвижение в социальных сетях <br> по выгодным ценам.
               </p>
-              <p class="text-sm md:hidden">
+              <p class="text-base md:hidden">
                 SMMFLOW - ведущий сервис на рынке продвижения в социальных сетях. За счет низких цен и высокого качества выполнения услуг сервис является незаменимым для большинства наших клиентов со всего мира. 
               </p>
               <div class="flex items-center gap-x-1 mt-5">
@@ -359,7 +416,7 @@
                 <img src="images/card4.svg" alt="w-[46px]">
               </div>
             </div>
-            <div class="lg:w-fit md:w-1/2 w-full lg:hidden">
+            <div class="lg:w-[25%] md:w-1/2 w-full lg:hidden">
               <p class="font-medium block">Нужна помощь?</p>
               <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
               <span class="block">support@smmflow.net</span>

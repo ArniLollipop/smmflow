@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body{
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', normal;
 }
 .header{
   box-shadow: 0px 4px 20px rgba(232, 232, 232, 0.61);
@@ -27,6 +27,9 @@ body{
 .swiper-slide-visible{
   opacity: 1;
 }
+.swiper-slide-duplicate-active{
+  opacity: 0.6;
+}
 .s-button-next{
   position: absolute;
   right: 0;
@@ -44,4 +47,6 @@ body{
 .popup{
   background: rgba(0, 0, 0, 0.6) !important;
 }
-
+.input{
+  background: rgba(29, 78, 216, 0.6);
+}

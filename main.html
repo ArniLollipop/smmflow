@@ -321,9 +321,12 @@
               <div class="w-full h-fit overflow-hidden rounded-xl">
                 <div class="slider-shadow flex items-center relative rounded-xl overflow-hidden bg-white ">
                   <div class="swiper pr-2">
-                    <div id="slider" class="swiper-wrapper">
+                    <div id="slider" class="swiper-wrapper font-medium">
                       
                     </div>
+                  </div>
+                  <div class="">
+
                   </div>
                   <button class="s-button-next w-fit pr-1 h-full z-10">
                     <img src="images/ArrowRight.svg" alt="" class=" w-7 h-[14px]">
@@ -341,7 +344,7 @@
           <div class="revies-swiper overflow-hidden">
             <div class="swiper-wrapper">
               <div class="swiper-slide w-full">
-                <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] rounded-2xl block mx-auto">
+                <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] h-[260px] md:text-base text-sm rounded-2xl block mx-auto">
                   <div class="flex items-center mb-6">
                     <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
                     <div class="">
@@ -445,13 +448,13 @@
         </section>
         <section class="w-full">
           <div class="max-w-[1180px] mx-auto md:py-14 py-10 xl:px-0 md:px-[10px]">
-            <div class="flex items-center justify-between md:py-[96px] lg:px-20 md:px-10 px-[10px] py-6 bg-textBlue md:rounded-[40px] relative overflow-hidden">
+            <div class="md:py-[96px] lg:px-20 md:px-10 px-[10px] py-6 bg-textBlue md:rounded-[40px] relative overflow-hidden">
               <div class="lg:w-2/3 w-[70%]">
-                <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white">Скидки до 50% <br> в нашем телеграм-канале</h2>
-                <p class = "text-white md:mt-5 md:mb-7 mt-3 mb-5 md:text-lg text-base">Раздаем промокоды в Telegram каждую неделю</p>
-                <button href="/" class="h-full md:py-[18px] px-6 py-4 rounded-md md:text-lg text-base font-medium bg-[#2C75FF] hover:shadow-lg text-white">Получить промокод</button>
+                <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white leading-4">Скидки до 50%<br> в нашем телеграм-канале</h2>
+                <p class = "text-white md:mt-5 md:mb-7 mt-3 mb-5 md:text-lg text-base leading-4">Раздаем промокоды в Telegram каждую неделю</p>
+                <button class="h-full md:py-[18px] px-6 py-4 md:rounded-md rounded-[10px] md:text-lg text-base font-medium bg-[#2C75FF] hover:shadow-lg text-white">Получить промокод</button>
               </div>
-              <div class=" absolute md:top-0 md:right-10 -bottom-12 -right-5 w-[40%] h-full">
+              <div class=" absolute md:top-0 md:right-10 -bottom-8 -right-5 w-[40%] h-full">
                 <img src="images/Saly2.svg" alt="" class=" md:w-3/4 md:h-full w-[248px] h-[248px]">
               </div>
             </div>
@@ -469,8 +472,8 @@
       </div>
       <footer class="w-full bg-whiteGray">
         <div class="max-w-[1180px] xl:px-0 px-[10px] mx-auto md:py-10 py-5">
-          <div class="flex flex-wrap gap-y-5 justify-between">
-            <div class="lg:w-[35%] md:w-1/2 w-full">
+          <div class="flex flex-wrap justify-between gap-y-5">
+            <div class="lg:w-[30%] md:w-1/2 w-full">
               <img src="images/Logo.svg" alt="" class="mb-5">
               <p class="text-sm md:block hidden">
                 SMMFLOW - сервис, где вы сможете приобрести качественное продвижение в социальных сетях <br> по выгодным ценам.
@@ -485,7 +488,7 @@
                 <img src="images/card4.svg" alt="w-[46px]">
               </div>
             </div>
-            <div class="lg:w-fit md:w-1/2 w-full lg:hidden">
+            <div class="lg:w-[25%] md:w-1/2 w-full lg:hidden">
               <p class="font-medium block">Нужна помощь?</p>
               <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
               <span class="block">support@smmflow.net</span>
@@ -605,7 +608,7 @@
           </button>`
         element.info.map((info)=>{
           document.getElementById("slider-service").innerHTML += `
-            <button class="col-span-1 md:px-4 px-2 md:h-[170px] h-[111px] h-auto flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
+            <button class="col-span-1 md:px-4 px-2 md:h-[170px] h-[111px] h-auto flex-row gap-y-1 hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
               <img src="${info.img}" alt="" class="md:w-[38px] md:h-[38px] w-[30px] h-[30px] mx-auto">
               <p class=" lg:text-xl md:text-base text-sm font-medium mt-[6px]">${info.text}</p>
             </button>
@@ -638,7 +641,7 @@
           }
           element.info.map((info)=>{
             s += `
-              <button class="col-span-1 md:px-4 px-2 md:h-[170px] h-[111px] h-auto flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
+              <button class="col-span-1 md:px-4 px-2 md:h-[170px] h-[111px] h-auto gap-y-1 flex-row hover:-translate-y-1 transition-all duration-300 items-center justify-center bg-white rounded-xl">
                 <img src="${info.img}" alt="" class="md:w-[38px] md:h-[38px] w-[30px] h-[30px] mx-auto">
                 <p class=" lg:text-xl md:text-base text-sm font-medium">${info.text}</p>
               </button>
@@ -720,6 +723,7 @@
       loop: true,
       loopedSlides: 50,
       watchSlidesProgress: true,
+      watchSlidesVisibility: true,
       slidesPerView: 'auto',
       navigation: {
         nextEl: ".s-button-next",
