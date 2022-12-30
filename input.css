@@ -42,6 +42,8 @@ body{
 }
 .swiper-button-disabled{
   visibility: hidden;
+  opacity: 0;
+  transform: translateX(100%);
 }
 .s-button-prev{
   position: absolute;

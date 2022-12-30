@@ -330,10 +330,10 @@
                   <div class="">
 
                   </div>
-                  <button onclick="shadow()" class="s-button-next w-[56px] pr-1 h-full z-10">
+                  <button id="nextEl" onclick="setTimeout(()=> shadow(), 100)" class="s-button-next lg:w-[56px] md:w-[46px] w-[36px] pr-1 h-full z-10">
                     <img src="images/ArrowRight.svg" alt="" class=" w-7 h-[14px]">
                   </button>
-                  <button onclick="shadow()" class="s-button-prev w-[56px] pr-1 h-full z-10">
+                  <button id="prevEl" onclick="setTimeout(()=> shadow(), 100)" class="s-button-prev lg:w-[56px] md:w-[46px] w-[36px] pl-1 h-full z-10">
                     <img src="images/ArrowRight.svg" alt="" class=" w-7 h-[14px] rotate-180">
                   </button>
                 </div>
@@ -424,19 +424,18 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
-
-    let isShadow = false
-
+    let countS = 0;
+    
     function shadow(){
-      if (!isShadow){
+      console.log("asodfnoainfpin");
+      if (document.getElementById("nextEl").classList.contains("swiper-button-disabled")){
         document.getElementById("slider-shadow").classList.remove("slider-shadow")
-        isShadow = !isShadow
       }
-      else{
+      else if(!document.getElementById("nextEl").classList.contains("swiper-button-disabled")){
         document.getElementById("slider-shadow").classList.add("slider-shadow")
-        isShadow = !isShadow
       }
     }
+    
 
     let isModal = false;
     let isLogIn = false;
@@ -688,7 +687,15 @@
       watchSlidesProgress: true,
       watchSlidesVisibility: true,
       slidesPerView: 'auto',
-      slidesPerGroup: 8,
+      slidesPerGroup: 1,
+      breakpoints:{
+        768:{
+          slidesPerGroup: 5,
+        },
+        1024:{
+          slidesPerGroup: 8,
+        }
+      },
       navigation: {
         nextEl: ".s-button-next",
         prevEl: ".s-button-prev",
