@@ -982,6 +982,10 @@ video {
   height: 0.75rem;
 }
 
+.h-\[18px\] {
+  height: 18px;
+}
+
 .min-h-\[100vh\] {
   min-height: 100vh;
 }
@@ -1065,6 +1069,10 @@ video {
 
 .w-3 {
   width: 0.75rem;
+}
+
+.w-\[18px\] {
+  width: 18px;
 }
 
 .max-w-\[1180px\] {
@@ -1633,10 +1641,6 @@ video {
   gap: 0.5rem;
 }
 
-.gap-\[10px\] {
-  gap: 10px;
-}
-
 .gap-y-4 {
   row-gap: 1rem;
 }
@@ -1684,9 +1688,19 @@ video {
        column-gap: 10px;
 }
 
+.gap-x-3 {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+
 .gap-x-\[7px\] {
   -moz-column-gap: 7px;
        column-gap: 7px;
+}
+
+.gap-x-\[5px\] {
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -1968,10 +1982,6 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
-}
-
-.rounded-\[10xp\] {
-  border-radius: 10xp;
 }
 
 .rounded-\[10px\] {
@@ -2427,6 +2437,11 @@ video {
   padding-bottom: 25px;
 }
 
+.py-\[14px\] {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
 .pt-14 {
   padding-top: 3.5rem;
 }
@@ -2699,6 +2714,11 @@ video {
 .text-\[\#5E5E5E\] {
   --tw-text-opacity: 1;
   color: rgb(94 94 94 / var(--tw-text-opacity));
+}
+
+.text-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(236 186 8 / var(--tw-text-opacity));
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -3145,6 +3165,10 @@ body{
   background: rgba(29, 78, 216, 0.6);
 }
 
+.story-back{
+  background: rgba(244, 244, 244, 0.6);
+}
+
 .placeholder\:font-normal::-moz-placeholder {
   font-weight: 400;
 }
@@ -3188,10 +3212,37 @@ body{
   width: 100%;
 }
 
+.after\:w-0::after {
+  content: var(--tw-content);
+  width: 0px;
+}
+
 .after\:bg-blue::after {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+.after\:opacity-0::after {
+  content: var(--tw-content);
+  opacity: 0;
+}
+
+.after\:transition-all::after {
+  content: var(--tw-content);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.after\:duration-150::after {
+  content: var(--tw-content);
+  transition-duration: 150ms;
+}
+
+.after\:duration-300::after {
+  content: var(--tw-content);
+  transition-duration: 300ms;
 }
 
 .hover\:-translate-y-1:hover {

@@ -309,45 +309,57 @@
           </div>
         </section>
         <section class="border border-border ">
-          <div class="flex items-center max-w-[1180px] mx-auto">
+          <div class="flex items-center gap-x-3 max-w-[1180px] mx-auto">
             <div class="flex items-center pr-3 gap-x-1 py-6">
               <img src="images/Money2.svg" alt="">
               <p class="font-medium text-base">Баланс: 1653₽</p>
             </div>
-            <button class="px-3 py-6 text-[#5E5E5E] font-medium flex items-center gap-x-[7px] relative after:w-full after:h-[1px] after:bg-blue after:absolute after:-bottom-[1px] after:left-0">
+            <button id="story" onclick="tabs(`story`)" class="px-3 py-6 text-[#5E5E5E] font-medium flex items-center gap-x-[7px] relative after:w-full after:h-[1px] after:bg-blue after:absolute after:-bottom-[1px] after:left-0 after:transition-all after:duration-300">
               <img src="images/Ballot.svg" alt="" class="">
               <p class="">История заказов</p>
             </button>
-            <button class="px-3 py-6 border-blue text-[#5E5E5E] font-medium flex items-center gap-x-[6px]">
+            <button id="balance" onclick="tabs(`balance`)" class="px-3 py-6 border-blue text-[#5E5E5E] font-medium flex items-center gap-x-[6px] relative after:opacity-0 after:w-full after:h-[1px] after:bg-blue after:absolute after:-bottom-[1px] after:left-0 after:transition-all after:duration-300 after:w-0">
               <img src="images/donate.svg" alt="" class="">
               <p class="">Пополнить баланс</p>
             </button>
-            <button class="px-3 py-6 border-blue text-[#5E5E5E] font-medium flex items-center gap-x-1">
+            <button id="settings" onclick="tabs(`settings`)" class="px-3 py-6 border-blue text-[#5E5E5E] font-medium flex items-center gap-x-1 relative after:opacity-0 after:w-full after:h-[1px] after:bg-blue after:absolute after:-bottom-[1px] after:left-0 after:transition-all after:duration-300 after:w-0">
               <img src="images/settings.svg" alt="" class="">
               <p class="">Настройки</p>
             </button>
-            <button class="px-3 py-6 border-blue text-[#5E5E5E] font-medium flex items-center gap-x-[6px]">
+            <button id="leave" onclick="tabs(`leave`)" class="px-3 py-6 border-blue text-[#5E5E5E] font-medium flex items-center gap-x-[6px] relative after:opacity-0 after:w-full after:h-[1px] after:bg-blue after:absolute after:-bottom-[1px] after:left-0 after:transition-all after:duration-300 after:w-0">
               <img src="images/sign-out.svg" alt="" class="">
               <p class="">Выйти</p>
             </button>
           </div>
         </section>
         <section class="max-w-[1180px] mx-auto min-h-[100vh]">
-          <div class="xl:px-0 px-[10px] md:py-[50px] py-[30px]">
+          <div id="storyContent" class="xl:px-0 px-[10px] md:py-[50px] py-[30px]">
             <h3 class="text-[24px] font-semibold">История заказов</h3>
             <div class="mt-5 border border-border rounded-[10px] px-5 py-[25px]">
               <div class="grid grid-cols-6 pl-5 items-center">
                 <p class="font-medium text-base col-span-1">Дата</p>
-                <p class="font-medium text-base col-span-2">Дата</p>
-                <p class="font-medium text-base col-span-1 text-center">Дата</p>
-                <p class="font-medium text-base col-span-1 text-center">Дата</p>
-                <p class="font-medium text-base col-span-1 text-center">Дата</p>
+                <p class="font-medium text-base col-span-2">Заказ</p>
+                <p class="font-medium text-base col-span-1">Кол-во</p>
+                <p class="font-medium text-base col-span-1">Цена</p>
+                <p class="font-medium text-base col-span-1 ">Статус</p>
+              </div>
+              <div id = "stories">
+
               </div>
             </div>
           </div>
+          <div id="balanceContent" class="hidden xl:px-0 px-[10px] md:py-[50px] py-[30px]">
+            <h3 class="text-[24px] font-semibold">Пополнение баланса</h3>
+          </div>
+          <div id="settingsContent" class="hidden xl:px-0 px-[10px] md:py-[50px] py-[30px]">
+            <h3 class="text-[24px] font-semibold">Настройки</h3>
+          </div>
+          <div id="leaveContent" class="hidden">
+            leave
+          </div>
+
+
         </section>
-        
-    
       </div>
       <footer class="w-full bg-whiteGray">
         <div class="max-w-[1180px] xl:px-0 px-[10px] mx-auto md:py-10 py-5">
@@ -462,7 +474,93 @@ let isModal = false;
         isService = !isService
       }
     }
+
+    function tabs(id){
+      if(id === "story"){
+        document.getElementById("story").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("balance").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("storyContent").classList.remove("hidden")
+        document.getElementById("balanceContent").classList.add("hidden")
+        document.getElementById("settingsContent").classList.add("hidden")
+        document.getElementById("leaveContent").classList.add("hidden")
+      }
+      else if (id === "balance"){
+        document.getElementById("story").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("settings").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("storyContent").classList.add("hidden")
+        document.getElementById("balanceContent").classList.remove("hidden")
+        document.getElementById("settingsContent").classList.add("hidden")
+        document.getElementById("leaveContent").classList.add("hidden")
+      }
+      else if (id === "settings"){
+        document.getElementById("story").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("leave").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("storyContent").classList.add("hidden")
+        document.getElementById("balanceContent").classList.add("hidden")
+        document.getElementById("settingsContent").classList.remove("hidden")
+        document.getElementById("leaveContent").classList.add("hidden")
+      }
+      else if (id === "leave"){
+        document.getElementById("story").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("storyContent").classList.add("hidden")
+        document.getElementById("balanceContent").classList.add("hidden")
+        document.getElementById("settingsContent").classList.add("hidden")
+        document.getElementById("leaveContent").classList.remove("hidden")
+      }
+    }
+
     
+    let Stories = [
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'В обработке', statusColor: 'text-blue'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Выполняется', statusColor: 'text-blue'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Завершен', statusColor: 'text-green'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Отменен', statusColor: 'text-red'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Выполнен частично', statusColor: 'text-yellow'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: '', statusColor: ''},
+
+    ]
+
+    let htmlStory = ""
+
+    Stories.map((str)=>{
+      htmlStory += `
+              <div class="rounded-md py-[14px] story-back mt-[14px]">
+                <div class="grid grid-cols-6 pl-5 items-center">
+                  <div class="col-span-1">
+                    ${str.date}
+                  </div>
+                  <div class="col-span-2">
+                    <div class="flex items-center gap-x-[5px]">
+                      <img src="${str.img}" alt="" class="w-[18px] h-[18px]">
+                      <p class="font-medium text-base">${str.service}</p>
+                    </div>
+                    <button class="text-blue text-base">${str.link}</button>
+                  </div>
+                  <div class="col-span-1 ">
+                    ${str.count}
+                  </div>
+                  <div class="col-span-1 ">
+                    ${str.price}
+                  </div>
+                  <div class="${str.statusColor} col-span-1 ">
+                    ${str.status}
+                  </div>
+
+                </div>
+              </div>`
+    })
+
+    document.getElementById("stories").innerHTML = htmlStory;
   </script>
 </body>
 </html>
+
