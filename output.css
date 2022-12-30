@@ -821,6 +821,10 @@ video {
   margin-right: 30px;
 }
 
+.mb-\[7px\] {
+  margin-bottom: 7px;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -3116,6 +3120,14 @@ body{
   background: rgba(29, 78, 216, 0.6);
 }
 
+.placeholder\:font-normal::-moz-placeholder {
+  font-weight: 400;
+}
+
+.placeholder\:font-normal::placeholder {
+  font-weight: 400;
+}
+
 .placeholder\:text-\[\#8A8A8A\]::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(138 138 138 / var(--tw-text-opacity));
@@ -3277,6 +3289,10 @@ body{
 
   .md\:mb-7 {
     margin-bottom: 1.75rem;
+  }
+
+  .md\:mb-6 {
+    margin-bottom: 1.5rem;
   }
 
   .md\:block {

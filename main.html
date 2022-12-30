@@ -25,10 +25,10 @@
         <div id="logIn" class="relative ">
           <p class="text-center text-xl font-medium mb-10">Вход в аккаунт</p>
           <label class="text-start font-medium ">Ваш email-адрес
-            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
+            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50 mb-3">
           </label>
           <label class="text-start font-medium ">Ваш пароль
-            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50">
+            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
           </label>
           <button class="text-whiteBlue my-3">Забыли пароль?</button>
           <p class="text-red mb-3 hidden">Неправильный email-адрес или пароль</p>
@@ -358,7 +358,7 @@
               <div class="lg:w-2/3 w-[70%]">
                 <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white leading-4">Скидки до 50%<br> в нашем телеграм-канале</h2>
                 <p class = "text-white md:mt-5 md:mb-7 mt-3 mb-5 md:text-lg text-base leading-4">Раздаем промокоды в Telegram каждую неделю</p>
-                <button class="h-full md:py-[18px] px-6 py-4 md:rounded-md rounded-[10px] md:text-lg text-base font-medium bg-[#2C75FF] hover:shadow-lg text-white">Получить промокод</button>
+                <button class="h-full md:py-[18px] px-6 py-3 md:rounded-md rounded-[10px] md:text-lg text-base font-medium bg-[#2C75FF] hover:shadow-lg text-white">Получить промокод</button>
               </div>
               <div class=" absolute md:top-0 md:-right-10 -bottom-2 -right-4 w-[40%] h-full">
                 <img src="images/Saly2.svg" alt="" class=" md:w-3/4 md:h-full w-[248px] h-[248px]">
@@ -525,7 +525,7 @@
         document.getElementById("slider").innerHTML += `
           <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide hover:bg-pressed pressed">
             <div class=" md:py-3 py-2 md:px-4 px-2 flex items-center gap-x-2 w-fit mx-auto">
-              <img src="${element.img}" alt="" class="md:h-8 md:w-8 h-[28px] w-[28px]">
+              <img src="${element.img}" alt="" class="md:h-8 h-[28px] w-[28px]">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
           </button>`
@@ -542,7 +542,7 @@
         document.getElementById("slider").innerHTML += `
           <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide hover:bg-pressed ">
             <div class=" md:py-3 py-2 md:px-4 px-2 flex items-center gap-x-2 w-fit mx-auto">
-              <img src="${element.img}" alt="" class="md:h-8 md:w-8 h-[28px] w-[28px]">
+              <img src="${element.img}" alt="" class="md:h-8 h-[28px] w-[28px]">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
           </button>`
@@ -662,7 +662,7 @@
       s += `
         <div class="swiper-slide w-full">
           <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] md:h-[296px] h-[260px] text-sm rounded-2xl block mx-auto">
-            <div class="flex items-center mb-6">
+            <div class="flex items-center md:mb-6 mb-[7px]">
               <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
               <div class="">
                 <p class="font-medium  text-lg">${review.name}</p>
@@ -675,7 +675,7 @@
                 </div>
               </div>
             </div>
-            <p class="leading-6 text-lg font-normal text-textGray">
+            <p class="leading-6 md:text-lg text-base font-normal text-textGray">
               ${review.text}
             </p>
           </div>
