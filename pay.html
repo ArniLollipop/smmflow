@@ -38,17 +38,17 @@
             <span>Нет аккаунта? <button onclick="signUp()" class="text-whiteBlue"> Зарегистрироваться</button></span>
           </div>
         </div>
-        <div id="signUp" class="relative hidden">
+        <div id="signUp" class="relative hidden pb-[10px]">
           <p class="text-center text-xl font-medium mb-10">Регистрация</p>
           <label class="text-start font-medium ">Ваш email-адрес
-            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
+            <input type="email" placeholder="johndoe@google.com" class="mt-[10px] w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
           </label>
           <label class="text-start font-medium ">Ваш пароль
-            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
+            <input type="password" placeholder="Введите ваш пароль" class="mt-[10px] w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
           </label>
           <p class="text-red mb-3 hidden">Этот Email-адрес уже используется.</p>
           <p class="text-green mb-3 hidden">Регистрация прошла успешно.</p>
-          <button class="text-center w-full font-medium text-white bg-blue py-3 rounded-md hover:shadow-lg">Зарегистрироваться</button>
+          <button class="text-center w-full font-medium mt-5 text-white bg-blue py-3 rounded-md hover:shadow-lg">Зарегистрироваться</button>
         </div>
         <button onclick="modalOpen()" class="absolute top-5 right-5"><img src="images/Close.svg" alt="" class="w-5 h-5"></button>
       </div>
@@ -316,26 +316,26 @@
                     <p class="font-medium"><span class="text-[#6D6D6D] font-normal">Тариф:</span> Живые ❤️</p>
                   </div>
                 </div>
-                <div class="flex flex-wrap rounded-xl items-center my-5 gap-2 md:text-base text-sm">
+                <div class="flex flex-wrap bg-whiteGray items-center my-3 gap-2 md:text-base text-sm">
                   <div class="p-2 font-medium bg-darkGray rounded-lg">
-                    🌍  Со всего мира
+                    <span class="mr-[6px]">🌍</span>Со всего мира
                   </div>
                   <div class="p-2 font-medium bg-darkGray rounded-lg">
-                    🚀  Скорость до 10К/день
+                    <span class="mr-[6px]">🚀</span>Скорость до 10К/день
                   </div>
                   <div class="p-2 font-medium bg-darkGray rounded-lg">
-                    ⚡  Быстрый старт
+                    <span class="mr-[6px]">⚡</span>Быстрый старт
                   </div>
                   <div class="p-2 font-medium bg-darkGray rounded-lg">
-                    ⭐️  Гарантия 60 дней
+                    <span class="mr-[6px]">⭐️</span>Гарантия 60 дней
                   </div>
                 </div>
-                <p class="text-blue"><span class="text-[#6D6D6D]">Ссылка:</span> https://instagram.com/durov</p>
+                <p class="text-blue"><span class="text-[#6D6D6D]">Ссылка:</span><button> https://instagram.com/durov</button></p>
                 <p class="text-[#6D6D6D] mt-2">Количество: 1000</p>
               </div>
               <div class="mt-[30px] w-full">
                 <p class="font-medium">Укажите ваш Email-адрес</p>
-                <input type="email" placeholder="johndoe@google.com" class="outline-none border border-border rounded-xl p-3 w-full my-2">
+                <input type="email" placeholder="johndoe@google.com" class="outline-none border border-border rounded-md p-3 w-full my-2">
                 <p class="text-xs mt-1 text-[#8A8A8A] w-[80%]">Отправим чек и данные для доступа к аккаунту</p>
               </div>
               <div class="mt-5 w-full">
@@ -359,7 +359,7 @@
                       </div>
                     </label>
                   </div>
-                  <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl mt-2">
+                  <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl mt-[10px]">
                     <label for="pay2" class=" w-full cursor-pointer flex items-center justify-between" >
                       <div class="flex items-center gap-x-[10px]">
                         <div class=" flex items-center justify-center w-5 h-5 rounded-full bg-[#E9E9E9]">
@@ -376,7 +376,7 @@
                       </div>
                     </label>
                   </div>
-                  <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl mt-2">
+                  <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl mt-[10px]">
                     <label for="pay3" class=" w-full cursor-pointer flex items-center justify-between" >
                       <div class="flex items-center gap-x-[10px]">
                         <div class=" flex items-center justify-center w-5 h-5 rounded-full bg-[#E9E9E9]">
@@ -393,7 +393,7 @@
               </div>
               <p class="text-red text-sm mt-3 hidden">Ошибка при оплате, попробуйте позже или обратитесь <button class="text-whiteBlue">в поддержку</button></p>
               <p class="text-green text-sm mt-3 hidden">Переходим в платежную систему...</p>
-              <button class="w-full text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-3" >Оплатить 450 руб.</и>
+              <button class="w-full text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-[14px]" >Оплатить 450 руб.</и>
             </div>
           </div>
         </section>

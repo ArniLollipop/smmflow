@@ -38,17 +38,17 @@
             <span>Нет аккаунта? <button onclick="signUp()" class="text-whiteBlue"> Зарегистрироваться</button></span>
           </div>
         </div>
-        <div id="signUp" class="relative hidden">
+        <div id="signUp" class="relative hidden pb-[10px]">
           <p class="text-center text-xl font-medium mb-10">Регистрация</p>
           <label class="text-start font-medium ">Ваш email-адрес
-            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
+            <input type="email" placeholder="johndoe@google.com" class="mt-[10px] w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
           </label>
           <label class="text-start font-medium ">Ваш пароль
-            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
+            <input type="password" placeholder="Введите ваш пароль" class="mt-[10px] w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
           </label>
           <p class="text-red mb-3 hidden">Этот Email-адрес уже используется.</p>
           <p class="text-green mb-3 hidden">Регистрация прошла успешно.</p>
-          <button class="text-center w-full font-medium text-white bg-blue py-3 rounded-md hover:shadow-lg">Зарегистрироваться</button>
+          <button class="text-center w-full font-medium mt-5 text-white bg-blue py-3 rounded-md hover:shadow-lg">Зарегистрироваться</button>
         </div>
         <button onclick="modalOpen()" class="absolute top-5 right-5"><img src="images/Close.svg" alt="" class="w-5 h-5"></button>
       </div>
@@ -312,15 +312,15 @@
   
                 <p class="font-medium text-base mb-1">Социальная сеть</p>
                 <div id="relative1" class=" relative">
-                  <button id="select1Btn" onclick="select1()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-xl rounded-t-xl">
-                    <div class="flex gap-x-1">
+                  <button id="select1Btn" onclick="select1()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-md rounded-t-md">
+                    <div class="flex gap-x-[6px]">
                       <img src="images/selectImg.svg" alt="" class="w-5 h-5">
                       <span>Выберите соц. сеть</span>
                     </div>
                     <span class="text-whiteBlue text-sm">Выбрать</span>
                   </button>
                   <div class="absolute top-full w-full">
-                    <ul id="select1" class="border-border z-10 hidden border rounded-b-xl">
+                    <ul id="select1" class="border-border z-10 hidden overflow-hidden border rounded-b-xl">
                       
                     </ul>
                   </div>
@@ -328,15 +328,15 @@
   
                 <p class="font-medium text-base mb-1 mt-5">Тип услуги</p>
                 <div id="relative2" class="">
-                  <button id="select2Btn" onclick="select2()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-xl rounded-t-xl">
-                    <div class="flex gap-x-1">
+                  <button id="select2Btn" onclick="select2()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-md rounded-t-md">
+                    <div class="flex gap-x-[6px]">
                       <img src="images/selectImg.svg" alt="" class="w-5 h-5">
                       <span>Выберите тип услуги</span>
                     </div>
                     <span class="text-whiteBlue text-sm">Выбрать</span>
                   </button>
                   <div class="absolute top-full w-full">
-                    <ul id="select2" class="border-border z-10 hidden border rounded-b-xl">
+                    <ul id="select2" class="border-border z-10 hidden overflow-hidden border rounded-b-xl">
                       
                     </ul>
                   </div>
@@ -344,15 +344,15 @@
   
                 <p class="font-medium text-base mb-1 mt-5">Тариф</p>
                 <div id="relative3" class="">
-                  <button id="select3Btn" onclick="select3()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-xl rounded-t-xl">
-                    <div class="flex gap-x-1">
-                      <img src="images/selectImg.svg" alt="" class="w-5 h-5">
+                  <button id="select3Btn" onclick="select3()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-md rounded-t-md">
+                    <div class="flex gap-x-[6px]">
+                      <img src="images/selectImg.svg" alt="" class="w-5 h-5 ">
                       <span>Выберите тариф</span>
                     </div>
                     <span class="text-whiteBlue text-sm">Выбрать</span>
                   </button>
                   <div class="absolute top-full w-full">
-                    <ul id="select3" class="border-border z-10 hidden border rounded-b-xl">
+                    <ul id="select3" class="border-border z-10 hidden overflow-hidden border rounded-b-xl">
                       
                     </ul>
                   </div>
@@ -376,15 +376,15 @@
                 <div class="lg:block hidden">
                   <p class="font-medium text-base mb-1 mt-5">Тариф</p>
                   <div id="relative4" class="">
-                    <button id="select4Btn" onclick="select4()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-xl rounded-t-xl">
-                      <div class="flex gap-x-1">
+                    <button id="select4Btn" onclick="select4()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-md rounded-t-md">
+                      <div class="flex gap-x-[6px]">
                         <img src="images/selectImg.svg" alt="" class="w-5 h-5">
                         <span>Выберите тариф</span>
                       </div>
                       <img src="images/ArrowDown.svg" alt="">
                     </button>
                     <div class="absolute top-full w-full">
-                      <ul id="select4" class="border-border z-10 hidden border rounded-b-xl">
+                      <ul id="select4" class="border-border z-10 hidden overflow-hidden border rounded-b-xl">
                         
                       </ul>
                     </div>
@@ -392,27 +392,27 @@
                 </div>
                 <div>
                   <p class="font-medium text-base mb-1 mt-5">Количество</p>
-                  <input type="text" placeholder="Укажите количество" class="p-3 border outline-none border-border w-full rounded-xl">
+                  <input type="text" placeholder="Укажите количество" class="p-3 border outline-none border-border w-full rounded-md">
                   <span class="text-xs mt-1 text-[#8A8A8A]">Можно заказать от 100 до 100 000</span>
                 </div>
                 <div >
                   <p class="font-medium text-base mb-1 mt-5">Укажите ссылку</p>
-                  <input type="text" placeholder="https://www.instagram.com/p/CN8Xf1rgWX7/" class="p-3 border outline-none border-border w-full rounded-xl">
+                  <input type="text" placeholder="https://www.instagram.com/p/CN8Xf1rgWX7/" class="p-3 border outline-none border-border w-full rounded-md">
                   <p class="text-xs mt-1 text-[#8A8A8A] w-[80%]">Ваш профиль должен быть открытым для правильной работы наших услуг. Мы не сможем продвигать закрытый профиль</p>
                 </div>
                 <div class="flex items-center justify-between w-full mt-5">
                   <p class="font-medium text-base ">Промокод</p>
-                  <button class="flex items-center gap-x-[6px] md:text-base text-sm text-[#2C75FF] border-2 border-[#2C75FF] px-2 py-[6px] rounded-md font-medium">
-                    🎁 Получить промокод
+                  <button class="flex items-center gap-x-[6px] md:text-base text-sm text-[#2C75FF] border-2 border-[#2C75FF] px-[10px] py-[7px] rounded-md font-medium">
+                    <span class="mr-[6px]"> 🎁</span> Получить промокод
                   </button>
                 </div>
-                <div class="p-3 border border-border flex items-center justify-between rounded-xl mt-2">
+                <div class="p-3 border border-border flex items-center justify-between rounded-md mt-2">
                   <input type="text" placeholder="Введите промокод" class="w-[70%] outline-none">
-                  <button class="text-whiteBlue text-sm">Активировать</button>
+                  <button class="text-whiteBlue text-base">Активировать</button>
                 </div>
                 <div class="flex items-center justify-between mt-5">
                   <p class=" text-xl font-medium">К оплате</p>
-                  <p class="font-medium text-xl">453 руб.</p>
+                  <p class="font-medium text-lg">453 руб.</p>
                 </div>
                 <a href="pay.html">
                   <div class="w-full text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-2" >Оплатить 450 руб.</div>
@@ -582,7 +582,7 @@ let isModal = false;
     let s = ""
 
     social.map((element)=>{
-      s += `<li onclick="option1(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray p-3">
+      s += `<li onclick="option1(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-[6px] hover:bg-gray p-3">
               <img src="${element.img}" alt="" class="w-5 h-5">
               <span>${element.name}</span>
             </li>`
@@ -597,7 +597,7 @@ let isModal = false;
     function select1(){
       if(!isSelect1){
         document.getElementById("select1").classList.remove("hidden")
-        document.getElementById("select1Btn").classList.remove("rounded-xl")
+        document.getElementById("select1Btn").classList.remove("rounded-md")
         isSelect1 = !isSelect1
         if (isSelect2){
           select2()
@@ -611,7 +611,7 @@ let isModal = false;
       }
       else{
         document.getElementById("select1").classList.add("hidden")
-        document.getElementById("select1Btn").classList.add("rounded-xl")
+        document.getElementById("select1Btn").classList.add("rounded-md")
         isSelect1 = !isSelect1
       }
     }
@@ -619,7 +619,7 @@ let isModal = false;
       social.map((element)=>{
         if (element.id == id){
           document.getElementById("select1Btn").innerHTML = `
-            <div class="flex items-center gap-x-1">
+            <div class="flex items-center gap-x-[6px]">
               <img src="${element.img}" alt="" class="w-5 h-5">
               <span>${element.name}</span>
             </div>
@@ -642,7 +642,7 @@ let isModal = false;
       {id: 15, img: 'images/Reels.svg', name: "Reels"},
     ]
     services.map((element)=>{
-      s += `<li onclick="option2(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray p-3">
+      s += `<li onclick="option2(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-[6px] hover:bg-gray p-3">
               <img src="${element.img}" alt="" class="w-5 h-5">
               <span>${element.name}</span>
             </li>`
@@ -652,7 +652,7 @@ let isModal = false;
     function select2(){
       if(!isSelect2){
         document.getElementById("select2").classList.remove("hidden")
-        document.getElementById("select2Btn").classList.remove("rounded-xl")
+        document.getElementById("select2Btn").classList.remove("rounded-md")
         document.getElementById("relative2").classList.add("relative")
         isSelect2 = !isSelect2
         if (isSelect3){
@@ -665,7 +665,7 @@ let isModal = false;
       else{
         console.log("asd");
         document.getElementById("select2").classList.add("hidden")
-        document.getElementById("select2Btn").classList.add("rounded-xl")
+        document.getElementById("select2Btn").classList.add("rounded-md")
         document.getElementById("relative2").classList.remove("relative")
         isSelect2 = !isSelect2
       }
@@ -674,7 +674,7 @@ let isModal = false;
       services.map((element)=>{
         if (element.id == id){
           document.getElementById("select2Btn").innerHTML = `
-            <div class="flex items-center gap-x-1">
+            <div class="flex items-center gap-x-[6px]">
               <img src="${element.img}" alt="" class="w-5 h-5">
               <span>${element.name}</span>
             </div>
@@ -710,7 +710,7 @@ let isModal = false;
     function select3(){
       if(!isSelect3){
         document.getElementById("select3").classList.remove("hidden")
-        document.getElementById("select3Btn").classList.remove("rounded-xl")
+        document.getElementById("select3Btn").classList.remove("rounded-md")
         document.getElementById("relative3").classList.add("relative")
         isSelect3 = !isSelect3
         if (isSelect4){
@@ -719,7 +719,7 @@ let isModal = false;
       }
       else{
         document.getElementById("select3").classList.add("hidden")
-        document.getElementById("select3Btn").classList.add("rounded-xl")
+        document.getElementById("select3Btn").classList.add("rounded-md")
         document.getElementById("relative3").classList.remove("relative")
         isSelect3 = !isSelect3
       }
@@ -756,13 +756,13 @@ let isModal = false;
     function select4(){
       if(!isSelect4){
         document.getElementById("select4").classList.remove("hidden")
-        document.getElementById("select4Btn").classList.remove("rounded-xl")
+        document.getElementById("select4Btn").classList.remove("rounded-md")
         document.getElementById("relative4").classList.add("relative")
         isSelect4 = !isSelect4
       }
       else{
         document.getElementById("select4").classList.add("hidden")
-        document.getElementById("select4Btn").classList.add("rounded-xl")
+        document.getElementById("select4Btn").classList.add("rounded-md")
         document.getElementById("relative4").classList.remove("relative")
         isSelect4 = !isSelect4
       }

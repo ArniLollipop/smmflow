@@ -26,6 +26,9 @@ module.exports = {
       },
       zIndex :{
         '5' : "5",
+      },
+      borderRadius:{
+        'xl' : '10px',
       }
     },
   },
