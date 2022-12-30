@@ -16,7 +16,7 @@ body{
   width: 100px;
   background:transparent;
   z-index: 5;
-  box-shadow: inset -50px 0px 10px white;
+  box-shadow: inset -60px 0px 10px white !important;
   opacity: 60;
 }
 .swiper-slide{
@@ -35,6 +35,23 @@ body{
   right: 0;
   z-index: 10;
   background-color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
+}
+.swiper-button-disabled{
+  visibility: hidden;
+}
+.s-button-prev{
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  background-color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .2s;
 }
 .swiper-button-next::after{
   display: none;
