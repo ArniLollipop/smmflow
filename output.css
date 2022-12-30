@@ -2626,6 +2626,14 @@ video {
   line-height: 1rem;
 }
 
+.leading-6 {
+  line-height: 1.5rem;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
 .text-whiteBlue {
   --tw-text-opacity: 1;
   color: rgb(9 109 255 / var(--tw-text-opacity));
