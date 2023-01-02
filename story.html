@@ -90,7 +90,7 @@
         </div>
       </div>
     </header>
-    <div id="main" class="min-h-[100vh]">
+    <div id="main" class="min-h-[70vh]">
       <div class="">
         <section class="relative w-full mx-auto">
           <div id="service" onmouseleave="openService()" class="hidden w-full h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-[15] py-6 absolute top-0 left-0">
@@ -332,7 +332,7 @@
             </button>
           </div>
         </section>
-        <section class="max-w-[1180px] mx-auto min-h-[100vh]">
+        <section class="max-w-[1180px] mx-auto min-h-[50vh]">
           <div id="storyContent" class="xl:px-0 px-[10px] md:py-[50px] py-[30px]">
             <h3 class="text-[24px] font-semibold lg:mb-0 mb-[30px]">История заказов</h3>
             <div class="lg:mt-5 lg:border lg:border-border lg:rounded-[10px] lg:px-5 lg:py-[25px]">
@@ -350,8 +350,8 @@
           </div>
           <div id="balanceContent" class="hidden xl:px-0 px-[10px] md:py-[50px] py-[30px]">
             <h3 class="text-[24px] font-semibold lg:mb-0 mb-[30px]">Пополнение баланса</h3>
-            <div class="mt-[30px] flex justify-between">
-              <div class="w-[406px]">
+            <div class="mt-[30px] lg:flex justify-between">
+              <div class="md:w-[406px] w-full max-w-[406px] lg:mx-0 block mx-auto">
                 <p class="text-base font-medium">Сумма пополнения</p>
                 <input id="input-price" type="number" placeholder="Введите или выберите сумму пополнения" class="w-full placeholder:text-[#8A8A8A] border border-border px-3 py-[14px] rounded-md outline-none my-2">
                 <div class="flex items-center justify-between mb-[9px] w-full">
@@ -385,7 +385,7 @@
                     <p class="price-bonus">+1000₽</p>
                   </button>
                 </div>
-                <div class="grid grid-cols-3 gap-x-2 items-center justify-between mb-[9px] w-full">
+                <div class="grid grid-cols-3 gap-x-2 items-center justify-between mb-2 w-full">
                   <button onclick="inputPrice(1000)" class="rounded-[8px] overflow-hidden col-span-1 bg-darkGray flex items-center justify-end font-medium">
                     <p class="w-[70%]">1000₽</p>
                     <p class="price-bonus bg-[#E6E6E6] py-2 px-[1px]">+50₽</p>
@@ -452,85 +452,43 @@
                       </label>
                     </div>
                   </div>
-                  <p class="text-red mt-[14px]">Ошибка при оплате, попробуйте позже или обратитесь <button class="text-blue"> в поддержку</button></p>
+                  <p class="text-red mt-[14px] hidden">Ошибка при оплате, попробуйте позже или обратитесь <button class="text-blue"> в поддержку</button></p>
+                  <p class="text-green mt-[14px] hidden">Переходим в платежную систему...</p>
                   <button class="w-full text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-[14px]" >Оплатить 450 руб.</button>
                 </div>
               </div>
-              <div class="w-[591px] h-fit">
-                <p class="text-base font-medium">История пополнений</p>
-                <div class="rounded-[10px] border border-border px-5 py-[25px] mt-2">
+              <div class="md:w-[591px] w-full lg:mt-0 mt-[30px] h-fit">
+                <p class="lg:text-base text-2xl font-medium">История пополнений</p>
+                <div class="rounded-[10px] lg:border border-border sm:px-5 lg:py-[25px] lg:mt-2 mt-[30px]">
                   <div class="grid grid-cols-5 pl-5 pr-[30px]">
-                    <div class="col-span-2">
+                    <div class="sm:col-span-2 col-span-4">
                       <p class="font-medium">Дата</p>
                     </div>
-                    <div class="col-span-2">
+                    <div class="sm:col-span-2 col-span-1">
                       <p class="font-medium">Сумма</p>
                     </div>
-                    <div class="col-span-1">
+                    <div class="col-span-1 sm:block hidden">
                       <p class="font-medium text-end">Статус</p>
                     </div>
                   </div>
-                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
-                    <div class="col-span-2">
-                      11.12.2022 в 12:43
-                    </div>
-                    <div class="col-span-2">
-                      1000₽
-                    </div>
-                    <div class="col-span-1 text-green2 text-end">
-                      Оплачен
-                    </div>
-                  </div>
-                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
-                    <div class="col-span-2">
-                      11.12.2022 в 12:43
-                    </div>
-                    <div class="col-span-2">
-                      1000₽
-                    </div>
-                    <div class="col-span-1 text-green2 text-end">
-                      Оплачен
-                    </div>
-                  </div>
-                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
-                    <div class="col-span-2">
-                      11.12.2022 в 12:43
-                    </div>
-                    <div class="col-span-2">
-                      1000₽
-                    </div>
-                    <div class="col-span-1 text-green2 text-end">
-                      Оплачен
-                    </div>
-                  </div>
-                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
-                    <div class="col-span-2">
-                      11.12.2022 в 12:43
-                    </div>
-                    <div class="col-span-2">
-                      1000₽
-                    </div>
-                    <div class="col-span-1 text-green2 text-end">
-                      Оплачен
-                    </div>
-                  </div>
-                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
-                    <div class="col-span-2">
-                      11.12.2022 в 12:43
-                    </div>
-                    <div class="col-span-2">
-                      1000₽
-                    </div>
-                    <div class="col-span-1 text-green2 text-end">
-                      Оплачен
-                    </div>
+                  <div id="story-balance">
+                    
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="settingsContent" class="hidden xl:px-0 px-[10px] md:py-[50px] py-[30px]">
-            <h3 class="text-[24px] font-semibold lg:mb-0 mb-[30px]">Настройки</h3>
+          <div id="settingsContent" class="hidden xl:px-0 px-[10px] md:py-[50px] py-[30px] max-w-[406px]">
+            <h3 class="text-[24px] font-semibold mb-[30px]">Настройки</h3>
+            <p class="font-semibold text-xl">Сменить пароль</p>
+            <p class="text-sm text-[#8A8A8A]">Введите пароль, который вы используете сейчас и новый пароль, который вы хотите установить</p>
+            <p class="mt-5 font-medium">Пароль</p>
+            <input type="password" placeholder="Введите ваш пароль" class="outline-none py-[14px] px-3 border border-border rounded-md mt-2 w-full">
+            <p class="mt-5 font-medium">Новый пароль</p>
+            <input type="password" placeholder="Введите ваш пароль" class="outline-none py-[14px] px-3 border border-border rounded-md mt-2 w-full">
+            <p class="mt-5 text-green hidden">Пароль успешно изменен!</p>
+            <p class="mt-5 text-red hidden">Пароль должен содержать более 8 символов</p>
+            <button class="px-6 text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-5" >Сменить пароль</button>
           </div>
           <div id="leaveContent" class="hidden">
             leave
@@ -769,6 +727,34 @@ let isModal = false;
       document.getElementById("input-price").value = price;
     }
 
+    let balance = [
+    ]
+
+    if(balance.length === 0){
+      document.getElementById("story-balance").innerHTML =
+       `<img src="images/Saly-17.svg" alt="" class="my-[30px] w-fit block mx-auto">
+        <p class="font-medium text-[#4F4F4F] text-center">Пополнений ещё не было</p>
+        <p class="text-center text-[#4F4F4F] w-[80%] block mx-auto leading-5 mt-[10px]">Вы ещё ни разу не пополняли баланс . Пополните баланс и сделайте свой первый заказ!</p>
+        `
+    }
+    else{
+      balance.map((element)=>{
+      document.getElementById("story-balance").innerHTML += `
+      <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
+        <div class="sm:col-span-2 col-span-4">
+          ${element.date}
+        </div>
+        <div class="sm:col-span-2 col-span-1 -ml-1 justify-start flex items-center gap-x-[5px]">
+          ${element.price}₽
+          <img src = "images/check.svg" alt = "" class = "sm:hidden">
+        </div>
+        <div class="col-span-1 sm:block hidden text-end ${element.statusColor}">
+          ${element.status}
+        </div>
+      </div>  
+      `
+    })
+    }
   </script>
 </body>
 </html>

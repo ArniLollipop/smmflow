@@ -685,6 +685,10 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.col-span-4 {
+  grid-column: span 4 / span 4;
+}
+
 .float-right {
   float: right;
 }
@@ -731,6 +735,11 @@ video {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.my-\[30px\] {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .my-\[14px\] {
@@ -836,6 +845,18 @@ video {
 
 .mb-\[9px\] {
   margin-bottom: 9px;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.ml-\[5px\] {
+  margin-left: 5px;
+}
+
+.-ml-1 {
+  margin-left: -0.25rem;
 }
 
 .box-border {
@@ -1007,6 +1028,18 @@ video {
   min-height: 100vh;
 }
 
+.min-h-\[70vh\] {
+  min-height: 70vh;
+}
+
+.min-h-\[50vh\] {
+  min-height: 50vh;
+}
+
+.min-h-\[20vh\] {
+  min-height: 20vh;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1088,16 +1121,8 @@ video {
   width: 0.75rem;
 }
 
-.w-\[406px\] {
-  width: 406px;
-}
-
 .w-\[72px\] {
   width: 72px;
-}
-
-.w-\[591px\] {
-  width: 591px;
 }
 
 .w-\[18px\] {
@@ -1112,12 +1137,20 @@ video {
   width: 1rem;
 }
 
-.w-\[60\%\] {
-  width: 60%;
+.w-\[406px\] {
+  width: 406px;
+}
+
+.w-1\/2 {
+  width: 50%;
 }
 
 .max-w-\[1180px\] {
   max-width: 1180px;
+}
+
+.max-w-\[406px\] {
+  max-width: 406px;
 }
 
 .flex-shrink {
@@ -2259,14 +2292,14 @@ video {
   background-color: rgb(233 233 233 / var(--tw-bg-opacity));
 }
 
-.bg-\[rgb\(255\2c 0\2c 0\)\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-\[\#E6E6E6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(230 230 230 / var(--tw-bg-opacity));
+}
+
+.bg-\[rgb\(255\2c 0\2c 0\)\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-saly2 {
@@ -2495,6 +2528,11 @@ video {
   padding-bottom: 14px;
 }
 
+.px-\[1px\] {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -2503,11 +2541,6 @@ video {
 .py-\[25px\] {
   padding-top: 25px;
   padding-bottom: 25px;
-}
-
-.px-\[1px\] {
-  padding-left: 1px;
-  padding-right: 1px;
 }
 
 .pt-14 {
@@ -2546,12 +2579,16 @@ video {
   padding-right: 30px;
 }
 
-.pr-\[10px\] {
-  padding-right: 10px;
+.pr-\[33px\] {
+  padding-right: 33px;
 }
 
-.pl-\[10px\] {
-  padding-left: 10px;
+.pr-\[35px\] {
+  padding-right: 35px;
+}
+
+.pr-\[45px\] {
+  padding-right: 45px;
 }
 
 .text-left {
@@ -2745,6 +2782,10 @@ video {
   line-height: 1.25rem;
 }
 
+.leading-3 {
+  line-height: .75rem;
+}
+
 .text-whiteBlue {
   --tw-text-opacity: 1;
   color: rgb(9 109 255 / var(--tw-text-opacity));
@@ -2800,14 +2841,19 @@ video {
   color: rgb(94 94 94 / var(--tw-text-opacity));
 }
 
+.text-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(236 186 8 / var(--tw-text-opacity));
+}
+
 .text-green2 {
   --tw-text-opacity: 1;
   color: rgb(0 154 62 / var(--tw-text-opacity));
 }
 
-.text-yellow {
+.text-\[\#4F4F4F\] {
   --tw-text-opacity: 1;
-  color: rgb(236 186 8 / var(--tw-text-opacity));
+  color: rgb(79 79 79 / var(--tw-text-opacity));
 }
 
 .text-\[\#336699\]\/\[\.35\] {
@@ -3430,6 +3476,35 @@ body{
     }
   }
 
+  .sm\:col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:border {
+    border-width: 1px;
+  }
+
+  .sm\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .sm\:pr-0 {
+    padding-right: 0px;
+  }
+
+  .sm\:text-start {
+    text-align: start;
+  }
+
   .sm\:underline {
     text-decoration-line: underline;
   }
@@ -3518,6 +3593,14 @@ body{
 
   .md\:w-\[323px\] {
     width: 323px;
+  }
+
+  .md\:w-\[406px\] {
+    width: 406px;
+  }
+
+  .md\:w-\[591px\] {
+    width: 591px;
   }
 
   .md\:grid-cols-4 {
@@ -3660,6 +3743,11 @@ body{
 }
 
 @media (min-width: 1024px) {
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .lg\:mb-0 {
     margin-bottom: 0px;
   }
@@ -3668,8 +3756,20 @@ body{
     margin-top: 1.25rem;
   }
 
+  .lg\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .lg\:mt-2 {
+    margin-top: 0.5rem;
+  }
+
   .lg\:block {
     display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:grid {
@@ -3783,6 +3883,11 @@ body{
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }
 

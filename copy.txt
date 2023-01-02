@@ -22,3 +22,19 @@
       -------------mobile version
 
     */
+
+/*
+---------------------------story balance
+<div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
+  <div class="col-span-2">
+    11.12.2022 в 12:43
+  </div>
+  <div class="col-span-2">
+    1000₽
+  </div>
+  <div class="col-span-1 text-green2 text-end">
+    Оплачен
+  </div>
+</div>    
+
+*/
