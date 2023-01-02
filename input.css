@@ -89,3 +89,8 @@ body{
 .story-back{
   background: rgba(244, 244, 244, 0.6);
 }
+
+.price-bonus{
+  color: rgba(1, 165, 76, 0.8);
+  font-size: 14px;
+}

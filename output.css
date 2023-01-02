@@ -1112,6 +1112,10 @@ video {
   width: 1rem;
 }
 
+.w-\[60\%\] {
+  width: 60%;
+}
+
 .max-w-\[1180px\] {
   max-width: 1180px;
 }
@@ -2260,6 +2264,11 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#E6E6E6\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(230 230 230 / var(--tw-bg-opacity));
+}
+
 .bg-saly2 {
   background-image: url("images/Saly2.svg");
 }
@@ -2496,6 +2505,11 @@ video {
   padding-bottom: 25px;
 }
 
+.px-\[1px\] {
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
 .pt-14 {
   padding-top: 3.5rem;
 }
@@ -2530,6 +2544,14 @@ video {
 
 .pr-\[30px\] {
   padding-right: 30px;
+}
+
+.pr-\[10px\] {
+  padding-right: 10px;
+}
+
+.pl-\[10px\] {
+  padding-left: 10px;
 }
 
 .text-left {
@@ -2778,6 +2800,11 @@ video {
   color: rgb(94 94 94 / var(--tw-text-opacity));
 }
 
+.text-green2 {
+  --tw-text-opacity: 1;
+  color: rgb(0 154 62 / var(--tw-text-opacity));
+}
+
 .text-yellow {
   --tw-text-opacity: 1;
   color: rgb(236 186 8 / var(--tw-text-opacity));
@@ -2785,11 +2812,6 @@ video {
 
 .text-\[\#336699\]\/\[\.35\] {
   color: rgb(51 102 153 / .35);
-}
-
-.text-green2 {
-  --tw-text-opacity: 1;
-  color: rgb(0 154 62 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -3234,6 +3256,11 @@ body{
 
 .story-back{
   background: rgba(244, 244, 244, 0.6);
+}
+
+.price-bonus{
+  color: rgba(1, 165, 76, 0.8);
+  font-size: 14px;
 }
 
 .placeholder\:font-normal::-moz-placeholder {
