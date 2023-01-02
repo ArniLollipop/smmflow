@@ -19,4 +19,6 @@
         <button class="text-blue text-base mt-1">${str.link}</button>
       </div>
       
+      -------------mobile version
+
     */

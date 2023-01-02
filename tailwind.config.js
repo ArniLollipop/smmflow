@@ -17,6 +17,7 @@ module.exports = {
         textGray: "#5F5F66",
         border : '#E3E3E3',
         yellow: '#ECBA08',
+        green2: "#009A3E",
       },
       backgroundImage:{
         saly : 'url("images/Saly-1.png")',

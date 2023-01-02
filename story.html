@@ -25,10 +25,10 @@
         <div id="logIn" class="relative ">
           <p class="text-center text-xl font-medium mb-10">Вход в аккаунт</p>
           <label class="text-start font-medium ">Ваш email-адрес
-            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50 mb-3">
+            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50 mb-3">
           </label>
           <label class="text-start font-medium ">Ваш пароль
-            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] p-2 border border-border outline-none border-opacity-50">
+            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
           </label>
           <button class="text-whiteBlue my-3">Забыли пароль?</button>
           <p class="text-red mb-3 hidden">Неправильный email-адрес или пароль</p>
@@ -309,7 +309,7 @@
           </div>
         </section>
         <section class="border border-border ">
-          <div class="flex items-center gap-x-3 max-w-[1180px] mx-auto">
+          <div class="flex items-center gap-x-3 max-w-[1180px] mx-auto xl:px-0 px-[10px]">
             <div class="flex items-center pr-3 gap-x-1 py-6">
               <img src="images/Money2.svg" alt="">
               <p class="font-medium text-base">Баланс: 1653₽</p>
@@ -334,9 +334,9 @@
         </section>
         <section class="max-w-[1180px] mx-auto min-h-[100vh]">
           <div id="storyContent" class="xl:px-0 px-[10px] md:py-[50px] py-[30px]">
-            <h3 class="text-[24px] font-semibold">История заказов</h3>
-            <div class="mt-5 border border-border rounded-[10px] px-5 py-[25px]">
-              <div class="grid grid-cols-6 pl-5 items-center">
+            <h3 class="text-[24px] font-semibold lg:mb-0 mb-[30px]">История заказов</h3>
+            <div class="lg:mt-5 lg:border lg:border-border lg:rounded-[10px] lg:px-5 lg:py-[25px]">
+              <div class="lg:grid hidden grid-cols-6 pl-5 items-center ">
                 <p class="font-medium text-base col-span-1">Дата</p>
                 <p class="font-medium text-base col-span-2">Заказ</p>
                 <p class="font-medium text-base col-span-1">Кол-во</p>
@@ -349,10 +349,159 @@
             </div>
           </div>
           <div id="balanceContent" class="hidden xl:px-0 px-[10px] md:py-[50px] py-[30px]">
-            <h3 class="text-[24px] font-semibold">Пополнение баланса</h3>
+            <h3 class="text-[24px] font-semibold lg:mb-0 mb-[30px]">Пополнение баланса</h3>
+            <div class="mt-[30px] flex justify-between">
+              <div class="w-[406px]">
+                <p class="text-base font-medium">Сумма пополнения</p>
+                <input type="number" placeholder="Введите или выберите сумму пополнения" class="w-full placeholder:text-[#8A8A8A] border border-border px-3 py-[14px] rounded-md outline-none my-2">
+                <div class="flex items-center justify-between mb-[9px] w-full">
+                  <button class="rounded-[8px] bg-darkGray w-[72px] text-center py-2 font-medium">
+                    250₽
+                  </button>
+                  <button class="rounded-[8px] bg-darkGray w-[72px] text-center py-2 font-medium">
+                    500₽
+                  </button>
+                  <button class="rounded-[8px] bg-darkGray w-[72px] text-center py-2 font-medium">
+                    1000₽
+                  </button>
+                  <button class="rounded-[8px] bg-darkGray w-[72px] text-center py-2 font-medium">
+                    2500₽
+                  </button>
+                  <button class="rounded-[8px] bg-darkGray w-[72px] text-center py-2 font-medium">
+                    5000₽
+                  </button>
+                </div>
+                <span class="text-xs text-[#8A8A8A]">Минимальная сумма пополнения: 15 руб.</span>
+                <div class="mt-5 w-full">
+                  <p class="font-semibold text-lg">Способ оплаты</p>
+                  <div class="mt-[14px]">
+                    <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl">
+                      <label for="pay1" class=" w-full cursor-pointer flex items-center justify-between" >
+                        <div class="flex items-center gap-x-[10px]">
+                          <div class=" flex items-center justify-center w-5 h-5 rounded-full bg-[#E9E9E9]">
+                            <input checked type="radio" id="pay1" name="pay" class="w-0 hidden peer">
+                            <div class="w-3 h-3 rounded-full input opacity-0 transition-all duration-150 peer-checked:opacity-100">
+  
+                            </div>
+                          </div>
+                          <p class="text-base font-medium">Карта РФ</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                          <img src="images/card1.svg" alt="">
+                          <img src="images/card2.svg" alt="">
+                          <img src="images/card3.svg" alt="">
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl mt-[10px]">
+                      <label for="pay2" class=" w-full cursor-pointer flex items-center justify-between" >
+                        <div class="flex items-center gap-x-[10px]">
+                          <div class=" flex items-center justify-center w-5 h-5 rounded-full bg-[#E9E9E9]">
+                            <input  type="radio" id="pay2" name="pay" class="w-0 hidden peer">
+                            <div class="w-3 h-3 rounded-full input opacity-0 transition-all duration-150 peer-checked:opacity-100">
+  
+                            </div>
+                          </div>
+                          <p class="text-base font-medium">Карта другой страны</p>
+                        </div>
+                        <div class="flex items-center gap-x-1">
+                          <img src="images/card2.svg" alt="">
+                          <img src="images/card3.svg" alt="">
+                        </div>
+                      </label>
+                    </div>
+                    <div class="w-full border border-[#E9E9E9] px-[10px] py-3 rounded-xl mt-[10px]">
+                      <label for="pay3" class=" w-full cursor-pointer flex items-center justify-between" >
+                        <div class="flex items-center gap-x-[10px]">
+                          <div class=" flex items-center justify-center w-5 h-5 rounded-full bg-[#E9E9E9]">
+                            <input  type="radio" id="pay3" name="pay" class="w-0 hidden peer">
+                            <div class="w-3 h-3 rounded-full input opacity-0 transition-all duration-150 peer-checked:opacity-100">
+  
+                            </div>
+                          </div>
+                          <img src="images/Qiwi.svg" alt="">
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <button class="w-full text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-[14px]" >Оплатить 450 руб.</button>
+                </div>
+              </div>
+              <div class="w-[591px] h-fit">
+                <p class="text-base font-medium">История пополнений</p>
+                <div class="rounded-[10px] border border-border px-5 py-[25px] mt-2">
+                  <div class="grid grid-cols-5 pl-5 pr-[30px]">
+                    <div class="col-span-2">
+                      <p class="font-medium">Дата</p>
+                    </div>
+                    <div class="col-span-2">
+                      <p class="font-medium">Сумма</p>
+                    </div>
+                    <div class="col-span-1">
+                      <p class="font-medium text-end">Статус</p>
+                    </div>
+                  </div>
+                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
+                    <div class="col-span-2">
+                      11.12.2022 в 12:43
+                    </div>
+                    <div class="col-span-2">
+                      1000₽
+                    </div>
+                    <div class="col-span-1 text-green2 text-end">
+                      Оплачен
+                    </div>
+                  </div>
+                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
+                    <div class="col-span-2">
+                      11.12.2022 в 12:43
+                    </div>
+                    <div class="col-span-2">
+                      1000₽
+                    </div>
+                    <div class="col-span-1 text-green2 text-end">
+                      Оплачен
+                    </div>
+                  </div>
+                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
+                    <div class="col-span-2">
+                      11.12.2022 в 12:43
+                    </div>
+                    <div class="col-span-2">
+                      1000₽
+                    </div>
+                    <div class="col-span-1 text-green2 text-end">
+                      Оплачен
+                    </div>
+                  </div>
+                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
+                    <div class="col-span-2">
+                      11.12.2022 в 12:43
+                    </div>
+                    <div class="col-span-2">
+                      1000₽
+                    </div>
+                    <div class="col-span-1 text-green2 text-end">
+                      Оплачен
+                    </div>
+                  </div>
+                  <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
+                    <div class="col-span-2">
+                      11.12.2022 в 12:43
+                    </div>
+                    <div class="col-span-2">
+                      1000₽
+                    </div>
+                    <div class="col-span-1 text-green2 text-end">
+                      Оплачен
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div id="settingsContent" class="hidden xl:px-0 px-[10px] md:py-[50px] py-[30px]">
-            <h3 class="text-[24px] font-semibold">Настройки</h3>
+            <h3 class="text-[24px] font-semibold lg:mb-0 mb-[30px]">Настройки</h3>
           </div>
           <div id="leaveContent" class="hidden">
             leave
@@ -372,10 +521,14 @@
               <p class="text-base md:hidden">
                 SMMFLOW - ведущий сервис на рынке продвижения в социальных сетях. За счет низких цен и высокого качества выполнения услуг сервис является незаменимым для большинства наших клиентов со всего мира. 
               </p>
-              <div class="flex items-center gap-x-1 mt-5">
+              <div class="flex flex-wrap items-center w-[90%] gap-1 mt-5">
                 <img src="images/card1.svg" alt="w-[46px]">
                 <img src="images/card2.svg" alt="w-[46px]">
                 <img src="images/card3.svg" alt="w-[46px]">
+                <img src="images/card4.svg" alt="w-[46px]">
+                <img src="images/card4.svg" alt="w-[46px]">
+                <img src="images/card4.svg" alt="w-[46px]">
+                <img src="images/card4.svg" alt="w-[46px]">
                 <img src="images/card4.svg" alt="w-[46px]">
               </div>
             </div>
@@ -405,7 +558,6 @@
         </div>
       </footer>
     </div>
-
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script>
@@ -534,11 +686,11 @@ let isModal = false;
     Stories.map((str)=>{
       htmlStory += `
               <div class="rounded-md py-[14px] story-back mt-[14px]">
-                <div class="grid grid-cols-6 pl-5 items-center">
+                <div class="lg:grid lg:grid-cols-6 grid-cols-1 pl-5 items-center hidden">
                   <div class="col-span-1">
                     ${str.date}
                   </div>
-                  <div class="col-span-2">
+                  <div class="col-span-2 lg:block hidden">
                     <div class="flex items-center gap-x-[5px]">
                       <img src="${str.img}" alt="" class="w-[18px] h-[18px]">
                       <p class="font-medium text-base">${str.service}</p>
@@ -555,6 +707,29 @@ let isModal = false;
                     ${str.status}
                   </div>
 
+                </div>
+                <div class = "pl-5 lg:hidden">
+                  <div class = "flex items-center gap-x-[10px] text-base font-medium">
+                    <img src="${str.img}" alt="" class="h-[34px]">
+                    <div class = "flex flex-col gap-x-0">
+                      <p class="w-[100px] leading-5">
+                        Подписчики
+                        <span class = "flex items-center gap-x-1">Живые <img src="images/RedHeart.svg" alt="" class = "w-4 h-4"></span>
+                      </p>
+                    </div>
+                  </div>
+                  <p class="text-blue mt-3">
+                    https://www.instagram.com/durov/
+                  </p>
+                  <p class = "text-base mt-[10px]">
+                    ${str.count} за ${str.price}  
+                  </p>
+                  <p class = "text-base mt-[10px]">
+                    Дата: ${str.date}
+                  </p>  
+                  <p class = "text-base mt-[10px]">
+                    Статус: <span class = "${str.statusColor}">${str.status}</span>
+                  </p>
                 </div>
               </div>`
     })
