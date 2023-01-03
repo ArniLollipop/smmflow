@@ -653,6 +653,10 @@ video {
   top: 100%;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -675,6 +679,10 @@ video {
 
 .z-0 {
   z-index: 0;
+}
+
+.z-5 {
+  z-index: 5;
 }
 
 .col-span-1 {
@@ -735,6 +743,11 @@ video {
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
+}
+
+.my-20 {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 .my-\[30px\] {
@@ -849,10 +862,6 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.ml-\[5px\] {
-  margin-left: 5px;
 }
 
 .-ml-1 {
@@ -1036,8 +1045,8 @@ video {
   min-height: 50vh;
 }
 
-.min-h-\[20vh\] {
-  min-height: 20vh;
+.min-h-\[80vh\] {
+  min-height: 80vh;
 }
 
 .w-full {
@@ -1137,20 +1146,16 @@ video {
   width: 1rem;
 }
 
-.w-\[406px\] {
-  width: 406px;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
 .max-w-\[1180px\] {
   max-width: 1180px;
 }
 
 .max-w-\[406px\] {
   max-width: 406px;
+}
+
+.max-w-\[415px\] {
+  max-width: 415px;
 }
 
 .flex-shrink {
@@ -2523,9 +2528,24 @@ video {
   padding-bottom: 7px;
 }
 
-.py-\[14px\] {
-  padding-top: 14px;
-  padding-bottom: 14px;
+.py-\[15px\] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.py-\[9px\] {
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .px-\[1px\] {
@@ -2533,14 +2553,14 @@ video {
   padding-right: 1px;
 }
 
+.py-\[14px\] {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-
-.py-\[25px\] {
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .pt-14 {
@@ -2577,18 +2597,6 @@ video {
 
 .pr-\[30px\] {
   padding-right: 30px;
-}
-
-.pr-\[33px\] {
-  padding-right: 33px;
-}
-
-.pr-\[35px\] {
-  padding-right: 35px;
-}
-
-.pr-\[45px\] {
-  padding-right: 45px;
 }
 
 .text-left {
@@ -2782,10 +2790,6 @@ video {
   line-height: 1.25rem;
 }
 
-.leading-3 {
-  line-height: .75rem;
-}
-
 .text-whiteBlue {
   --tw-text-opacity: 1;
   color: rgb(9 109 255 / var(--tw-text-opacity));
@@ -2839,16 +2843,6 @@ video {
 .text-\[\#5E5E5E\] {
   --tw-text-opacity: 1;
   color: rgb(94 94 94 / var(--tw-text-opacity));
-}
-
-.text-yellow {
-  --tw-text-opacity: 1;
-  color: rgb(236 186 8 / var(--tw-text-opacity));
-}
-
-.text-green2 {
-  --tw-text-opacity: 1;
-  color: rgb(0 154 62 / var(--tw-text-opacity));
 }
 
 .text-\[\#4F4F4F\] {
@@ -3309,6 +3303,21 @@ body{
   font-size: 14px;
 }
 
+.swiper-story{
+  position: relative;
+}
+
+.story-shadow::after{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  box-shadow: inset -50px 0px 10px white !important;
+  z-index: 2;
+  top: 0;
+  right: 0;
+}
+
 .placeholder\:font-normal::-moz-placeholder {
   font-weight: 400;
 }
@@ -3332,9 +3341,9 @@ body{
   position: absolute;
 }
 
-.after\:-bottom-\[1px\]::after {
+.after\:-bottom-\[3px\]::after {
   content: var(--tw-content);
-  bottom: -1px;
+  bottom: -3px;
 }
 
 .after\:left-0::after {
@@ -3342,9 +3351,24 @@ body{
   left: 0px;
 }
 
-.after\:h-\[1px\]::after {
+.after\:-bottom-\[1px\]::after {
   content: var(--tw-content);
-  height: 1px;
+  bottom: -1px;
+}
+
+.after\:-bottom-\[2px\]::after {
+  content: var(--tw-content);
+  bottom: -2px;
+}
+
+.after\:-bottom-\[0px\]::after {
+  content: var(--tw-content);
+  bottom: -0px;
+}
+
+.after\:h-\[2px\]::after {
+  content: var(--tw-content);
+  height: 2px;
 }
 
 .after\:w-full::after {
@@ -3488,21 +3512,9 @@ body{
     display: none;
   }
 
-  .sm\:border {
-    border-width: 1px;
-  }
-
   .sm\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
-  }
-
-  .sm\:pr-0 {
-    padding-right: 0px;
-  }
-
-  .sm\:text-start {
-    text-align: start;
   }
 
   .sm\:underline {
@@ -3852,6 +3864,11 @@ body{
     padding-bottom: 22px;
   }
 
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
   .lg\:px-5 {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -3888,6 +3905,16 @@ body{
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .lg\:after\:-bottom-\[1px\]::after {
+    content: var(--tw-content);
+    bottom: -1px;
+  }
+
+  .lg\:after\:-bottom-\[0px\]::after {
+    content: var(--tw-content);
+    bottom: -0px;
   }
 }
 

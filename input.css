@@ -94,3 +94,16 @@ body{
   color: rgba(1, 165, 76, 0.8);
   font-size: 14px;
 }
+.swiper-story{
+  position: relative;
+}
+.story-shadow::after{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 100%;
+  box-shadow: inset -50px 0px 10px white !important;
+  z-index: 2;
+  top: 0;
+  right: 0;
+}
