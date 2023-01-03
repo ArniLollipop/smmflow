@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+  <title>Document</title>
+</head>
+<body>
+  <div class="w-full mx-auto overflow-hidden relative min-h-[100vh]">
+    <div id = "menu" class="h-[100vh] absolute bg-white z-10 px-[10px] w-full pt-14 translate-x-full transition-all duration-200">
+      <a href="order.html" class="font-medium text-2xl mt-4 block">Сделать заказ</a>
+      <button class="font-medium text-2xl mt-4 block">Мои заказы</button>
+      <button onclick="modalOpen()" class="font-medium text-2xl mt-4 block">Войти</button>
+      <button class="font-medium text-2xl mt-4 block">Пополнить баланс</button>
+      <button class="font-medium text-2xl mt-4 block">Выход</button>
+    </div>
+    <div id="modal" class="hidden fixed w-full px-[10px] h-full popup z-20">
+      <div class="bg-white md:px-[110px] md:py-[60px] py-10 md:w-[560px] px-[10px] rounded-md  top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 relative">
+        <div id="logIn" class="relative ">
+          <p class="text-center text-xl font-medium mb-10">Вход в аккаунт</p>
+          <label class="text-start font-medium ">Ваш email-адрес
+            <input type="email" placeholder="johndoe@google.com" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50 mb-3">
+          </label>
+          <label class="text-start font-medium ">Ваш пароль
+            <input type="password" placeholder="Введите ваш пароль" class="mt-1 w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
+          </label>
+          <button class="text-whiteBlue my-3">Забыли пароль?</button>
+          <p class="text-red mb-3 hidden">Неправильный email-адрес или пароль</p>
+          <p class="text-green mb-3 hidden">Вы успешно вошли в свой аккаунт.</p>
+          <button class="text-center w-full font-medium text-white bg-blue py-3 rounded-md hover:shadow-lg">Войти</button>
+          <div class="flex items-center justify-center mt-5">
+            <span>Нет аккаунта? <button onclick="signUp()" class="text-whiteBlue"> Зарегистрироваться</button></span>
+          </div>
+        </div>
+        <div id="signUp" class="relative hidden pb-[10px]">
+          <p class="text-center text-xl font-medium mb-10">Регистрация</p>
+          <label class="text-start font-medium ">Ваш email-адрес
+            <input type="email" placeholder="johndoe@google.com" class="mt-[10px] w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
+          </label>
+          <label class="text-start font-medium ">Ваш пароль
+            <input type="password" placeholder="Введите ваш пароль" class="mt-[10px] w-full rounded-md placeholder:text-[#8A8A8A] placeholder:font-normal p-2 border border-border outline-none border-opacity-50">
+          </label>
+          <p class="text-red mb-3 hidden">Этот Email-адрес уже используется.</p>
+          <p class="text-green mb-3 hidden">Регистрация прошла успешно.</p>
+          <button class="text-center w-full font-medium mt-5 text-white bg-blue py-3 rounded-md hover:shadow-lg">Зарегистрироваться</button>
+        </div>
+        <button onclick="modalOpen()" class="absolute top-5 right-5"><img src="images/Close.svg" alt="" class="w-5 h-5"></button>
+      </div>
+    </div>
+    <header id="header" class=" header w-full">
+      <div class="max-w-[1180px] mx-auto xl:px-0 px-[10px] flex items-center justify-between py-4 z-10">
+        <div class="flex items-center"> 
+          <a id="logo" href="main.html" class="flex mr-9 z-10"> 
+            <img src="images/Logo.svg" alt="">
+          </a>
+          <div class = "hidden md:flex items-center w-fit"> 
+            <button onclick="openService()" onmouseover="openService()" class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Услуги</button>
+            <button class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Преимущества</button>
+            <button class="border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Отзывы</button>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center w-fit">
+          <button onclick="modalOpen()" class="mr-7 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Войти</button>
+          <a href="order.html" class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Быстрый заказ</a>
+        </div>
+        <div class="md:hidden flex items-center z-20">
+          <button id = "burger" onclick="Burger()" class="">
+            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_420_8350)">
+              <rect id="burger1" class="transition-all duration-150 " x="0.279297" y="0.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              <rect id="burger2" class="transition-all duration-150 " x="0.279297" y="8.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              <rect id="burger3" class="transition-all duration-150 " x="0.279297" y="16.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_420_8350">
+                <rect width="22" height="19" fill="white" transform="translate(0.279297 0.5)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div id="main" class="min-h-[100vh]" >
+      <div class="">
+        <section class="relative w-full mx-auto">
+          <div id="service" onmouseleave="openService()" class="hidden w-full h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-[15] py-6 absolute top-0 left-0">
+            <div class="max-w-[1180px] mx-auto">
+              <div class="grid grid-cols-7 gap-y-4 gap-x-4 justify-between w-full">
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/insta.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">Instagram</h5>
+                  </div>
+                  <div class="mt-5 text-start">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Telegram.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">Telegram</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Реакции</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Голосование</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Старт бота</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Telegraph просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Vk.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">Vk</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на видео</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на пост</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Накрутка опросов</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Прослушивания</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Релиз плейлиста</button> 
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Tiktok.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">TikTok</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Youtube.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">YouTube</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры трансляций</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры Shorts</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Часы просмотров</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Twich.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">Twitch</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Facebook.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">FaceBook</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/insta.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">Instagram</h5>
+                  </div>
+                  <div class="mt-5 text-start">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Telegram.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">Telegram</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Реакции</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Голосование</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Старт бота</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Telegraph просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Vk.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">Vk</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на видео</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры на пост</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Накрутка опросов</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Прослушивания</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Релиз плейлиста</button> 
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Tiktok.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">TikTok</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Youtube.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">YouTube</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры трансляций</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры Shorts</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Репосты</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Часы просмотров</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Twich.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">Twitch</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                  </div>
+                </div>
+                <div class="col-span-1">
+                  <div class="flex items-center gap-x-1">
+                    <img src="images/Facebook.svg" alt="" class="h-5 w-5">
+                    <h5 class=" text-lg ">FaceBook</h5>
+                  </div>
+                  <div class="mt-5">
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Подписчики</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Лайки</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Просмотры</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Комментарии</button> 
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Истории</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Зрители</button>
+                    <button class="hover:text-hoverBlue block mt-2 text-start">Статистика</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <section class="max-w-[1180px] mx-auto min-h-[100vh]">
+          <div class="xl:px-0 px-[10px] md:py-10 py-[30px]">
+            <h2 class="font-semibold text-xl">Условия обслуживания</h2>
+            <div class="md:text-base text-sm max-w-[800px] mt-5">
+                <p class = "mt-5"> Настоящий документ является официальным публичным договором SMMFLOW, именуемого в дальнейшем «Исполнитель», любому юридическому или физическому лицу, выразившему готовность воспользоваться услугами Исполнителя и принявшему условия настоящего Договора (оферты), именуемому в дальнейшем «Заказчик», на оказание услуг по продвижению в социальных сетях и рекламе, осуществляемых через Веб-сайт по адресу: https://smmflow.net.</p>
+                <p class = "mt-5"> В соответствии с пунктом 2 статьи 437 Гражданского кодекса Российской Федерации (ГК РФ) в случае принятия изложенных ниже условий и оплаты услуг юридическое или физическое лицо, производящее акцепт настоящей оферты, становится Заказчиком (в соответствии с пунктом 3 статьи 438 ГК РФ акцепт оферты равносилен заключению договора на условиях, изложенных в оферте), а Исполнитель и Заказчик совместно — Сторонами настоящего договора.</p>
+                <p class = "mt-5 font-bold"> 1. Общие положения</p>
+                <p class = "mt-5"> 1.1. В связи с изложенным выше, внимательно прочитайте текст настоящей публичной оферты и ознакомьтесь с прейскурантом услуг. Если Вы не согласны с каким-либо пунктом оферты, Исполнитель предлагает Вам отказаться от использования услуг.</p>
+                <p class = "mt-5"> 1.2. Публичная оферта, выраженная в настоящем Договоре, вступает в силу с момента размещения в сети Интернет по адресу: https://smmflow.net/agreement и действует до момента отзыва оферты Исполнителем.</p>
+                <p class = "mt-5"> 1.3. Акцептом (безусловным принятием) условий настоящей публичной оферты (моментом заключения Договора) в соответствии со статьей 438 ГК РФ считается факт оплаты Заказчиком Услуг, предоставляемых Исполнителем в соответствии с условиями настоящего Договора, при отсутствии явно выраженного письменного соглашения Сторон об ином.</p>
+                <p class = "mt-5"> 1.4. Осуществляя акцепт настоящей публичной оферты в порядке, определенном п.1.3. настоящего Договора, Заказчик соглашается со всеми условиями Договора в том виде, в каком они изложены в тексте настоящего Договора, и в соответствии с Гражданским Кодексом Российской Федерации рассматривается как лицо, вступившее с Исполнителем в договорные отношения на основании настоящего Договора публичной оферты.</p>
+                <p class = "mt-5"> 1.5. Исполнитель оказывает услуги по продвижению в социальных сетях и рекламе (далее — Услуги), содержание и размер оплаты которых опубликованы в сети Интернет по адресу: https://smmflow.net, а порядок оказания и оплаты которых указан в настоящем Договоре-оферте (далее — Договор).</p>
+                <p class = "mt-5"> 1.6. Заключая настоящий Договор, Заказчик понимает значение своих действий и способен руководить ими, не находится под влиянием заблуждения, обмана, насилия, угрозы. Договор заключен Заказчиком добровольно, с предварительным полным ознакомлением с условиями настоящего Договора-оферты, содержание которого Заказчику понятно. Если Заказчик не имел соответствующих полномочий в момент принятия публичной оферты от имени юридического лица, то он, как физическое лицо, принимает на себя всю ответственность за исполнение данной публичной оферты.</p>
+                <p class = "mt-5"> 1.7. Исполнитель вправе в любое время по своему усмотрению изменить условия публичной оферты (настоящего Договора) или отозвать её. В случае изменения Исполнителем условий настоящего Договора, изменения вступают в силу с момента размещения измененных условий в сети Интернет по адресу: https://smmflow.net/agreement, если иной срок не указан Исполнителем при таком размещении. Заказчик соглашается и признает, что внесение изменений в настоящий Договор влечет за собой внесение этих изменений в заключенный в соответствии с п. 1.3. настоящего Договора и действующий между Заказчиком и Исполнителем договор, если иное не определено Исполнителем при внесении изменений в настоящий Договор.</p>
+                <p class = "mt-5"> 1.8. Исполнитель имеет право в любой момент изменять Прейскурант и условия настоящей публичной оферты в одностороннем порядке без предварительного согласования с Заказчиком, обеспечивая при этом публикацию измененных условий на Интернет-ресурсе по адресу: https://smmflow.net/agreement.</p>
+                <p class = "mt-5 font-bold"> 2. Стороны и используемые понятия</p>
+                <p class = "mt-5"> 2.1. Стороны — Исполнитель и Заказчик.</p>
+                <p class = "mt-5"> 2.2. Исполнитель — лицо, оказывающее услуги по продвижению в социальных сетях и рекламе через Веб-сайт в сети Интернет по адресу: https://smmflow.net. Исполнитель является одной из сторон данного Договора-оферты.</p>
+                <p class = "mt-5"> 2.3. Заказчик – лицо, осуществившее акцепт оферты, и являющееся таким образом Заказчиком услуг Исполнителя по заключенному Договору-оферте. Заказчик является одной из сторон данного Договора-оферты.</p>
+                <p class = "mt-5"> 2.4. Договор-оферта – договор между Исполнителем и Заказчиком на оказание услуг по продвижению в социальных сетях и рекламе, который заключается посредством акцепта оферты. Договор-оферта опубликован в сети Интернет по адресу: https://smmflow.net/agreement.</p>
+                <p class = "mt-5"> 2.5. Акцепт оферты – полное и безоговорочное принятие оферты путем осуществления Заказчиком действий, указанных в пункте 4.4. настоящей оферты. Акцепт оферты создает Договор оферты.</p>
+                <p class = "mt-5"> 2.6. Сервис — комплекс всех Услуг, предоставляемых Заказчику с использованием Вебсайта по адресу: https://smmflow.net.</p>
+                <p class = "mt-5"> 2.7. Услуги — комплекс функций технического характера, предоставляемый Заказчику в рамках платного приобретения услуг по продвижению, накрутке и рекламе. В том числе, услуги Сервиса решают задачу привлечения подписчиков, лайков, репостов, комментариев, и прочей активности в аккаунты Заказчика в социальных сетях. Объем и качество предоставляемых Услуг может изменяться Сервисом в одностороннем порядке без предварительного или последующего извещения Заказчика.</p>
+                <p class = "mt-5"> 2.8. Веб-сайт — Сервис «SMMFLOW», предоставляющий услуги по онлайн продвижению в социальных сетях расположенный по адресу: https://smmflow.net.</p>
+                <p class = "mt-5"> 2.9. Прейскурант — действующий систематизированный перечень услуг Исполнителя с ценами, публикуемый на Интернет-ресурсе по адресу: https://smmflow.net.</p>
+                <p class = "mt-5 font-bold"> 3. Предмет Договора</p>
+                <p class = "mt-5"> 3.1. Предметом настоящей оферты является оказание Заказчику услуг по продвижению в социальных сетях и рекламе в соответствии с условиями настоящей оферты и текущим прейскурантом услуг Исполнителя.</p>
+                <p class = "mt-5"> 3.2. Перечень оказываемых услуг продвижения в социальных сетях приведен на сайте https://smmflow.net, являющимся неотъемлемой частью настоящей оферты.</p>
+                <p class = "mt-5"> 3.3. Конкретный перечень Услуг, оказываемых Заказчику, определяется на основании заявки Заказчика и/или счета, выставленного Исполнителем и оплаченного Заказчиком. С момента оплаты счета он становится неотъемлемой частью Договора, заключенного между Заказчиком и Исполнителем, определяющим состав и стоимость оказываемых по Договору Услуг.</p>
+                <p class = "mt-5 font-bold"> 4. Порядок оказания и оплаты услуг</p>
+                <p class = "mt-5"> 4.1. Оказание услуг продвижения, рекламы и накрутки в социальных сетях предоставляются в полном объеме при условии их 100% (сто процентов) оплаты Заказчиком. Условия выполнения услуги, а также её описание/характеристики строго индивидуальны и подробно указаны на конкретной странице оформления заказа и покупки услуги/товара. Оформляя и оплачивая заказ на сайте, Заказчик подтверждает своё полное согласие с данными правилами и характеристиками/описание товара/услуги.</p>
+                <p class = "mt-5"> 4.2. Ознакомившись с прейскурантом услуг Исполнителя и текстом настоящей публичной оферты, Заказчик формирует на сайте: https://smmflow.net электронную заявку.</p>
+                <p class = "mt-5"> 4.3. На основании полученной заявки Исполнитель автоматически выставляет Заказчику счет (квитанцию) на оплату выбранной услуги в электронном виде.</p>
+                <p class = "mt-5"> 4.4. Заказчик перечисляет денежные средства путем оплаты любым способом через платежный шлюз, предоставленный партнерами Исполнителя.</p>
+                <p class = "mt-5"> 4.5. После проведения Заказчиком оплаты выставленного счета и зачисления денежных средств договор Оферты вступает в силу.</p>
+                <p class = "mt-5"> 4.6. В течение не более 7 рабочих дней с момента акцепта оферты Исполнитель обеспечивает предоставление услуг Заказчику в соответствие с его заявкой, если в заявке не указан другой срок исполнения.</p>
+                <p class = "mt-5"> 4.7. Услуги считаются оказанными надлежащим образом и в полном объеме, если в течение 24 часов с момента оказания услуг Заказчиком не выслан на адрес Исполнителя мотивированный отказ от принятия услуги.</p>
+                <p class = "mt-5 font-bold"> 5. Условия возврата денежных средств</p>
+                <p class = "mt-5"> 5.1. Исполнитель не несёт никакой ответственности за возможное списание третьими лицами выполненных Исполнителем работ и не обязан возмещать денежные средства. Даже в случае списания третьими лицами выполненных Исполнителем работ, услуга продолжает считается полностью выполненной.</p>
+                <p class = "mt-5"> 5.2. Возврат средств не производится, если заказ не удалось выполнить из-за ошибки Заказчика (например, если при оформлении заказа было указана некорректная ссылка, или если страница, указанная Заказчиком, была заблокирована и т.п.), а также, если размещенный контент Заказчика нарушал правила социальных сетей или действующее законодательство Российской Федерации.</p>
+                <p class = "mt-5"> 5.3. Если Заказчиком была указана некорректная ссылка, то заказ считается выполненным и денежные средства Заказчику не возвращаются.</p>
+                <p class = "mt-5"> 5.4 Если Заказчиком была указана несуществующая ссылка и заказ не был выполнен, то в статус “Отменен” и средства возвращаются на баланс личного кабинета пользователя.</p>
+                <p class = "mt-5"> 5.4. Возврат неиспользованных средств со счета баланса Заказчика на Веб-сайте https://smmflow.net возможен только при условии формирования заявки в личном кабинете на странице https://smmflow.net/cabinet/support. Средства будут возвращены на тот же счет, с которого были внесены Заказчиком после процедуры идентификации пользователя на основании Федерального закона от 07.08.2001 N 115-ФЗ в течении 7 рабочих дней. Возврат денежных средств происходит с удержанием комиссии 15% (Пятнадцать процентов) от суммы возврата на покрытие расходов платежного эквайринга и прочих расходов.</p>
+                <p class = "mt-5 font-bold"> 6. Права и обязанности Сторон</p>
+                <p class = "mt-5"> 6.1. По настоящему Договору Исполнитель обязуется оказывать Заказчику комплекс Услуг, указанных в заявке Заказчика и/или оплаченном Заказчиком счете, а Заказчик обязуется принять и оплатить их в соответствии с условиями настоящего Договора.</p>
+                <p class = "mt-5"> 6.2. Заказчик обязан самостоятельно ознакомиться с действующей редакцией настоящего Договора, размещенной на сайте Исполнителя в сети Интернет на общедоступной странице https://smmflow.net/agreement.</p>
+                <p class = "mt-5"> 6.3. За невыполнение или ненадлежащее выполнение обязательств по настоящей публичной оферте Стороны несут ответственность в соответствии с действующим законодательством Российской Федерации. Договор вступает в силу с момента акцепта оферты и действует до выполнения Сторонами своих обязательств. Все споры и разногласия решаются путем переговоров Сторон. Срок рассмотрения рекламаций – тридцать дней.</p>
+                <p class = "mt-5 font-bold"> 7. Порядок разрешения споров</p>
+                <p class = "mt-5"> 7.1. Все споры, разногласия и претензии, которые могут возникнуть в связи с исполнением, расторжением или признанием недействительным Договора, Стороны будут стремиться решить путем переговоров. Сторона, у которой возникли претензии и/или разногласия, направляет другой Стороне сообщение с указанием возникших претензий и/или разногласий.</p>
+                <p class = "mt-5"> 7.2. В случае если ответ на сообщение не будет получен направившей сообщение Стороной в течение 30 (тридцати) рабочих дней с даты направления соответствующего сообщения, либо если Стороны не придут к соглашению по возникшим претензиям и/или разногласиям, спор подлежит разрешению в судебном порядке по месту нахождения Исполнителя.</p>
+                <p class = "mt-5 font-bold"> 8. Ограничение ответственности</p>
+                <p class = "mt-5"> 8.1. Веб-сайт может содержать ссылки на другие ресурсы. Вы признаете и соглашаетесь с тем, что Веб-сайт не несет никакой ответственности за доступность этих ресурсов и за их контент, а также за любые последствия, связанные с использованием Вами контента этих ресурсов.</p>
+                <p class = "mt-5"> 8.2. Вы также соглашаетесь с тем, что Веб-сайт не несёт никакой ответственности за Ваши персональные данные, которые Вы предоставляете сторонним ресурсам и/или иным третьим лицам в случае перехода на них с Веб-сайта.</p>
+                <p class = "mt-5"> 8.3. Исполнитель не дает гарантии от защитных действий, которые могут предпринять третьи лица, в том числе социальные сети, против массовой накрутки. Денежные средства в таком случае не возвращаются.</p>
+                <p class = "mt-5"> 8.4. Исполнитель не несёт ответственности за любой возможный ущерб, причиненный Заказчику, его профилям в социальных сетях или его бизнесу, а также за любые виды убытков, произошедшие вследствие использования Сервиса или отдельных частей/услуг/товаров/функций Сервиса.</p>
+                <p class = "mt-5"> 8.5. Пользуясь услугами Сервиса, Заказчик берёт на себя полную ответственность за последствия накрутки, в том числе - возможную блокировку аккаунта/профиля/страницы.</p>
+                <p class = "mt-5"> 8.6. В случае использования Заказчиком одновременно нескольких Сервисов по продвижению, накрутке и/или рекламы, Исполнитель не может гарантировать качество выполняемого заказа, не несет ответственности за его выполнение и не принимает претензии по качеству.</p>
+                <p class = "mt-5"> 8.7. Ответственность за действия несовершеннолетних, включая приобретение ими услуг/товаров из каталога на Веб-сайте, лежит на законных представителях несовершеннолетних.</p>
+                <p class = "mt-5"> 8.8. В случае неисполнения и/или ненадлежащего исполнения Исполнителем обязательств по предоставлению услуг в связи с предоставлением Заказчиком недостоверных и/или недействительных данных, равно как и невыполнение Заказчиком условий настоящего Договора, Исполнитель ответственности не несет и денежных средств не возвращает.</p>
+                <p class = "mt-5"> 8.9. Исполнитель не несет ответственности за нарушение условий договора оферты, если такое нарушение вызвано действием обстоятельств непреодолимой силы (форс-мажор) или обстоятельств, которые не зависят от работы Исполнителя, включая: изменения в работе социальных сетей, действия органов государственной власти, пожар, наводнение, землетрясение, другие стихийные действия, отсутствие электроэнергии и/или сбои работы компьютерной сети, забастовки, гражданские волнения, беспорядки, любые иные обстоятельства, не ограничиваясь перечисленным, которые могут повлиять на выполнение Исполнителем условий настоящей публичной оферты и неподконтрольные Исполнителю.</p>
+                <p class = "mt-5"> 8.10. В случае невозможности оказания услуг по вине Исполнителя, Исполнитель обязуется произвести возврат денежных средств, оплаченных Заказчиком, на баланс Заказчика на Веб-сайте. В иных случаях возврат денежных средств не производится.</p>
+                <p class = "mt-5"> 8.11. Для исполнения своих обязательств по настоящей Оферте Исполнитель вправе привлекать третьих лиц.</p>
+                <p class = "mt-5"> 8.12 Пользователь дает согласие на хранение, обработку и передачу, в том числе передачу третьей стороне, данных о своих заказах.</p>
+                <p class = "mt-5"> 8.13 Использование персональных данных и иной информации Пользователя, в том числе предоставленной при оформлении заказа на Сайте, по настоящей Оферте осуществляется исключительно в целях исполнения Исполнителем своих обязательств.</p>
+                <p class = "mt-5"> 8.14 Частичное или полное возмещение средств не будет произведено Исполнителем, если Пользователь потребуете прервать выполнение заказа.</p>
+                <p class = "mt-5 font-bold"> 9. Политика конфиденциальности</p>
+                <p class = "mt-5"> 9.1. Условия Политики конфиденциальности и отношения между Вами и Веб-сайтом, связанные с обработкой персональных данных, регулируются Федеральным Законом Российской Федерации №152-ФЗ от 27 июля 2006г. «О персональных данных».</p>
+                <p class = "mt-5"> 9.2. Политика конфиденциальности действует в отношении персональных данных, которые Веб-сайт получил или может получить от Вас при регистрации и/или оформлении заказа на Веб-сайте, и необходимые для выполнения обязательств со стороны Веб-сайта в отношении приобретаемой Вами услуги/товара и/или Вашего доступа к сервисам Веб-сайта.</p>
+                <p class = "mt-5"> 9.3. Политика конфиденциальности доступна по ссылке https://smmflow.net/privacy.</p>
+                <p class = "mt-5 font-bold"> 10. Заключительные положения</p>
+                <p class = "mt-5"> 10.1. Договор-оферта и все возникающие из него правоотношения регулируются законодательством Российской Федерации без учета его коллизионных норм. Все возникающие споры разрешаются в соответствии с законодательством Российской Федерации. Настоящий Договор-оферта размещён на неопределенный срок и утрачивает свою силу при её аннулировании Исполнителем.</p>
+                <p class = "mt-5"> 10.2. Признание судом какого-либо положения Договора недействительным или не подлежащим принудительному исполнению не влечет недействительности иных положений Договора.</p>
+                <p class = "mt-5"> 10.3. Заказчик обязуется самостоятельно осуществлять контроль за изменениями в положениях настоящего Договора и нести ответственность за последствия, связанные с несоблюдением данной обязанности.</p>
+                <p class = "mt-5"> 10.4. Бездействие со стороны Исполнителя в случае нарушения Заказчиком положений Договора не лишает Исполнителя права предпринять позднее соответствующие действия в защиту своих интересов.</p>
+                <p class = "mt-5"> 10.5. Заказчик подтверждает, что ознакомился со всеми положениями Договора, понимает и принимает их в полном объеме.</p>
+                <p class = "mt-5"> 10.6 При несогласии Заказчик обязан прекратить использование Сайта https://smmflow.net и отказаться от Услуг Исполнителя. В противном случае продолжение использования Заказчиком Сайта означает, что Заказчик согласен с условиями Оферты в новой редакции.</p>
+                <p class = "mt-5"> 10.7 Контактные данные администрации по всем вопросам: support@smmflow.net</p>
+            </div>
+          </div>
+        </section>
+        
+    
+      </div>
+      <footer class="w-full bg-whiteGray">
+        <div class="max-w-[1180px] xl:px-0 px-[10px] mx-auto md:py-10 py-5">
+          <div class="flex flex-wrap justify-between gap-y-5">
+            <div class="lg:w-[30%] md:w-1/2 w-full">
+              <img src="images/Logo.svg" alt="" class="mb-5">
+              <p class="text-sm md:block hidden">
+                SMMFLOW - сервис, где вы сможете приобрести качественное продвижение в социальных сетях <br> по выгодным ценам.
+              </p>
+              <p class="text-base md:hidden">
+                SMMFLOW - ведущий сервис на рынке продвижения в социальных сетях. За счет низких цен и высокого качества выполнения услуг сервис является незаменимым для большинства наших клиентов со всего мира. 
+              </p>
+              <div class="flex items-center gap-x-1 mt-5">
+                <img src="images/card1.svg" alt="w-[46px]">
+                <img src="images/card2.svg" alt="w-[46px]">
+                <img src="images/card3.svg" alt="w-[46px]">
+                <img src="images/card4.svg" alt="w-[46px]">
+              </div>
+            </div>
+            <div class="lg:w-[25%] md:w-1/2 w-full lg:hidden">
+              <p class="font-medium block">Нужна помощь?</p>
+              <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
+              <span class="block">support@smmflow.net</span>
+            </div>
+            <div class="lg:w-fit md:w-1/2 w-full">
+              <button class="block">Каталог услуг</button>
+              <button class="block my-2">Преимущества</button>
+              <button class="block">Отзывы</button>
+            </div>
+            <div class="lg:w-fit md:w-1/2 w-full">
+              <button class="block">Политика конфиденциальности</button>
+              <button class="block my-2">Публичная оферта</button>
+              <button class="block my-2">Пользовательское соглашение</button>
+              <button class="block my-2">Правила сервиса</button>
+              <button class="block">Контакты</button>
+            </div>
+            <div class="lg:w-fit w-1/3 lg:block hidden">
+              <p class="font-medium block">Нужна помощь?</p>
+              <button class="px-6 py-3 rounded-[4px] bg-[#EBEBEB] my-3 hover:shadow-md block">Онлайн-чат</button>
+              <span class="block">support@smmflow.net</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script>
+
+let isModal = false;
+    let isLogIn = false;
+    let burgerMenu = false;
+
+    function Burger(){
+      if (!burgerMenu){
+        document.getElementById("burger1").classList.add("rotate-45","translate-x-[5px]", "-translate-y-[0.5px]")
+        document.getElementById("burger2").classList.add("opacity-0", "rotate-360")
+        document.getElementById("burger3").classList.add("-rotate-45", "-translate-x-[9px]", "translate-y-1")
+        document.getElementById("menu").classList.remove("translate-x-full")
+        burgerMenu = !burgerMenu
+      }
+      else{
+        document.getElementById("burger1").classList.remove("rotate-45","translate-x-[5px]", "-translate-y-[0.5px]")
+        document.getElementById("burger2").classList.remove("opacity-0", "rotate-360")
+        document.getElementById("burger3").classList.remove("-rotate-45", "-translate-x-[9px]", "translate-y-1")
+        document.getElementById("menu").classList.add("translate-x-full")
+        burgerMenu = !burgerMenu
+      }
+    }
+
+
+    function signUp(){
+      if (!isLogIn){
+        document.getElementById("logIn").classList.add("hidden")
+        document.getElementById("signUp").classList.remove("hidden")
+        isLogIn = !isLogIn
+      }
+      else{
+        document.getElementById("logIn").classList.remove("hidden")
+        document.getElementById("signUp").classList.add("hidden")
+        isLogIn = !isLogIn
+      }
+    }
+
+    function modalOpen(){
+      if(!isModal){
+        document.getElementById("modal").classList.remove("hidden")
+        isModal = !isModal
+      }
+      else{
+        isLogIn = true
+        signUp();
+        document.getElementById("modal").classList.add("hidden")
+        isModal = !isModal
+      }
+    }
+    //
+
+    let count = 0;
+
+    let isService = false;
+
+    function openService(){
+      if(!isService){
+        document.getElementById("service").classList.remove("hidden")
+        document.getElementById("service").classList.add("border-b-2")
+        isService = !isService
+      }
+      else{
+        document.getElementById("service").classList.add("hidden")
+        isService = !isService
+      }
+    }
+    
+  </script>
+</body>
+</html>
