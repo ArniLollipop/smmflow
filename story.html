@@ -331,7 +331,7 @@
               <p class="lg:text-base text-sm">Выйти</p>
             </button>
           </div>
-          <div onmouseover="setTimeout(()=> shadow(), 100)" id="swiper" class="swiper-story story-shadow md:hidden overflow-hidden">
+          <div id="swiper" class="swiper-story relative md:hidden overflow-hidden">
             <div class="swiper-wrapper navbar-story flex items-center">
               <div class="swiper-slide">
                 <div class="flex items-center pr-1 gap-x-1 lg:py-6 py-[15px]">
@@ -364,8 +364,11 @@
                 </button>
               </div>
             </div>
-            <button id="nextEl" onclick="setTimeout(()=> shadow(), 100)" class="s-button-next w-fit h-full absolute top-0 right-0 z-5">
-              <img src="images/ArrowRight.svg" alt="" class="w-fit">
+            <button id="nextEl" class="s-button-next slider-right-shadow-story lg:w-[56px] md:w-[46px] w-fit pr-1 h-full z-10 top-0">
+              <img src="images/ArrowRight.svg" alt="" class=" w-7 h-[14px] z-10">
+            </button>
+            <button id="prevEl" class="s-button-prev slider-left-shadow-story lg:w-[56px] md:w-[46px] w-fit pl-1 h-full z-10 top-0">
+              <img src="images/ArrowRight.svg" alt="" class=" w-7 h-[14px] rotate-180 z-10">
             </button>
           </div>
 

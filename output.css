@@ -3222,6 +3222,45 @@ body{
   box-shadow: inset -60px 0px 10px white !important;
 }
 
+.slider-left-shadow::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100px;
+  background:transparent;
+  z-index: 5;
+  opacity: 60;
+  overflow: inset;
+  box-shadow: inset 60px 0px 10px white !important;
+}
+
+.slider-right-shadow-story::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50px;
+  background:transparent;
+  z-index: 5;
+  opacity: 60;
+  overflow: inset;
+  box-shadow: inset -50px 0px 10px white !important;
+}
+
+.slider-left-shadow-story::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50px;
+  background:transparent;
+  z-index: 5;
+  opacity: 60;
+  overflow: inset;
+  box-shadow: inset 50px 0px 10px white !important;
+}
+
 .swiper-slide{
   width: auto !important;
   opacity: 0.25;
