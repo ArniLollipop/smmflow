@@ -308,11 +308,11 @@
           <div class="xl:px-0 px-[10px] md:py-10 py-[30px]">
             <h3 class="text-[24px] font-semibold">Оформление заказа</h3>
             <div class="flex justify-between mt-[30px]">
-              <div class="lg:w-[45%] w-full">
+              <div class="max-w-[480px] w-full">
   
                 <p class="font-medium text-base mb-1">Социальная сеть</p>
                 <div id="relative1" class=" relative">
-                  <button id="select1Btn" onclick="select1()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-md rounded-t-md">
+                  <button id="select1Btn" onclick="select1()" class="z-0 border border-border px-3 py-[9px] flex items-center justify-between w-full rounded-md rounded-t-md">
                     <div class="flex gap-x-[6px]">
                       <img src="images/selectImg.svg" alt="" class="w-5 h-5">
                       <span>Выберите соц. сеть</span>
@@ -320,7 +320,7 @@
                     <span class="text-whiteBlue text-sm">Выбрать</span>
                   </button>
                   <div class="absolute top-full w-full">
-                    <ul id="select1" class="border-border z-10 hidden overflow-hidden border rounded-b-xl">
+                    <ul id="select1" class="border-border z-10 hidden overflow-hidden border border-t-0 rounded-b-xl">
                       
                     </ul>
                   </div>
@@ -328,7 +328,7 @@
   
                 <p class="font-medium text-base mb-1 mt-5">Тип услуги</p>
                 <div id="relative2" class="">
-                  <button id="select2Btn" onclick="select2()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-md rounded-t-md">
+                  <button id="select2Btn" onclick="select2()" class="z-0 border border-border px-3 py-[9px] flex items-center justify-between w-full rounded-md rounded-t-md">
                     <div class="flex gap-x-[6px]">
                       <img src="images/selectImg.svg" alt="" class="w-5 h-5">
                       <span>Выберите тип услуги</span>
@@ -336,7 +336,7 @@
                     <span class="text-whiteBlue text-sm">Выбрать</span>
                   </button>
                   <div class="absolute top-full w-full">
-                    <ul id="select2" class="border-border z-10 hidden overflow-hidden border rounded-b-xl">
+                    <ul id="select2" class="border-border z-10 hidden overflow-hidden border border-t-0 rounded-b-xl">
                       
                     </ul>
                   </div>
@@ -344,7 +344,7 @@
   
                 <p class="font-medium text-base mb-1 mt-5">Тариф</p>
                 <div id="relative3" class="">
-                  <button id="select3Btn" onclick="select3()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-md rounded-t-md">
+                  <button id="select3Btn" onclick="select3()" class="z-0 border border-border px-3 py-[9px] flex items-center justify-between w-full rounded-md rounded-t-md">
                     <div class="flex gap-x-[6px]">
                       <img src="images/selectImg.svg" alt="" class="w-5 h-5 ">
                       <span>Выберите тариф</span>
@@ -352,31 +352,33 @@
                     <span class="text-whiteBlue text-sm">Выбрать</span>
                   </button>
                   <div class="absolute top-full w-full">
-                    <ul id="select3" class="border-border z-10 hidden overflow-hidden border rounded-b-xl">
+                    <ul id="select3" class="border-border z-10 hidden overflow-hidden border border-t-0 rounded-b-xl">
                       
                     </ul>
                   </div>
                 </div>
                 <div class="lg:hidden block">
                   <div class="flex flex-wrap bg-whiteGray rounded-xl p-[10px] items-center my-3 gap-2 md:text-base text-sm">
-                    <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      <span class="mr-2">🌍</span>Со всего мира
+                    <div class="px-2 py-1 font-medium bg-darkGray rounded-lg flex items-center gap-x-1">
+                      <img src="images/Earth.svg" alt=""> 
+                      <p> Со всего мира</p>
                     </div>
-                    <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      <span class="mr-2">🚀</span>Скорость до 10К/день
+                    <div class="px-2 py-1 font-medium bg-darkGray rounded-lg flex items-center gap-x-1">
+                      <img src="images/Raketa.svg" alt=""> 
+                      <p>Скорость до 10К/день</p>
                     </div>
-                    <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      <span class="mr-2">⚡</span>Быстрый старт
+                    <div class="px-2 py-1 font-medium bg-darkGray rounded-lg flex items-center gap-x-1">
+                      <img src="images/Mcqueen.svg" alt=""> Быстрый старт
                     </div>
-                    <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      <span class="mr-2">⭐️</span>Гарантия 60 дней
+                    <div class="px-2 py-1 font-medium bg-darkGray rounded-lg flex items-center gap-x-1">
+                      <img src="images/StarYellow.svg" alt=""> Гарантия 60 дней
                     </div>
                   </div>
                 </div>
                 <div class="lg:block hidden">
                   <p class="font-medium text-base mb-1 mt-5">Тариф</p>
                   <div id="relative4" class="">
-                    <button id="select4Btn" onclick="select4()" class="z-0 border border-border p-3 flex items-center justify-between w-full rounded-md rounded-t-md">
+                    <button id="select4Btn" onclick="select4()" class="z-0 border border-border px-3 py-[9px] flex items-center justify-between w-full rounded-md rounded-t-md">
                       <div class="flex gap-x-[6px]">
                         <img src="images/selectImg.svg" alt="" class="w-5 h-5">
                         <span>Выберите тариф</span>
@@ -384,7 +386,7 @@
                       <img src="images/ArrowDown.svg" alt="">
                     </button>
                     <div class="absolute top-full w-full">
-                      <ul id="select4" class="border-border z-10 hidden overflow-hidden border rounded-b-xl">
+                      <ul id="select4" class="border-border z-10 hidden overflow-hidden border border-t-0 rounded-b-xl">
                         
                       </ul>
                     </div>
@@ -392,21 +394,22 @@
                 </div>
                 <div>
                   <p class="font-medium text-base mb-1 mt-5">Количество</p>
-                  <input type="text" placeholder="Укажите количество" class="p-3 border outline-none border-border w-full rounded-md">
+                  <input type="text" placeholder="Укажите количество" class="px-3 py-[9px] border outline-none border-border w-full rounded-md">
                   <span class="text-xs mt-1 text-[#8A8A8A]">Можно заказать от 100 до 100 000</span>
                 </div>
                 <div >
                   <p class="font-medium text-base mb-1 mt-5">Укажите ссылку</p>
-                  <input type="text" placeholder="https://www.instagram.com/p/CN8Xf1rgWX7/" class="p-3 border outline-none border-border w-full rounded-md">
+                  <input type="text" placeholder="https://www.instagram.com/p/CN8Xf1rgWX7/" class="px-3 py-[9px] border outline-none border-border w-full rounded-md">
                   <p class="text-xs mt-1 text-[#8A8A8A] w-[80%]">Ваш профиль должен быть открытым для правильной работы наших услуг. Мы не сможем продвигать закрытый профиль</p>
                 </div>
                 <div class="flex items-center justify-between w-full mt-5">
                   <p class="font-medium text-base ">Промокод</p>
-                  <button class="flex items-center gap-x-[6px] md:text-base text-sm text-[#2C75FF] border-2 border-[#2C75FF] px-[10px] py-[7px] rounded-md font-medium">
-                    <span class="mr-[6px]"> 🎁</span> Получить промокод
+                  <button class="flex items-center gap-x-[6px] md:text-base text-sm text-[#2C75FF] border-2 border-[#2C75FF] px-[10px] py-1 rounded-md font-medium ">
+                    <img src="images/Podarok.svg" alt="">
+                    Получить промокод
                   </button>
                 </div>
-                <div class="p-3 border border-border flex items-center justify-between rounded-md mt-2">
+                <div class="px-3 py-[9px] border border-border flex items-center justify-between rounded-md mt-2">
                   <input type="text" placeholder="Введите промокод" class="w-[70%] outline-none">
                   <button class="text-whiteBlue text-base">Активировать</button>
                 </div>
@@ -418,24 +421,26 @@
                   <div class="w-full text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-2" >Оплатить 450 руб.</div>
                 </a>
               </div>
-              <div class="w-[50%] lg:block hidden border-l border-border h-fit xl:p-14 lg:p-7">
+              <div class="w-[52%] lg:block hidden border-l border-border h-fit xl:pl-[50px] xl:p-14 lg:p-7">
                 <div class="bg-gray rounded-xl p-5 w-full">
                   <p class="font-medium text-xl">Описание услуги</p>
                   <div class="flex flex-wrap items-center my-5 gap-2 text-base">
-                    <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      <span class="mr-1">🌍</span>Со всего мира
+                    <div class="px-2 py-1 font-medium bg-darkGray rounded-lg flex items-center gap-x-1">
+                      <img src="images/Earth.svg" alt=""> 
+                      <p> Со всего мира</p>
                     </div>
-                    <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      <span class="mr-1">🚀</span>Скорость до 10К/день
+                    <div class="px-2 py-1 font-medium bg-darkGray rounded-lg flex items-center gap-x-1">
+                      <img src="images/Raketa.svg" alt=""> 
+                      <p>Скорость до 10К/день</p>
                     </div>
-                    <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      <span class="mr-1">⚡</span>Быстрый старт
+                    <div class="px-2 py-1 font-medium bg-darkGray rounded-lg flex items-center gap-x-1">
+                      <img src="images/Mcqueen.svg" alt=""> Быстрый старт
                     </div>
-                    <div class="p-2 font-medium bg-darkGray rounded-lg">
-                      <span class="mr-1">⭐️</span>Гарантия 60 дней
+                    <div class="px-2 py-1 font-medium bg-darkGray rounded-lg flex items-center gap-x-1">
+                      <img src="images/StarYellow.svg" alt=""> Гарантия 60 дней
                     </div>
                   </div>
-                  <span class="">
+                  <span class="text-base">
                     Подписываются живые люди со всего мира. Все отписки и списания мы будем восстанавливать автоматически в течение 60 дней после заказа.
                   </span>
                   <div class="flex items-center mt-5 justify-between bg-textBlue rounded-xl p-4 relative overflow-hidden">
@@ -582,7 +587,7 @@ let isModal = false;
     let s = ""
 
     social.map((element)=>{
-      s += `<li onclick="option1(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-[6px] hover:bg-gray p-3">
+      s += `<li onclick="option1(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-[6px] hover:bg-gray px-3 py-[9px]">
               <img src="${element.img}" alt="" class="w-5 h-5">
               <span>${element.name}</span>
             </li>`
@@ -642,7 +647,7 @@ let isModal = false;
       {id: 15, img: 'images/Reels.svg', name: "Reels"},
     ]
     services.map((element)=>{
-      s += `<li onclick="option2(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-[6px] hover:bg-gray p-3">
+      s += `<li onclick="option2(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-[6px] hover:bg-gray px-3 py-[9px]">
               <img src="${element.img}" alt="" class="w-5 h-5">
               <span>${element.name}</span>
             </li>`
@@ -701,7 +706,7 @@ let isModal = false;
     ]
     s=""
     TarifService.map((element)=>{
-      s += `<li onclick="option3(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray p-3">
+      s += `<li onclick="option3(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray px-3 py-[9px]">
               <span>${element.text}</span>
             </li>`
     })
@@ -746,7 +751,7 @@ let isModal = false;
       {id: 30, text: 'Живые ⭐️ Гарантия'},
     ]
     TarifUser.map((element)=>{
-      s += `<li onclick="option4(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray p-3">
+      s += `<li onclick="option4(id)" id = "${element.id}" class="flex items-center bg-white z-10 gap-x-1 hover:bg-gray px-3 py-[9px]">
               <span>${element.text}</span>
             </li>`
     })
