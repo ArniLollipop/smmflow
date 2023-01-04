@@ -677,6 +677,10 @@ video {
   z-index: 15;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1076,10 +1080,6 @@ video {
 
 .w-\[248px\] {
   width: 248px;
-}
-
-.w-\[28px\] {
-  width: 28px;
 }
 
 .w-\[30px\] {
