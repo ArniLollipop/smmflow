@@ -836,6 +836,10 @@ video {
   margin-bottom: 7px;
 }
 
+.mt-\[6\.5px\] {
+  margin-top: 6.5px;
+}
+
 .mt-\[30px\] {
   margin-top: 30px;
 }
@@ -860,12 +864,12 @@ video {
   margin-bottom: 0.5rem;
 }
 
-.-ml-1 {
-  margin-left: -0.25rem;
+.ml-\[60px\] {
+  margin-left: 60px;
 }
 
-.mt-\[6\.5px\] {
-  margin-top: 6.5px;
+.-ml-1 {
+  margin-left: -0.25rem;
 }
 
 .box-border {
@@ -3218,12 +3222,12 @@ body{
   position: absolute;
   right: 0;
   height: 100%;
-  width: 100px;
+  width: 56px;
   background:transparent;
   z-index: 5;
   opacity: 60;
   overflow: inset;
-  box-shadow: inset -60px 0px 10px white !important;
+  box-shadow: inset -46px 0px 10px white !important;
 }
 
 .slider-left-shadow::after{
@@ -3231,12 +3235,40 @@ body{
   position: absolute;
   left: 0;
   height: 100%;
-  width: 100px;
+  width: 56px;
   background:transparent;
   z-index: 5;
   opacity: 60;
   overflow: inset;
-  box-shadow: inset 60px 0px 10px white !important;
+  box-shadow: inset 46px 0px 10px white !important;
+}
+
+@media screen and (min-width:768px) {
+  .slider-right-shadow::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 70px;
+    background:transparent;
+    z-index: 5;
+    opacity: 60;
+    overflow: inset;
+    box-shadow: inset -60px 0px 10px white !important;
+  }
+
+  .slider-left-shadow::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 70px;
+    background:transparent;
+    z-index: 5;
+    opacity: 60;
+    overflow: inset;
+    box-shadow: inset 60px 0px 10px white !important;
+  }
 }
 
 .slider-right-shadow-story::after{
@@ -3244,12 +3276,12 @@ body{
   position: absolute;
   right: 0;
   height: 100%;
-  width: 50px;
+  width: 56px;
   background:transparent;
   z-index: 5;
   opacity: 60;
   overflow: inset;
-  box-shadow: inset -50px 0px 10px white !important;
+  box-shadow: inset -46px 0px 10px white !important;
 }
 
 .slider-left-shadow-story::after{
@@ -3257,12 +3289,12 @@ body{
   position: absolute;
   left: 0;
   height: 100%;
-  width: 50px;
+  width: 56px;
   background:transparent;
   z-index: 5;
   opacity: 60;
   overflow: inset;
-  box-shadow: inset 50px 0px 10px white !important;
+  box-shadow: inset 46px 0px 10px white !important;
 }
 
 .swiper-slide{

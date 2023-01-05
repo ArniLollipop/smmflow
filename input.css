@@ -14,12 +14,12 @@ body{
   position: absolute;
   right: 0;
   height: 100%;
-  width: 100px;
+  width: 56px;
   background:transparent;
   z-index: 5;
   opacity: 60;
   overflow: inset;
-  box-shadow: inset -60px 0px 10px white !important;
+  box-shadow: inset -46px 0px 10px white !important;
 }
 
 .slider-left-shadow::after{
@@ -27,12 +27,40 @@ body{
   position: absolute;
   left: 0;
   height: 100%;
-  width: 100px;
+  width: 56px;
   background:transparent;
   z-index: 5;
   opacity: 60;
   overflow: inset;
-  box-shadow: inset 60px 0px 10px white !important;
+  box-shadow: inset 46px 0px 10px white !important;
+}
+
+@media screen and (min-width:768px) {
+  .slider-right-shadow::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 70px;
+    background:transparent;
+    z-index: 5;
+    opacity: 60;
+    overflow: inset;
+    box-shadow: inset -60px 0px 10px white !important;
+  }
+  
+  .slider-left-shadow::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 70px;
+    background:transparent;
+    z-index: 5;
+    opacity: 60;
+    overflow: inset;
+    box-shadow: inset 60px 0px 10px white !important;
+  }
 }
 
 .slider-right-shadow-story::after{
@@ -40,12 +68,12 @@ body{
   position: absolute;
   right: 0;
   height: 100%;
-  width: 50px;
+  width: 56px;
   background:transparent;
   z-index: 5;
   opacity: 60;
   overflow: inset;
-  box-shadow: inset -50px 0px 10px white !important;
+  box-shadow: inset -46px 0px 10px white !important;
 }
 
 .slider-left-shadow-story::after{
@@ -53,12 +81,12 @@ body{
   position: absolute;
   left: 0;
   height: 100%;
-  width: 50px;
+  width: 56px;
   background:transparent;
   z-index: 5;
   opacity: 60;
   overflow: inset;
-  box-shadow: inset 50px 0px 10px white !important;
+  box-shadow: inset 46px 0px 10px white !important;
 }
 
 .swiper-slide{
