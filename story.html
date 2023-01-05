@@ -717,12 +717,12 @@ let isModal = false;
 
     
     let Stories = [
-    {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'В обработке', statusColor: 'text-blue'},
-      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Выполняется', statusColor: 'text-blue'},
-      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Завершен', statusColor: 'text-green'},
-      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Отменен', statusColor: 'text-red'},
-      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Выполнен частично', statusColor: 'text-yellow'},
-      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые ❤️”', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: '', statusColor: ''},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'В обработке', statusColor: 'text-blue'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Выполняется', statusColor: 'text-blue'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Завершен', statusColor: 'text-green'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Отменен', statusColor: 'text-red'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Выполнен частично', statusColor: 'text-yellow'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: '', statusColor: ''},
     ]
 
     let htmlStory = ""
@@ -751,7 +751,10 @@ let isModal = false;
                       <div class="col-span-2 lg:block hidden">
                         <div class="flex items-center gap-x-[5px]">
                           <img src="${str.img}" alt="" class="w-[18px] h-[18px]">
-                          <p class="font-medium text-base">${str.service}</p>
+                          <div class = "flex items-center gap-x-1">
+                            <p class="font-medium text-base">${str.service}</p>
+                            <img src = "${str.emoji}" alt = "" class = "h-5">
+                          </div>
                         </div>
                         <button class="text-blue text-base">${str.link}</button>
                       </div>
@@ -801,7 +804,10 @@ let isModal = false;
                       <div class="col-span-2 hidden lg:flex items-center gap-x-[10px]">
                         <img src="${str.img}" alt="" class="h-8">
                         <div class="">
-                          <p class="font-medium text-base">${str.service}</p>
+                          <div class = "flex items-center gap-x-1">
+                            <p class="font-medium text-base">${str.service}</p>
+                            <img src = "${str.emoji}" alt = "" class = "h-5">
+                          </div>
                           <button class="text-blue text-base">${str.link}</button>
                         </div>
                       </div>
