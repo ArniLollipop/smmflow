@@ -357,7 +357,7 @@
             <div class="md:py-[96px] lg:px-20 md:px-10 px-[10px] py-6 bg-textBlue md:rounded-[40px] relative overflow-hidden">
               <div class="lg:w-2/3 w-[70%]">
                 <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white leading-4">Скидки до 50%<br> в нашем телеграм-канале</h2>
-                <p class = "text-white md:mt-5 md:mb-7 mt-3 mb-5 md:text-lg text-base leading-4">Раздаем промокоды в Telegram каждую неделю</p>
+                <p class = "text-white md:mt-5 md:mb-7 my-[18px] md:text-lg text-base leading-4">Раздаем промокоды в Telegram каждую неделю</p>
                 <button class="h-full md:py-[18px] px-6 py-3 md:rounded-md rounded-[10px] md:text-lg text-base font-medium bg-[#2C75FF] hover:shadow-lg text-white">Получить промокод</button>
               </div>
               <div class=" absolute md:top-0 md:-right-10 -bottom-2 -right-4 w-[40%] h-full">
@@ -511,7 +511,7 @@
       if(element.open){
         document.getElementById("slider").innerHTML += `
           <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide z-0 ring-inset hover:bg-pressed pressed">
-            <div class=" md:py-3 py-2 md:px-4 px-2 flex items-center gap-x-2 w-fit mx-auto">
+            <div class=" md:py-3 py-[9px] md:px-4 px-2 flex items-center gap-x-2 w-fit mx-auto">
               <img src="${element.img}" alt="" class="md:h-8 h-[28px]">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
@@ -528,7 +528,7 @@
       else{
         document.getElementById("slider").innerHTML += `
           <button id = "${element.id}" onclick="sliderService(${element.id})" class="id${element.id} swiper-slide z-0 ring-inset hover:bg-pressed ">
-            <div class=" md:py-3 py-2 md:px-4 px-2 flex items-center gap-x-2 w-fit mx-auto">
+            <div class=" md:py-3 py-[9px] md:px-4 px-2 flex items-center gap-x-2 w-fit mx-auto">
               <img src="${element.img}" alt="" class="md:h-8 h-[28px]">
               <h5 class=" text-lg ">${element.head}</h5>
             </div>
@@ -649,7 +649,7 @@
       s += `
         <div class="swiper-slide w-full">
           <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] md:h-[296px] h-[260px] text-sm rounded-2xl block mx-auto">
-            <div class="flex items-center md:mb-6 mb-[7px]">
+            <div class="flex items-center md:mb-[21px] mb-[7px]">
               <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
               <div class="">
                 <p class="font-medium text-lg">${review.name}</p>
