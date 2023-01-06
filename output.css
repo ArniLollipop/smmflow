@@ -833,8 +833,8 @@ video {
   margin-top: 6px;
 }
 
-.mb-\[7px\] {
-  margin-bottom: 7px;
+.mb-\[14px\] {
+  margin-bottom: 14px;
 }
 
 .mt-\[6\.5px\] {
@@ -2337,7 +2337,7 @@ video {
 }
 
 .bg-saly2 {
-  background-image: url("images/Saly2.svg");
+  background-image: url("images/Saly-2.png");
 }
 
 .decoration-slice {
