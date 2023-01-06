@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
   <title>Document</title>
 </head>
-<body>
-  <div class="w-full mx-auto overflow-hidden relative min-h-[100vh]">
-    <div id = "menu" class="h-[100vh] absolute bg-white z-10 px-[10px] w-full pt-14 translate-x-full transition-all duration-200">
+<body class="">
+  <div class="content w-full mx-auto overflow-hidden relative min-h-[100vh] flex flex-col">
+    <div id = "menu" class="h-[100vh] absolute bg-white z-20 px-[10px] w-full pt-14 translate-x-full transition-all duration-200">
       <a href="order.html" class="font-medium text-2xl mt-4 block">Сделать заказ</a>
       <button class="font-medium text-2xl mt-4 block">Мои заказы</button>
       <button onclick="modalOpen()" class="font-medium text-2xl mt-4 block">Войти</button>
@@ -56,7 +56,7 @@
     <header id="header" class=" header w-full">
       <div class="max-w-[1180px] mx-auto xl:px-0 px-[10px] flex items-center justify-between py-4 z-10">
         <div class="flex items-center"> 
-          <a id="logo" href="main.html" class="flex mr-9 z-10"> 
+          <a id="logo" href="main.html" class="flex mr-9 z-20"> 
             <img src="images/Logo.svg" alt="">
           </a>
           <div class = "hidden md:flex items-center w-fit"> 
@@ -66,7 +66,10 @@
           </div>
         </div>
         <div class="hidden md:flex items-center w-fit">
-          <button onclick="modalOpen()" class="mr-7 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Войти</button>
+          <div class="flex items-center gap-x-1 mr-[30px]">
+            <img src="images/Money.svg" alt="" class="w-5 h-5">
+            <p class="font-medium">1653₽</p>
+          </div>
           <a href="order.html" class="h-full py-3 rounded-md bg-blue hover:shadow-lg px-6 text-white">Быстрый заказ</a>
         </div>
         <div class="md:hidden flex items-center z-20">
@@ -87,8 +90,8 @@
         </div>
       </div>
     </header>
-    <div id="main" class="min-h-[100vh]" >
-      <div class="">
+    <div id="main" class="min-h-[90vh]">
+      <div class="main">
         <section class="relative w-full mx-auto">
           <div id="service" onmouseleave="openService()" class="hidden w-full h-[100vh] overflow-y-scroll px-[10px] bg-white w-full z-[15] py-6 absolute top-0 left-0">
             <div class="max-w-[1180px] mx-auto">
@@ -304,52 +307,16 @@
               </div>
             </div>
           </div>
-        <section class="max-w-[1180px] mx-auto min-h-[100vh]">
-          <div class="xl:px-0 px-[10px] md:py-10 py-[30px]">
-            <h2 class="font-semibold text-xl">Политика Cookies</h2>
-            <div class="md:text-base text-sm max-w-[800px] mt-5">
-              <p class = "mt-5"> На этой странице вы узнаете, что такое файлы Cookie, а также как и когда мы их используем.</p>
-              <p class = "mt-5 font-bold"> Определение термина «Cookie»:</p>
-              <p class = "mt-5"> Cookie — это фрагменты данных, которые генерирует веб-сервер и которые веб-сайт сохраняет на вашем пользовательском устройстве (компьютере, смартфоне, планшете и др.). Каждый сайт или сторонний сервис отправляет файлы Cookie браузеру, установленному на вашем устройстве, только в том случае, если ваш браузер позволяет это сделать. Это возможно, если вы не установили никаких ограничений в настройках браузера на сохранение Cookie-файлов.</p>
-              <p class = "mt-5"> В файлах Cookie содержится приоритетно анонимная информация.</p>
-              <p class = "mt-5"> Файлы Cookie дают сайту возможность запомнить ваши настройки, сохранить ваш e-mail адрес, ранее введённый на сайте, запомнить страницы сайта, которые вы посетили ранее.</p>
-              <p class = "mt-5"> Браузеры – это очень продуманная технология. Они защищают личные данные и позволяют веб-сайтам получить доступ только к тем файлам Cookie, которые ранее были отправлены ему.</p>
-              <p class = "mt-5"> Файлы Cookie делятся на:</p>
-              <p class = "mt-5"> - сессионные. Они хранятся в памяти браузера только во время вашего сеанса, после выхода с сайта сразу же удаляются.</p>
-              <p class = "mt-5"> - постоянные. Они хранятся в памяти браузера продолжительное время.</p>
-              <p class = "mt-5"> Определение термина «браузер»</p>
-              <p class = "mt-5"> Браузер — это приложение для просмотра веб-сайтов. Самые популярные браузеры — это Chrome, Internet Explorer, Firefox и Safari.</p>
-              <p class = "mt-5"> Все перечисленные браузеры являются безопасными. В настройках этих браузеров файлы Cookie могут быть легко отключены, а также изменены настройки их работы.</p>
-              <p class = "mt-5"> Вы можете:</p>
-              <p class = "mt-5"> - принимать все файлы Cookie;</p>
-              <p class = "mt-5"> - просить браузер уведомлять, когда используются файлы cookie;</p>
-              <p class = "mt-5"> - не принимать файлы Cookie.</p>
-              <p class = "mt-5 font-bold"> Файлы Cookie на https://smmflow.net и как мы их используем</p>
-              <p class = "mt-5"> Мы используем файлы Cookie для того, чтобы:</p>
-              <p class = "mt-5"> - наш сайт был более функциональным;</p>
-              <p class = "mt-5"> - для понимания того, как вы передвигаетесь на сайте, какой контент потребляете лучше, для разработки контентной стратегии сайта;</p>
-              <p class = "mt-5"> - понимать, сколько посещений сайта было за день, месяц, год.</p>
-              <p class = "mt-5"> - Анализировать географическую принадлежность пользователей сайта, количество повторных заходов и другие данные.</p>
-              <p class = "mt-5 font-bold text-lg"> Представляем вашему вниманию названия файлов cookies, которые мы используем на нашем сайте:</p>
-              <p class = "mt-5 font-bold"> Персонализирующие файлы Cookie</p>
-              <p class = "mt-5"> Эти файлы помогают нам распознавать повторные визиты пользователей на сайт и показывать информацию, которую человек смотрел ранее, или подставлять контактные данные в формы, которые были введены посетителями в предыдущие заходы.</p>
-              <p class = "mt-5 font-bold"> Файлы Cookie сторонних сервисов</p>
-              <p class = "mt-5"> Кнопки социальных сетей, видеоролики и некоторые другие сервисы нашего сайта являются собственностью других компаний. Эти компании могут также использовать файлы Cookie на вашем устройстве, если вы использовали их на нашем сайте или ранее были в них зарегистрированы.</p>
-              <p class = "mt-5"> С политикой конфиденциальности использования персональных данных этими сервисами, вы можете ознакомиться на сайтах этих сервисов.</p>
-              <p class = "mt-5 font-bold"> Блокировка файлов Cookie</p>
-              <p class = "mt-5"> Все браузеры позволяют простыми действиями отключить файлы Cookie.</p>
-              <p class = "mt-5"> Для их отключения необходимо зайти в настройки браузера и найти в них файлы Cookie.</p>
-              <p class = "mt-5"> Но нужно помнить, что блокировка файлов Cookie может оказать негативное влияние на работоспособность многих веб-сайтов.</p>
-              <p class = "mt-5 font-bold"> Как удалить файлы</p>
-              <p class = "mt-5"> Также всегда можно удалить файлы Cookie, которые хранятся на вашем компьютере. Для этого достаточно следовать инструкциям браузера. Опять же, удаление файлов Cookie может оказать негативное влияние на работоспособность многих веб-сайтов.</p>
-            </div>
-          </div>
         </section>
-        
-    
+        <section class="max-w-[1180px] py-[60px] mx-auto">
+          <img src="images/notFound.svg" alt="" class="w-fit mx-auto">
+          <h2 class="font-medium text-2xl mt-10 text-center">Что-то пошло не так..</h2>
+          <p class="text-[#4F4F4F] text-center mt-[14px] mx-auto">Страницы по этой ссылке не существует.<br>
+            Возможно она была удалена или набран неверный адрес.<br class="md:block hidden"> Перейдите на нашу главную страницу, </p>
+          <a href="main.html" class="px-5 py-2 rounded-md bg-blue text-white font-semibold mx-auto w-fit block mt-6 text-base hover:shadow-md">На главную</a>
+        </section>
       </div>
     </div>
-
   </div>
   <footer class="w-full bg-whiteGray mt-auto">
     <div class="max-w-[1180px] xl:px-0 px-[10px] mx-auto md:py-10 py-5">
@@ -465,7 +432,258 @@ let isModal = false;
         isService = !isService
       }
     }
+
+    function tabs(id){
+      if(id === "story"){
+        document.getElementById("story").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("balance").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("story2").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("balance2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("storyContent").classList.remove("hidden")
+        document.getElementById("balanceContent").classList.add("hidden")
+        document.getElementById("settingsContent").classList.add("hidden")
+        document.getElementById("leaveContent").classList.add("hidden")
+      }
+      else if (id === "balance"){
+        document.getElementById("story").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("settings").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("story2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance2").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("settings2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("storyContent").classList.add("hidden")
+        document.getElementById("balanceContent").classList.remove("hidden")
+        document.getElementById("settingsContent").classList.add("hidden")
+        document.getElementById("leaveContent").classList.add("hidden")
+      }
+      else if (id === "settings"){
+        document.getElementById("story").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("leave").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("story2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings2").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("leave2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("storyContent").classList.add("hidden")
+        document.getElementById("balanceContent").classList.add("hidden")
+        document.getElementById("settingsContent").classList.remove("hidden")
+        document.getElementById("leaveContent").classList.add("hidden")
+      }
+      else if (id === "leave"){
+        document.getElementById("story").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("story2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("balance2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("settings2").classList.add("after:opacity-0", "after:w-0")
+        document.getElementById("leave2").classList.remove("after:opacity-0", "after:w-0")
+        document.getElementById("storyContent").classList.add("hidden")
+        document.getElementById("balanceContent").classList.add("hidden")
+        document.getElementById("settingsContent").classList.add("hidden")
+        document.getElementById("leaveContent").classList.remove("hidden")
+      }
+    }
+
     
+    let Stories = [
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'В обработке', statusColor: 'text-blue'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Выполняется', statusColor: 'text-blue'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Завершен', statusColor: 'text-green'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Отменен', statusColor: 'text-red'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: 'Выполнен частично', statusColor: 'text-yellow'},
+      {date : '11.12.2022', img: 'images/insta.svg', service: 'Подписчики “Живые”', emoji: 'images/RedHeart.svg', link: 'https://www.instagram.com/durov/', count: 10000, price:'1000₽', status: '', statusColor: ''},
+    ]
+
+    let htmlStory = ""
+
+    if (Stories.length === 0){
+      htmlStory = `
+        <div class = "max-w-[415px] block mx-auto my-20">
+          <img src="images/Saly-17.svg" alt="" class="mb-[30px] w-fit block mx-auto">
+          <p class="font-medium text-[#4F4F4F] text-center">Заказов нет</p>
+          <p class="text-center text-[#4F4F4F] block mx-auto leading-5 mt-[10px]">Вы ещё ни разу ничего не заказывали. Пополните баланс и сделайте свой первый заказ!</p>
+          <button class="w-[50%] block mx-auto text-center py-3 hover:shadow-lg text-white font-medium bg-blue rounded-md mt-5" >Сделать заказ</button>
+        </div>
+        `
+        
+      
+    }
+    else{
+      Stories.map((str)=>{
+        if(str.status !== ''){
+          htmlStory += `
+                  <div class="rounded-md py-[14px] story-back mt-[14px]">
+                    <div class="lg:grid lg:grid-cols-6 grid-cols-1 pl-5 items-center hidden">
+                      <div class="col-span-1">
+                        ${str.date}
+                      </div>
+                      <div class="col-span-2 lg:block hidden">
+                        <div class="flex items-center gap-x-[5px]">
+                          <img src="${str.img}" alt="" class="w-[18px] h-[18px]">
+                          <div class = "flex items-center gap-x-1">
+                            <p class="font-medium text-base">${str.service}</p>
+                            <img src = "${str.emoji}" alt = "" class = "h-5">
+                          </div>
+                        </div>
+                        <button class="text-blue text-base">${str.link}</button>
+                      </div>
+                      <div class="col-span-1 ">
+                        ${str.count}
+                      </div>
+                      <div class="col-span-1 ">
+                        ${str.price}
+                      </div>
+                      <div class="${str.statusColor} col-span-1 ">
+                        ${str.status}
+                      </div>
+
+                    </div>
+                    <div class = "pl-5 lg:hidden">
+                      <div class = "flex items-center gap-x-[10px] text-base font-medium">
+                        <img src="${str.img}" alt="" class="h-[34px]">
+                        <div class = "flex flex-col gap-x-0">
+                          <p class="w-[100px] leading-5">
+                            Подписчики
+                            <span class = "flex items-center gap-x-1">Живые <img src="images/RedHeart.svg" alt="" class = "w-4 h-4"></span>
+                          </p>
+                        </div>
+                      </div>
+                      <p class="text-blue mt-3">
+                        https://www.instagram.com/durov/
+                      </p>
+                      <p class = "text-base mt-[10px]">
+                        ${str.count} за ${str.price}  
+                      </p>
+                      <p class = "text-base mt-[10px]">
+                        Дата: ${str.date}
+                      </p>  
+                      <p class = "text-base mt-[10px]">
+                        Статус: <span class = "${str.statusColor}">${str.status}</span>
+                      </p>
+                    </div>
+                  </div>`
+        }
+        else{
+          htmlStory += `
+                  <div class="rounded-md py-[14px] story-back mt-[14px]">
+                    <div class="lg:grid lg:grid-cols-6 grid-cols-1 pl-5 items-center hidden">
+                      <div class="col-span-1">
+                        ${str.date}
+                      </div>
+                      <div class="col-span-2 hidden lg:flex items-center gap-x-[10px]">
+                        <img src="${str.img}" alt="" class="h-8">
+                        <div class="">
+                          <div class = "flex items-center gap-x-1">
+                            <p class="font-medium text-base">${str.service}</p>
+                            <img src = "${str.emoji}" alt = "" class = "h-5">
+                          </div>
+                          <button class="text-blue text-base">${str.link}</button>
+                        </div>
+                      </div>
+                      <div class="col-span-1 ">
+                        ${str.count}
+                      </div>
+                      <div class="col-span-1 ">
+                        ${str.price}
+                      </div>
+                      <div class="${str.statusColor} col-span-1 ">
+                        ${str.status}
+                      </div>
+
+                    </div>
+                    <div class = "pl-5 lg:hidden">
+                      <div class = "flex items-center gap-x-[10px] text-base font-medium">
+                        <img src="${str.img}" alt="" class="h-[34px]">
+                        <div class = "flex flex-col gap-x-0">
+                          <p class="w-[100px] leading-5">
+                            Подписчики
+                            <span class = "flex items-center gap-x-1">Живые <img src="images/RedHeart.svg" alt="" class = "w-4 h-4"></span>
+                          </p>
+                        </div>
+                      </div>
+                      <p class="text-blue mt-3">
+                        https://www.instagram.com/durov/
+                      </p>
+                      <p class = "text-base mt-[10px]">
+                        ${str.count} за ${str.price}  
+                      </p>
+                      <p class = "text-base mt-[10px]">
+                        Дата: ${str.date}
+                      </p>  
+                      <p class = "text-base mt-[10px]">
+                        Статус: <span class = "${str.statusColor}">${str.status}</span>
+                      </p>
+                    </div>
+                  </div>`
+        }
+      })
+    }
+    document.getElementById("stories").innerHTML = htmlStory;
+
+    function inputPrice(price){
+      document.getElementById("input-price").value = price;
+    }
+
+    let balance = [
+      {date:'11.12.2022 в 12:43', price:1000, status: 'Оплачен', statusColor: 'text-[#009A3E]'}
+    ]
+
+    if(balance.length === 0){
+      document.getElementById("story-balance").innerHTML =
+       `<img src="images/Saly-17.svg" alt="" class="my-[30px] w-fit block mx-auto">
+        <p class="font-medium text-[#4F4F4F] text-center">Пополнений ещё не было</p>
+        <p class="text-center text-[#4F4F4F] w-[80%] block mx-auto leading-5 mt-[10px]">Вы ещё ни разу не пополняли баланс . Пополните баланс и сделайте свой первый заказ!</p>
+        `
+    }
+    else{
+      balance.map((element)=>{
+      document.getElementById("story-balance").innerHTML += `
+      <div class="story-back rounded-md py-[14px] px-5 my-[14px] grid grid-cols-5">
+        <div class="sm:col-span-2 col-span-4">
+          ${element.date}
+        </div>
+        <div class="sm:col-span-2 col-span-1 -ml-1 justify-start flex items-center gap-x-[5px]">
+          ${element.price}₽
+          <img src = "images/check.svg" alt = "" class = "sm:hidden">
+        </div>
+        <div class="col-span-1 sm:block hidden text-end ${element.statusColor}">
+          ${element.status}
+        </div>
+      </div>  
+      `
+    })
+    }
+    function shadow(){
+      console.log("askmda;mdsa");
+      if (document.getElementById("nextEl").classList.contains("swiper-button-disabled")){
+        console.log("aaaaaaaaaaaaaaaaa");
+        document.getElementById("swiper").classList.remove("story-shadow")
+      }
+      else if(!document.getElementById("nextEl").classList.contains("swiper-button-disabled")){
+        document.getElementById("swiper").classList.add("story-shadow")
+      }
+    }
+  </script>
+  <script>
+    var swiper = new Swiper('.swiper-story', {
+      watchSlidesProgress: true,
+      watchSlidesVisibility: true,
+      slidesPerView: 'auto',
+      slidesPerGroup: 3,
+      navigation: {
+        nextEl: ".s-button-next",
+        prevEl: ".s-button-prev",
+      },
+    });
   </script>
 </body>
 </html>
+

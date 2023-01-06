@@ -13,7 +13,7 @@
 </head>
 <body>
   <div class="w-full mx-auto overflow-hidden relative min-h-[100vh] content">
-    <div id = "menu" class="h-[100vh] absolute bg-white z-20 px-[10px] w-full pt-14 translate-x-full transition-all duration-200">
+    <div id = "menu" class="h-[100vh] md:hidden absolute bg-white z-20 px-[10px] w-full pt-14 translate-x-full transition-all duration-200">
       <a href="order.html" class="font-medium text-2xl mt-4 block">Сделать заказ</a>
       <button class="font-medium text-2xl mt-4 block">Мои заказы</button>
       <button onclick="modalOpen()" class="font-medium text-2xl mt-4 block">Войти</button>
@@ -358,7 +358,7 @@
               <div class="lg:w-2/3 w-[70%]">
                 <h2 class=" lg:text-4xl md:text-2xl text-lg font-semibold text-white leading-4">Скидки до 50%<br> в нашем телеграм-канале</h2>
                 <p class = "text-white md:mt-5 md:mb-7 my-[18px] md:text-lg text-base leading-4">Раздаем промокоды в Telegram каждую неделю</p>
-                <button class="h-full md:py-[18px] px-6 py-3 md:rounded-md rounded-[10px] md:text-lg text-base font-medium bg-[#2C75FF] hover:shadow-lg text-white">Получить промокод</button>
+                <button class="h-full md:py-4 px-6 py-3 md:rounded-md rounded-[10px] md:text-lg text-base font-medium bg-[#2C75FF] hover:shadow-lg text-white">Получить промокод</button>
               </div>
               <div class=" absolute md:top-0 md:-right-10 -bottom-2 -right-4 w-[40%] h-full">
                 <img src="images/Saly2.svg" alt="" class=" md:w-3/4 md:h-full w-[248px] h-[248px]">
@@ -649,7 +649,7 @@
       s += `
         <div class="swiper-slide w-full">
           <div class="md:p-7 p-4 bg-whiteGray md:w-[323px] w-[260px] md:h-[296px] h-[260px] text-sm rounded-2xl block mx-auto">
-            <div class="flex items-center md:mb-[21px] mb-[7px]">
+            <div class="flex items-center gap-x-[10px] md:mb-[21px] mb-[7px]">
               <img src="images/Review.svg" alt="" class="w-[50px] h-[50px]">
               <div class="">
                 <p class="font-medium text-lg">${review.name}</p>
