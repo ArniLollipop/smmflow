@@ -3,6 +3,35 @@ let countS = 0;
     let isModal = false;
     let isLogIn = false;
     let burgerMenu = false;
+    let isRecovery = false;
+    let isPassword = false;
+
+
+    function recovery(){
+      if(!isRecovery){
+        document.getElementById("logIn").classList.add("hidden");
+        document.getElementById("password").classList.remove("hidden")
+        isRecovery = !isRecovery;
+      }
+      else{
+        document.getElementById("logIn").classList.remove("hidden");
+        document.getElementById("password").classList.add("hidden")
+        isRecovery = !isRecovery;
+      }
+    }
+
+    function passwordOpen(){
+      if (!isPassword){
+        document.getElementById("password").classList.add("hidden");
+        document.getElementById("recovery").classList.remove("hidden")
+        isPassword = !isPassword;
+      }
+      else{
+        document.getElementById("password").classList.remove("hidden");
+        document.getElementById("recovery").classList.add("hidden")
+        isPassword = !isPassword;
+      }
+    }
 
     function Burger(){
       if (!burgerMenu){
@@ -45,6 +74,10 @@ let countS = 0;
       else{
         isLogIn = true
         signUp();
+        isPassword = true
+        passwordOpen();
+        isRecovery= true
+        recovery();
         document.getElementById("modal").classList.add("hidden")
         isModal = !isModal
       }
