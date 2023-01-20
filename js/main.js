@@ -277,3 +277,17 @@ let countS = 0;
         </div>`
     })
     document.getElementById("wrapper-reviews").innerHTML = s
+
+    let isDropDown = false
+
+    function dropDown(){
+      if (!isDropDown){
+        document.getElementById('dropDown').classList.remove('hidden')
+        isDropDown = !isDropDown
+      }
+      else{
+        document.getElementById('dropDown').classList.add('hidden')
+        isDropDown = !isDropDown
+      }
+    }
+

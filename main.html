@@ -33,7 +33,7 @@
           <button onclick="recovery()" class="text-whiteBlue my-3">Забыли пароль?</button>
           <p class="text-red mb-3 hidden">Неправильный email-адрес или пароль</p>
           <p class="text-green mb-3 hidden">Вы успешно вошли в свой аккаунт.</p>
-          <button class="text-center w-full font-medium text-white bg-blue py-3 rounded-md hover:shadow-lg transition-all duration-300">Войти</button>
+          <button onclick="loginHandle()" class="text-center w-full font-medium text-white bg-blue py-3 rounded-md hover:shadow-lg transition-all duration-300">Войти</button>
           <div class="flex items-center justify-center mt-5">
             <span>Нет аккаунта? <button onclick="signUp()" class="text-whiteBlue"> Зарегистрироваться</button></span>
           </div>
@@ -74,39 +74,69 @@
       </div>
     </div>
     <header id="header" class=" header w-full">
-      <div class="max-w-[1180px] mx-auto xl:px-0 px-[10px] flex items-center justify-between py-4 z-10">
-        <div class="flex items-center"> 
-          <a id="logo" href="main.html" class="flex mr-9 z-20"> 
-            <img src="images/Logo.svg" alt="">
-          </a>
-          <div class = "hidden md:flex items-center w-fit"> 
-            <button onclick="openService()" onmouseover="openService()" class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Услуги</button>
-            <button class="mr-5 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Преимущества</button>
-            <button class="border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Отзывы</button>
+      <div class="max-w-[1180px] mx-auto xl:px-0 px-[10px] flex items-center justify-between py-4 z-10 relative">
+          <div class="flex items-center">
+              <a id="logo" href="/" class="flex mr-9 z-20">
+                  <img src="/images/Logo.svg?1" alt="">
+              </a>
+              <div class = "hidden md:flex items-center w-fit">
+                  <button onclick="openService()" onmouseover="openService()" class="mr-5 hover:text-blue duration-75 transition-all">Услуги</button>
+                  <button class="mr-5 hover:text-blue duration-75 transition-all">Преимущества</button>
+                  <button class="hover:text-blue duration-75 transition-all">Отзывы</button>
+              </div>
           </div>
-        </div>
-        <div class="hidden md:flex items-center w-fit">
-          <button onclick="modalOpen()" class="mr-7 border-b-0 hover:border-b-2 border-opacity-0 duration-75 transition-all">Войти</button>
-          <a href="order.html" class="h-full py-3 rounded-md bg-blue hover:shadow-lg transition-all duration-300 px-6 text-white">Быстрый заказ</a>
-        </div>
-        <div class="md:hidden flex items-center z-20">
-          <button id = "burger" onclick="Burger()" class="">
-            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0_420_8350)">
-              <rect id="burger1" class="transition-all duration-150 " x="0.279297" y="0.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
-              <rect id="burger2" class="transition-all duration-150 " x="0.279297" y="8.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
-              <rect id="burger3" class="transition-all duration-150 " x="0.279297" y="16.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_420_8350">
-                <rect width="22" height="19" fill="white" transform="translate(0.279297 0.5)"/>
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
-        </div>
+          <div id="headerLogout" class="hidden md:hidden items-center w-fit">
+              <button onclick="modalOpen()" class="mr-7 hover:text-blue duration-75 transition-all">Войти</button>
+              <a href="/order" class="h-full py-3 rounded-md bg-blue hover:shadow-lg transition-all duration-300 px-6 text-white">Быстрый заказ</a>
+          </div>
+          <div id="headerLogin" class="hidden md:flex items-center w-fit flex items-center relative">
+            <a href="/order" class="h-full py-3 rounded-md bg-blue hover:shadow-lg transition-all duration-300 px-6 text-white mr-[30px]">Быстрый заказ</a>
+            <img src="/images/Money.svg" alt="" class="w-fit ml-[30px]">
+            <p class="font-bold mr-[10px]" style="margin-right: 10px;">1653₽</p>
+            <button class="w-[30px] h-[30px] rounded-[10px] mr-7">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 0C3.35787 0 0 3.35787 0 7.5V22.5C0 26.6421 3.35787 30 7.5 30H22.5C26.6421 30 30 26.6421 30 22.5V7.5C30 3.35787 26.6421 0 22.5 0H7.5ZM15 7.5C15.8284 7.5 16.5 8.17158 16.5 9V13.5H21C21.8284 13.5 22.5 14.1716 22.5 15C22.5 15.8284 21.8284 16.5 21 16.5H16.5V21C16.5 21.8284 15.8284 22.5 15 22.5C14.1716 22.5 13.5 21.8284 13.5 21V16.5H9C8.17158 16.5 7.5 15.8284 7.5 15C7.5 14.1716 8.17158 13.5 9 13.5H13.5V9C13.5 8.17158 14.1716 7.5 15 7.5Z" fill="#1D4ED8"/>
+              </svg>
+            </button>
+            <button onclick="dropDown()" class="w-[48px] h-[47px] rounded-full overflow-hidden flex items-center justify-center">
+              <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M48 0.802734H0V48.8027H48V0.802734Z" fill="#C4CCDF"/>
+                <mask id="mask0_920_3822" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="4" y="8" width="40" height="41">
+                <path d="M44 8.80273H4V48.8027H44V8.80273Z" fill="white"/>
+                </mask>
+                <g mask="url(#mask0_920_3822)">
+                <path d="M23.9994 28.803C26.7605 28.803 29.1172 27.8261 31.0701 25.8731C33.0232 23.9201 33.9999 21.5634 33.9999 18.8026C33.9999 16.0423 33.0232 13.6855 31.0701 11.7321C29.1166 9.77918 26.7598 8.80273 23.9994 8.80273C21.239 8.80273 18.8818 9.77918 16.9289 11.7321C14.9757 13.6855 13.999 16.0422 13.999 18.8026C13.999 21.5634 14.9757 23.9201 16.9289 25.8731C18.8824 27.8261 21.2389 28.803 23.9994 28.803Z" fill="white"/>
+                <path d="M42.2419 39.3624C42.181 38.486 42.0593 37.5395 41.8774 36.5238C41.695 35.508 41.4647 34.5666 41.1869 33.6981C40.909 32.8303 40.5357 31.9839 40.0669 31.1591C39.5984 30.3344 39.0602 29.6314 38.4522 29.0496C37.8441 28.4679 37.1021 28.0038 36.226 27.6567C35.3488 27.3096 34.3808 27.1357 33.3217 27.1357C33.1657 27.1357 32.801 27.3224 32.228 27.6957C31.6555 28.069 31.0087 28.4858 30.2882 28.9461C29.5678 29.4055 28.6298 29.8225 27.4757 30.1952C26.3212 30.5686 25.1625 30.7553 23.9989 30.7553C22.8357 30.7553 21.6769 30.5686 20.5225 30.1952C19.3682 29.8225 18.4304 29.4055 17.7099 28.9461C16.9895 28.4858 16.3429 28.0691 15.7701 27.6957C15.197 27.3224 14.8326 27.1357 14.6763 27.1357C13.6173 27.1357 12.6494 27.3096 11.7727 27.6567C10.8959 28.0038 10.1537 28.4683 9.54599 29.0496C8.93841 29.6314 8.40016 30.3344 7.93159 31.1591C7.46302 31.9839 7.08978 32.8307 6.81194 33.6981C6.53419 34.5666 6.30406 35.508 6.12181 36.5238C5.93938 37.5395 5.81789 38.4853 5.75705 39.3624C5.6963 40.2396 5.66602 41.138 5.66602 42.0582C5.66602 44.1411 6.29986 45.7865 7.5671 46.9932C8.83461 48.1994 10.5188 48.8024 12.6194 48.8024H35.3804C37.4808 48.8024 39.1648 48.1994 40.4325 46.9932C41.7005 45.7865 42.3339 44.1414 42.3339 42.0582C42.3337 41.138 42.3034 40.2396 42.2419 39.3624Z" fill="white"/>
+                </g>
+              </svg>
+            </button>
+          </div>
+          <div class="md:hidden flex items-center z-20">
+              <button id = "burger" onclick="Burger()" class="">
+                  <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_420_8350)">
+                          <rect id="burger1" class="transition-all duration-150 " x="0.279297" y="0.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+                          <rect id="burger2" class="transition-all duration-150 " x="0.279297" y="8.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+                          <rect id="burger3" class="transition-all duration-150 " x="0.279297" y="16.5" width="22" height="3" rx="1.5" fill="#1D4ED8"/>
+                      </g>
+                      <defs>
+                          <clipPath id="clip0_420_8350">
+                              <rect width="22" height="19" fill="white" transform="translate(0.279297 0.5)"/>
+                          </clipPath>
+                      </defs>
+                  </svg>
+              </button>
+          </div>
+          <div id = "dropDown" class="hidden py-[18px] w-[213px] bg-white absolute top-full mt-2 rounded-[4px] right-0 border border-[#ECECEC]">
+            <a href="#" class="py-[10px] px-6 w-full flex items-center gap-x-[6px] hover:bg-[#ECECEC]"><img src="images/Report.svg" alt="" class="w-fit">Сделать заказ</a>
+            <a href="#" class="py-[10px] px-6 w-full flex items-center gap-x-[6px] hover:bg-[#ECECEC]"><img src="images/CheckDropDown.svg" alt="" class="w-fit">Мои заказы</a>
+            <a href="#" class="py-[10px] px-6 w-full flex items-center gap-x-[6px] hover:bg-[#ECECEC]"><img src="images/MoneyDropDown.svg" alt="" class="w-fit">Пополнить баланс</a>
+            <a href="#" class="py-[10px] px-6 w-full flex items-center gap-x-[6px] hover:bg-[#ECECEC]"><img src="images/SettingsDropDown.svg" alt="" class="w-fit">Настройки</a>
+            <a href="#" class="py-[10px] px-6 w-full flex items-center gap-x-[6px] hover:bg-[#ECECEC]"><img src="images/LeaveDropDown.svg" alt="" class="w-fit">Выход</a>
+            
+          </div>
       </div>
-    </header>
+  </header>
     <div id="main" class="" >
       <div class="">
         <section class="relative w-full mx-auto">
@@ -443,6 +473,7 @@
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
+  <script src = "js/fetch.js"></script>
   <script>
     var swiper = new Swiper('.swiper', {
       watchSlidesProgress: true,
